@@ -13,9 +13,9 @@ const Hero = () => {
       <div className="md:col-span-5 flex items-center justify-center p-8 xl:p-16">
         <div className="flex flex-col gap-8">
           <h1 className="text-5xl xl:text-7xl font-bold xl:leading-[7.5rem]">
-            Web Design Impactful Digital{" "}
+            Diseño & Desarrollo Productos{" "}
             <span className="text-primary py-2 px-6 border-8 border-primary relative inline-block">
-              Products
+              Digitales
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -left-5 -top-5 p-2 bg-primary rounded-full box-content" />
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -right-5 -top-5 p-2 bg-primary rounded-full box-content" />
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -right-5 -bottom-5 p-2 bg-primary rounded-full box-content" />
@@ -23,16 +23,15 @@ const Hero = () => {
             </span>
           </h1>
           <p className="text-gray-500 text-2xl leading-[2.5rem]">
-            Help find solutions with intitutive and in accordance with client
-            business goals. we provide a high-quality services.
+          Encontrar soluciones que se adapten a las necesidades únicas de tu empresa, negocio o idea es nuestra prioridad.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <button className="w-full xl:w-auto bg-primary text-white py-2 px-8 rounded-xl text-xl">
-              Contact Us
+            Contáctanos
             </button>
             <button className="w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl">
               <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
-              Watch our <br /> introduction video
+              Mira nuestro <br /> Vídeo de introducción
             </button>
           </div>
         </div>
@@ -45,34 +44,22 @@ const Hero = () => {
             src="hero.png"
             className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] object-cover xl:-mt-28"
           />
-          <div className="relative bg-white shadow-xl rounded-lg p-4 flex flex-col justify-center gap-2 max-w-[250px] mx-auto -mt-12">
-            <div className="flex items-center">
-              <img
-                src="https://img.freepik.com/foto-gratis/empresaria-confiada-sonriente-que-presenta-brazos-cruzados_1262-20950.jpg"
-                className="w-10 h-10 object-cover rounded-full ring-2 ring-gray-300"
-              />
-              <img
-                src="https://img.freepik.com/foto-gratis/hombre-barbudo-feliz-sorprendido-camisa-apuntando-lejos_171337-5021.jpg"
-                className="w-10 h-10 object-cover rounded-full ring-2 ring-gray-300 -ml-4"
-              />
-              <img
-                src="https://img.freepik.com/foto-gratis/retrato-hombre-afroamericano-inteligente-profesional-pie-manos-cruzadas-sobre-pecho-pose-confianza_176420-33861.jpg"
-                className="w-10 h-10 object-cover rounded-full ring-2 ring-gray-300 -ml-4"
-              />
-              <img
-                src="https://img.freepik.com/foto-gratis/feliz-joven_1098-20869.jpg"
-                className="w-10 h-10 object-cover rounded-full ring-2 ring-gray-300 -ml-4"
-              />
-              <img
-                src="https://img.freepik.com/foto-gratis/negocios-finanzas-empleo-concepto-mujeres-emprendedoras-exitosas-joven-empresaria-segura-anteojos-mostrando-gesto-pulgar-arriba-sostenga-computadora-portatil-garantice-mejor-calidad-servicio_1258-59118.jpg"
-                className="w-10 h-10 object-cover rounded-full ring-2 ring-gray-300 -ml-4"
-              />
-            </div>
+          <div className="relative bg-white shadow-xl rounded-lg p-2 flex flex-col justify-center gap-1 max-w-[250px] mx-auto -mt-12">
+            
             <h2 className="text-xl font-bold tracking-[1px] text-gray-800">
-              120 + Employees
+              Productos/Servicios
             </h2>
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> 5.0 (3.1k Reviews)
+              <RiStarFill className="text-primary" /> App Web/Mobile
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Ecommerce
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Chatbot
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Soporte Ténico
             </div>
             <div className="absolute -right-12 -bottom-12 -z-10">
               <div className="relative">

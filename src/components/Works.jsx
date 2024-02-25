@@ -5,11 +5,11 @@ const Works = () => {
     <div id="aboutUs" className="p-8 xl:p-20">
       <div className="mb-8">
         <h1 className="text-[40px] font-black">
-          We create world-class digital products
+        Destored en Acción: Nuestros Productos
         </h1>
         <p className="text-xl text-gray-500">
-          By information about design the world to the best instructors, heatc
-          helping By information
+        Sumérgete en el emocionante mundo de Destored y descubre una variedad de productos digitales que hemos desarrollado con pasión y dedicación. 
+        ¡Explora nuestras creaciones y déjate inspirar por lo que podemos lograr juntos!
         </p>
       </div>
       {/* Works */}
@@ -19,23 +19,23 @@ const Works = () => {
             src="work1.png"
             className="w-full h-[600px] object-cover rounded-3xl"
           />
-          <p className="text-gray-500">App Design - June 20, 2022</p>
-          <h3 className="text-2xl font-bold">App Redesign</h3>
+          <p className="text-gray-500">Desktop & Web App - Noviembre, 2023</p>
+          <h3 className="text-2xl font-bold">Digital Market</h3>
           <p className="text-gray-500">
-            By information about design the world to the best instructors, heatc
-            helping By information about design the world to the best
-            instructors, heatc helping
+          Una aplicación web para dueños de supermercados que simplifica la gestión de stock,
+           ventas, compras, gastos y cierres de caja, todo en un solo lugar.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col gap-4">
+
+        <div className="flex flex-col gap-4">
             <img
-              src="work2.png"
+              src="work4.png"
               className="w-full h-56 object-cover rounded-3xl"
             />
-            <p className="text-gray-500">App Design - June 20, 2022</p>
+            <p className="text-gray-500">ChatBot - Enero, 2024</p>
             <h3 className="text-2xl font-bold">
-              Redesign channel website landng page
+              ChatBot de WhatsApp para gestión de turnos
             </h3>
           </div>
           <div className="flex flex-col gap-4">
@@ -43,31 +43,32 @@ const Works = () => {
               src="work3.png"
               className="w-full h-56 object-cover rounded-3xl"
             />
-            <p className="text-gray-500">App Design - June 20, 2022</p>
+            <p className="text-gray-500">Web App - Diciembre, 2023</p>
             <h3 className="text-2xl font-bold">
-              New Locator App For a New Company
+              Agenda digital para clínicas o consultorios médicos
             </h3>
-          </div>
-          <div className="flex flex-col gap-4">
-            <img
-              src="work4.png"
-              className="w-full h-56 object-cover rounded-3xl"
-            />
-            <p className="text-gray-500">App Design - June 20, 2022</p>
-            <h3 className="text-2xl font-bold">
-              Rental Rooms Web App Platform
-            </h3>
-          </div>
+          </div>  
           <div className="flex flex-col gap-4">
             <img
               src="work5.png"
               className="w-full h-56 object-cover rounded-3xl"
             />
-            <p className="text-gray-500">App Design - June 20, 2022</p>
+            <p className="text-gray-500">Desktop App - Junio, 2023</p>
             <h3 className="text-2xl font-bold">
-              Calendar App for Big SASS Company
+            Sistema de gestión de seguros para vehículos
             </h3>
           </div>
+          <div className="flex flex-col gap-4">
+            <img
+              src="work2.png"
+              className="w-full h-56 object-cover rounded-3xl"
+            />
+            <p className="text-gray-500">Desktop & Web App - Noviembre, 2022</p>
+            <h3 className="text-2xl font-bold">
+              Sistema de gestión avícola para compra, produccion y venta
+            </h3>
+          </div>
+
         </div>
       </div>
     </div>

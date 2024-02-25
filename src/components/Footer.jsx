@@ -6,6 +6,8 @@ import {
   RiFacebookLine,
   RiTwitterLine,
   RiGithubLine,
+  RiLinkedinFill 
+  
 } from "react-icons/ri";
 
 const Footer = () => {
@@ -14,15 +16,12 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 border-b border-gray-500 pb-8">
         {/* Logo */}
         <div className="w-1/6">
-          <a
-            href="#"
-            className="text-2xl font-bold relative p-1 bg-footer text-white"
-          >
-            Power<span className="text-primary text-5xl">.</span>{" "}
-          </a>
+        <img src="/Logo Destored.svg" alt="Icono personalizado" />
+
         </div>
         {/* Social media */}
         <nav className="flex items-center gap-4">
+
           <a href="#" className="block text-white p-4 bg-primary rounded-full">
             {" "}
             <RiInstagramLine />{" "}
@@ -33,12 +32,10 @@ const Footer = () => {
           </a>
           <a href="#" className="block text-white p-4 bg-primary rounded-full">
             {" "}
-            <RiTwitterLine />{" "}
+            <RiLinkedinFill />{" "}
           </a>
-          <a href="#" className="block text-white p-4 bg-primary rounded-full">
-            {" "}
-            <RiGithubLine />{" "}
-          </a>
+         
+
         </nav>
       </div>
       <div className="mt-8">
@@ -86,13 +83,13 @@ const Footer = () => {
             type="button"
             className="font-semibold py-2 px-6 bg-primary text-white rounded-xl"
           >
-            Contact Us
+            Contáctanos
           </button>
         </nav>
       </div>
       <div className="mt-20">
         <p className="text-gray-300 text-center">
-          © jotredev 2022 - All Rights Reserved
+          © Destored 2024 - All Rights Reserved
         </p>
       </div>
     </footer>
