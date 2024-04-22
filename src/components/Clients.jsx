@@ -7,14 +7,14 @@ const Clients = () => {
       Los Colaboradores que Hacen Posible Nuestro Éxito
       </h1>
       <div className="flex flex-col md:flex-row items-center flex-wrap gap-20">
-        <img src="google.png" className="w-40" />
-        <img src="airbnb.png" className="w-40" />
-        <img src="amazon.png" className="w-40" />
-        <img src="shopify.png" className="w-40" />
-        <img src="google.png" className="w-40" />
+        <img src="Yemas del sol.png" className="w-40" />
+        <img src="Vende por insta.png" className="w-40" />
+        <img src="Super el once.png" className="w-40" />
+        <img src="M&Cgroup.png" className="w-40" />
       </div>
     </div>
   );
 };
 
+//<img width="1200" height="675" src="" class="attachment-jannah-image-post size-jannah-image-post wp-post-image" alt="Acceso para agencias de Shopify" data-main-img="1" decoding="async" fetchpriority="high" title="Cómo agregar su agencia como colaborador a su tienda Shopify 1"></img>
 export default Clients;

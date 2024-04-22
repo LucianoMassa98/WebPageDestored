@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 
+//<blockquote className="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C2kSJdxu3Mr/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style={{ background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '540px', minWidth: '326px', padding: 0, width: '99.375%', width: '-webkit-calc(100% - 2px)', width: 'calc(100% - 2px)' }}></blockquote><script async src="//www.instagram.com/embed.js"></script>
 import {
   RiCheckboxBlankCircleFill,
   RiPlayFill,
   RiStarFill,
 } from "react-icons/ri";
 
-const Hero = () => {
+const Hero = () => {  
+
+  
+  
+  const [showModal, setShowModal] = useState(false);
+
+  const openInstagramVideo = () => {
+   console.log(showModal)
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    console.log(showModal)
+    setShowModal(false);
+
+  };
+
   return (
     <section id="home" className="min-h-[90vh] grid grid-cols-1 xl:grid-cols-8">
       {/* Information */}
@@ -26,13 +43,28 @@ const Hero = () => {
           Encontrar soluciones que se adapten a las necesidades únicas de tu empresa, negocio o idea es nuestra prioridad.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <button className="w-full xl:w-auto bg-primary text-white py-2 px-8 rounded-xl text-xl">
-            Contáctanos
-            </button>
-            <button className="w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl">
+            <a href="#services">
+              <button className="w-full xl:w-auto bg-primary text-white py-2 px-8 rounded-xl text-xl">
+              Contáctanos
+              </button>
+            </a>
+            <button className="w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl"
+             onClick={openInstagramVideo} >
               <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
               Mira nuestro <br /> Vídeo de introducción
             </button>
+            {showModal && (
+              <div className="fixed z-10 left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40">
+               <div className="bg-white m-auto p-5 border border-gray-400 w-1/3 mt-20">
+               <span className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black" onClick={closeModal}>&times;</span>
+               <iframe className="bg-white border-0 rounded-sm shadow-md m-[1px] max-w-[540px] min-w-[326px] p-0 w-[99.375%] h-[70vh]"
+               src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/"
+               allow="accelerometer; autoplay"
+               ></iframe>
+              
+              </div>
+              </div>
+             )}
           </div>
         </div>
       </div>
@@ -74,16 +106,16 @@ const Hero = () => {
 
         {/* Logos */}
         <img
-          src="figma.png"
-          className="w-10 h-10 md:w-20 md:h-20 object-cover rounded-full border-l-8 border-gray-600 absolute top-[12%] right-[20%] xl:right-[10%]"
+          src="chatbot.png"
+          className="w-10 h-10 md:w-20 md:h-20 object-cover rounded-full border-l-6 xl:border-l-8 border-gray-400 absolute top-[12%] right-[20%] xl:right-[10%]"
         />
         <img
-          src="adobe.png"
-          className="w-10 h-10 md:w-20 md:h-20 object-cover rounded-full border-l-8 border-gray-600 absolute top-[10%] xl:top-[2%] left-[20%] xl:left-[10%]"
+          src="developer.png"
+          className="w-10 h-10 md:w-20 md:h-20 object-cover rounded-full border-l-6 xl:border-l-8 border-gray-400 absolute top-[10%] xl:top-[2%] left-[20%] xl:left-[10%]"
         />
         <img
-          src="sketch.png"
-          className="w-10 h-10 md:w-20 md:h-20 object-cover rounded-full absolute bottom-[5%] left-[15%] xl:left-[3%] -rotate-12"
+          src="sitio-web.png"
+          className="w-10 h-10 md:w-20 md:h-20 object-cover rounded-sm absolute bottom-[5%] left-[15%] xl:left-[3%] -rotate-12"
         />
       </div>
     </section>
