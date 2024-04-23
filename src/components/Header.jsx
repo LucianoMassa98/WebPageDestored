@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between xl:justify-start w-full pt-12 pb-8 px-12 h-[10vh] z-50">
-      <div className="w-32 mt-10 pt-4 md:w-42 lg:w-1/6">
+      <div className="w-32 mt-10 pt-[32px] md:w-42 lg:w-1/6">
           <img className="" src="/Logo Destored.svg" alt="Icono personalizado"/>
       </div>
       <nav
@@ -40,9 +40,10 @@ const Header = () => {
       >
         {showMenu ? <RiCloseLine className="fixed" /> : <RiMenu3Fill />}
       </button>
-              <a href="https://api.whatsapp.com/send?phone=5218184676497&text=Hola bienvenido!" 
-               className="fixed w-[55px] h-[55px] bottom-[30px] right-[30px] bg-[#0df053] text-white rounded-full text-center text-[30px] shadow-[0_1px_10px_rgba(0,0,0,0.3)] z-[100] leading-[55px]" target="_blank"> 
-               <FaWhatsapp className="no-underline bg-[#0df053] bg-white" />
+             <a href="https://api.whatsapp.com/send?phone=5218184676497&text=Hola bienvenido!" 
+                className="fixed bottom-4 right-4 bg-[#0df053] hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center"
+                target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                 <FaWhatsapp size={24}/>
               </a>
     </header>
   );

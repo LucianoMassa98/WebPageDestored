@@ -54,14 +54,17 @@ const Hero = () => {
               Mira nuestro <br /> Vídeo de introducción
             </button>
             {showModal && (
-              <div className="fixed z-10 left-0 top-0 w-full h-full overflow-auto bg-black bg-opacity-40">
-               <div className="bg-white m-auto p-5 border border-gray-400 w-1/3 mt-20">
-               <span className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black" onClick={closeModal}>&times;</span>
-               <iframe className="bg-white border-0 rounded-sm shadow-md m-[1px] max-w-[540px] min-w-[326px] p-0 w-[99.375%] h-[70vh]"
-               src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/"
-               allow="accelerometer; autoplay"
-               ></iframe>
-              
+              <div className="fixed inset-0 z-10 overflow-auto bg-black bg-opacity-40 flex items-center justify-center">
+              <div className="bg-white p-5 border border-gray-400 rounded-lg w-11/12 sm:w-3/4 md:w-2/3 lg:max-w-md m-4">
+              <span className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black cursor-pointer" onClick={closeModal}>&times;</span>
+              <iframe
+              className="w-full h-auto"
+              src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen
+              allowTransparency="true"
+              style={{ minHeight: '310px' }} // Consider adjusting this based on content and design needs
+              ></iframe>
               </div>
               </div>
              )}

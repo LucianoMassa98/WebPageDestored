@@ -16,7 +16,7 @@ const Works = () => {
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-8">
         <div className="flex flex-col gap-2">
           <img
-            src="work1.png"
+            src="work1.jpeg"
             className="w-full h-[600px] object-cover rounded-3xl"
           />
           <p className="text-gray-500">Desktop & Web App - Noviembre, 2023</p>
@@ -30,7 +30,7 @@ const Works = () => {
 
         <div className="flex flex-col gap-4">
             <img
-              src="work4.png"
+              src="work2.JPEG"
               className="w-full h-56 object-cover rounded-3xl"
             />
             <p className="text-gray-500">ChatBot - Enero, 2024</p>
@@ -50,7 +50,7 @@ const Works = () => {
           </div>  
           <div className="flex flex-col gap-4">
             <img
-              src="work5.png"
+              src="work4.JPEG"
               className="w-full h-56 object-cover rounded-3xl"
             />
             <p className="text-gray-500">Desktop App - Junio, 2023</p>
@@ -60,7 +60,7 @@ const Works = () => {
           </div>
           <div className="flex flex-col gap-4">
             <img
-              src="work2.png"
+              src="work5.png"
               className="w-full h-56 object-cover rounded-3xl"
             />
             <p className="text-gray-500">Desktop & Web App - Noviembre, 2022</p>
