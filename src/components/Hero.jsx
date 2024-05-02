@@ -59,7 +59,7 @@ const Hero = () => {
               <span className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black cursor-pointer" onClick={closeModal}>&times;</span>
               <iframe
               className="w-full h-auto"
-              src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/"
+              src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com"
               frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen
               allowTransparency="true"

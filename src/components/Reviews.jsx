@@ -32,11 +32,11 @@ const Reviews = () => {
           />
            <img
             src="IMG_8823.jpg"
-            className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"
+            className="w-12 h-12 md:w-20 md:h-20 object-cover shrink-0 grow-0 rounded-full ring-4 ring-primary p-1 bg-white"
           />
            <img
             src="IMG_8824.jpg"
-            className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"
+            className="w-12 h-12 md:w-20 md:h-20 object-cover shrink-0 grow-0 rounded-full ring-4 ring-primary p-1 bg-white"
           />    
            <img
             src="IMG_8753.jpg"

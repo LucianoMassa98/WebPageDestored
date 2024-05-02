@@ -40,7 +40,7 @@ const Works = () => {
           </div>
           <div className="flex flex-col gap-4">
             <img
-              src="work3.png"
+              src="work5.JPEG"
               className="w-full h-56 object-cover rounded-3xl"
             />
             <p className="text-gray-500">Web App - Diciembre, 2023</p>
@@ -60,7 +60,7 @@ const Works = () => {
           </div>
           <div className="flex flex-col gap-4">
             <img
-              src="work5.png"
+              src="work3.JPEG"
               className="w-full h-56 object-cover rounded-3xl"
             />
             <p className="text-gray-500">Desktop & Web App - Noviembre, 2022</p>
