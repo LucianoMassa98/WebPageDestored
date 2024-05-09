@@ -1,134 +1,79 @@
-import React, { useState } from "react";
-// Icons
-import { RiMailFill, RiSmartphoneFill, RiMacFill, RiRobot2Fill } from "react-icons/ri";
-import { MdOutlineTextSnippet } from "react-icons/md";
-import { FaPhoneAlt, FaUser } from "react-icons/fa";
-import axios from 'axios';
+import { FaCheck } from "react-icons/fa6";
 
-const Services = () => {
+const Services = ({title, price, storage, users, sendUp}) => {  
+  const cardData = [{
+    image:'e',
+    title:'Paquete básico',
+    message:'Tiempo producción: 100hs',
+    price :'1000',
+    features:['Desarrollo de software a medida', 'Soporte técnico y diseño', 'Consultoría de software', '1 informe semanal (meet opcional) + 1 informe mensual escrito']
+  },
+  {
+    image:'d',
+    title:'Paquete Estándar',
+    message:'Tiempo producción: 100hs',
+    price :'1.500',
+    features:['Desarrollo de software a medida con funcionalidades adicionales', 'Consultoría de software', '+2 informe inter-mensual(meets opcionales)', '1 informe mensual escrito','Equipo +4 devs']
+  },
+  {
+    image:'b',
+    title:'Paquete Premium',
+    message:'Tiempo producción: 100hs',
+    price :'2500',
+    features:['Desarrollo de software a medida con características especiales', 'Diseño y soporte técnico avanzado, incluyendo asistencia prioritaria', 'Consultoría de software y team Leader','+3 informe mensual escrito y equipo de +5 its']
+  },
+  {
+    image:'x',
+    title:'Paquete personalizable',
+    message:'Proyectos específicos fuera de los paquetes de menor o mayor envergadura',
+    price :'',
+    features:['Chatbots y software por suscripción', 'Consultoría de software', 'Creación de productos digitales', 'Diseño de maquetas con Figma', 'Despliegue de software en la nube']
+  }]
 
-  const [post, setPost]= useState({
-     name:'',
-     phone:'',
-     email:'',
-     message:''
-  })
-
-  const handleInput = (event) => {
-    setPost({...post, [event.target.name]:event.target.value})
-  }
-
-  function handleSubmit(event){
-    event.preventDefault();
-    console.log(post)
-    //axios.post('', {post})
-    //.then(response=>console.log(response))
-    //.catch(err=>console.log(err))
-  }
-  
   return (
-    <div
-      id="services"
-      className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 p-8 md:p-12 xl:p-20"
-    >
-      <div className="flex flex-col gap-4">
-        <h1 className="text-[40px] font-bold">¿Cómo te podemos ayudar?</h1>
-        <p className="text-[20px] text-gray-500">
-        Por favor, proporciona tu dirección de correo electrónico para que podamos
-         ponernos en contacto contigo lo antes posible a través de uno de nuestros asesores.
-        </p>
-        <form className="w-full space-y-4"
-          onSubmit={handleSubmit} method="post">
-          <div className="flex space-x-4">
-          <div className="relative w-1/2">
-          <FaUser className="absolute top-1/2 -translate-y-1/2 left-2 text-gray-500 text-xl" />
-          <input
-              type="text"
-              onChange={handleInput}
-              name="name"
-              className="w-full block bg-gray-100 py-4 pl-10 pr-10 rounded-xl outline-none"
-              placeholder="Escriba su nombre completo"
-            />
-          </div>
-          <div className="relative w-1/2">
-          <FaPhoneAlt className="absolute top-1/2 -translate-y-1/2 left-2 text-gray-500 text-xl" />
-          <input
-              type="text"
-              onChange={handleInput}
-              name="phone"
-              className="w-full block bg-gray-100 py-4 pl-10 pr-10 rounded-xl outline-none"
-              placeholder="Escriba su teléfono"
-            />
-          </div>
-          </div>
-          <div className="relative">
-            <RiMailFill className="absolute top-1/2 -translate-y-1/2 left-2 text-gray-500 text-xl" />
-            <input
-              type="text"
-              onChange={handleInput}
-              name="email"
-              className="w-full block bg-gray-100 py-4 pl-10 pr-36 rounded-xl outline-none"
-              placeholder="Introduce tu dirección de correo electrónico"
-            />
-          </div>
-          <div className="relative">
-            <MdOutlineTextSnippet className="absolute top-1/4 left-2 text-gray-500 text-xl" />
-            <textarea
-              type="text"
-              onChange={handleInput}
-              name="message"
-              className="w-full block bg-gray-100 py-4 pl-10 pr-36 rounded-xl outline-none resize-none"
-              placeholder="Introduce tu mensaje"
-          ></textarea>
-          </div>
-          <div className="relative">
-          <button 
-              type="submit"
-              className="inline-block font-semibold py-4 px-6 bg-primary text-white rounded-xl"
-            >
-              Enviar
-            </button>
-          </div>
-        </form>
+    <div id="services" className='flex flex-col justify-center bg-white p-8'>
+       <div className="mb-2 mt-12 text-center">
+         <h1 className="text-[40px] text-center font-black">
+          Apartado de Precios
+         </h1>
+         <p className="text-xl text-gray-500 text-center">
+         Elige el plan perfecto para tus necesidades
+         </p>
+       </div>
+       <div className="flex flex-col gap-8 px-40 xl:flex-row">
+        {cardData.map((card, index)=>
+        <div key={index} className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
+           <h2 className="text-2xl font-bold text-left mt-3 mx-6">
+              {card.title}
+           </h2>
+           <p className="text-sm text-left mb-5 mx-6">
+              {card.message}
+           </p>
+           <div className="mx-6 flex justify-left items-left">
+               <p className="text-2xl font-bold">$</p>
+               <p className="text-2xl font-bold">{card.price}</p>
+               <p className="text-xl text-gray-400">/mes</p>
+           </div>
+           <button className="bg-[#9C1DD8] hover:text-[#00d9fa] hover:bg-gray-50 text-white
+           duration-150 rounded font-medium my-4 py-2 mx-6">
+           Agendar meet
+           </button>
+           <div className="text-left">
+           <p className="mx-8 font-medium pb-2 pt-3">Que Obtienes: </p>
+            {card.features.map((feature, index)=>(
+              <ul key={index} 
+                 className="space-y-3 mx-8">
+                <li className="flex  flex-col justify-left space-x-4 text-lg">
+                <FaCheck className="w-6 h-6 color-green"/>
+                <p className="text-gray-600">{feature}</p></li>
+              </ul>
+            ))}
+           </div>
+        </div>
+          )}
+       </div>
       </div>
-      {/* Services */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <div className="flex flex-col gap-2">
-          <div className="flex flex-wrap">
-          <RiMacFill className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-          <RiSmartphoneFill className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-          </div>
-          <h3 className="text-[20px] font-bold">App Web/Mobile/Desktop</h3>
-          <p className="text-gray-500">
-          Solucion personalizada para que se adapta a tu idea.
-          </p>
-        </div>
-        <div className="flex flex-col gap-2">
-          <RiRobot2Fill className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-          <h3 className="text-[20px] font-bold">ChatBot</h3>
-          <p className="text-gray-500">
-           Implementa tu Chatbot en Whatsapp, Facebook e Instagram.
-          </p>
-        </div>
-        <div className="flex flex-col gap-2">
-          <RiSmartphoneFill className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-          <h3 className="text-[20px] font-bold">Sistema de gestión</h3>
-          <p className="text-gray-500">
-            Diseña/Desarrolla software para la gestion de tu negocio.
-          </p>
-        </div>
-        <div className="flex flex-col gap-2">
-          <RiMacFill className="text-4xl p-2 bg-secondary text-primary box-content rounded-xl" />
-          <h3 className="text-[20px] font-bold">Soporte Técnico</h3>
-          <p className="text-gray-500">
-          Brindamos soporte técnico rápido y confiable para resolver tus problemas informáticos.
-          </p>
-        </div>
-
-      </div>
-    </div>
   );
-};
+}
 
 export default Services;
