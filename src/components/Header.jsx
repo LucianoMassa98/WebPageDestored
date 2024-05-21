@@ -33,6 +33,9 @@ const Header = () => {
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600">
           Productos
         </a>
+        <a href="#contactUs" className="text-slate-600 transition-colors hover:text-purple-600">
+          Contactános
+        </a>
       </nav>
       <button
         onClick={() => setShowMenu(!showMenu)}

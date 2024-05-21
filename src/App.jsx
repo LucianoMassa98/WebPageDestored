@@ -5,6 +5,9 @@ import Works from "./components/Works";
 import Reviews from "./components/Reviews";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+import 'semantic-ui-css/semantic.min.css';
+import './index.css';
 
 function App() {
   return (
@@ -13,6 +16,7 @@ function App() {
       <Hero />
       <Clients />
       <Works />
+      <Contact />
       <Reviews />
       <Services />
       <Footer />
