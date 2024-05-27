@@ -23,9 +23,7 @@ const Reviews = () => {
         </span>
       </div>
       <div className="flex flex-col items-center justify-center gap-8">
-        <div className="flex items-center justify-center gap-8 md:gap-12">
-
-         
+        <div className="flex items-center justify-center gap-8 md:gap-12">         
           <img
             src="IMG_8767.jpg"
             className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"

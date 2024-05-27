@@ -21,20 +21,20 @@ const Header = () => {
           showMenu ? "left-0" : "-left-full"
         } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500 z-50`}
       >
-        <a href="#home" className="text-slate-600 transition-colors hover:text-purple-600">
+        <a href="#home" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Home
         </a>
-        <a href="#aboutUs" className="text-slate-600 transition-colors hover:text-purple-600">
+        <a href="#aboutUs" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Nosotros
         </a>
-        <a href="#services" className="text-slate-600 transition-colors hover:text-purple-600">
+        <a href="#services" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Servicios
         </a>
-        <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600">
+        <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Productos
         </a>
-        <a href="#contactUs" className="text-slate-600 transition-colors hover:text-purple-600">
-          Contactános
+        <a href="#contactUs" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+          Contáctanos
         </a>
       </nav>
       <button
