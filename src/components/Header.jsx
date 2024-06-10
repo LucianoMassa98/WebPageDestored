@@ -39,7 +39,7 @@ const Header = () => {
       </nav>
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="xl:hidden text-2xl p-2"
+        className="xl:hidden text-2xl p-2 z-50"
       >
         {showMenu ? <RiCloseLine className="fixed" /> : <RiMenu3Fill />}
       </button>
