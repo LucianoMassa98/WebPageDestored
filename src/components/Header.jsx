@@ -33,7 +33,7 @@ const Header = () => {
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Productos
         </a>
-        <Link to ="/Contact" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <Link to ="/Contact" target="_blank" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Contáctanos
         </Link>
       </nav>
