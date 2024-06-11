@@ -8,19 +8,26 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Hero />
-      <Clients />
-      <Works />
-      <Contact />
-      <Reviews />
-      <Services />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Hero />
+            <Clients />
+            <Works />
+            <Reviews />
+            <Services />
+            <Footer />
+          </>
+        } />
+        <Route path="/Contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

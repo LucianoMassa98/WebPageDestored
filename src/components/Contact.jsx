@@ -106,15 +106,9 @@ const Contact = () => {
   
   return (
     <div id="contactUs" className="flex relative flex-col justify-center items-center px-16 py-20 min-h-[1324px] max-md:px-5">
-       <div className="absolute inset-0 bg-cover z-[-1]" style={{   background: `
-           linear-gradient(135deg, #0000 20.5%, #ffffff 0 29.5%, #0000 0) 0 16px,
-      linear-gradient(45deg, #0000 8%, #ffffff 0 17%, #0000 0 58%) 32px 0,
-      linear-gradient(135deg, #0000 8%, #ffffff 0 17%, #0000 0 58%, #ffffff 0 67%, #0000 0),
-      linear-gradient(45deg, #0000 8%, #ffffff 0 17%, #0000 0 58%, #ffffff 0 67%, #0000 0 83%, #ffffff 0 92%, #0000 0),
-      #f6f6fa
-    `,
-    backgroundSize: '64px 64px'}}></div>
-    <form className="flex relative flex-col mt-3.5 max-w-full w-[833px]" onSubmit={handleSubmit}>
+       <div className="absolute inset-y-32 inset-x-0 z-[-1] bg-repeat-space bg-[length:600px_700px]" style={{ 
+      backgroundImage: "url('/fondo3.png')" }}></div>
+    <form className="flex relative flex-col mt-3.5 max-w-full w-[833px] bg-white" onSubmit={handleSubmit}>
         <p className="self-center text-4xl font-semibold leading-10 text-center text-[#4B3F7D] max-md:max-w-full mt-1.5">
           Formulario de Requisitos para{" "}
         </p>
@@ -220,4 +214,13 @@ export default Contact;
 /*
 <div className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat" style={{ 
       backgroundImage: "url('/fondo.png')" }}></div>
+
+       <div className="absolute inset-0 bg-cover z-[-1]" style={{   background: `
+           linear-gradient(135deg, #0000 20.5%, #ffffff 0 29.5%, #0000 0) 0 16px,
+      linear-gradient(45deg, #0000 8%, #ffffff 0 17%, #0000 0 58%) 32px 0,
+      linear-gradient(135deg, #0000 8%, #ffffff 0 17%, #0000 0 58%, #ffffff 0 67%, #0000 0),
+      linear-gradient(45deg, #0000 8%, #ffffff 0 17%, #0000 0 58%, #ffffff 0 67%, #0000 0 83%, #ffffff 0 92%, #0000 0),
+      #f6f6fa
+    `,
+    backgroundSize: '64px 64px'}}></div>
       */ 

@@ -2,11 +2,11 @@ import React, { useState } from "react";
 // Icons
 import { FaWhatsapp } from "react-icons/fa";
 import {
-  RiCheckboxBlankCircleFill,
   RiMenu3Fill,
   RiCloseLine,
 } from "react-icons/ri";
 
+import {Link} from "react-router-dom"
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -21,9 +21,9 @@ const Header = () => {
           showMenu ? "left-0" : "-left-full"
         } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500 z-50`}
       >
-        <a href="#home" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <Link to ="/" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Home
-        </a>
+        </Link>
         <a href="#aboutUs" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Nosotros
         </a>
@@ -33,9 +33,9 @@ const Header = () => {
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Productos
         </a>
-        <a href="#contactUs" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <Link to ="/Contact" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Contáctanos
-        </a>
+        </Link>
       </nav>
       <button
         onClick={() => setShowMenu(!showMenu)}
@@ -44,7 +44,7 @@ const Header = () => {
         {showMenu ? <RiCloseLine className="fixed" /> : <RiMenu3Fill />}
       </button>
              <a href="https://api.whatsapp.com/send?phone=5218184676497&text=Hola bienvenido!"
-                className="fixed w-16 h-16 bottom-4 right-4 bg-[#0df053] shadow-lg hover:bg-green-600 text-white p-3 rounded-full flex items-center justify-center z-[100]"
+                className="fixed w-16 h-16 bottom-4 right-4 bg-[#0df053] shadow-lg hover:bg-green-600 text-white hover:text-white p-3 rounded-full flex items-center justify-center z-[100]"
                 target="_blank" aria-label="WhatsApp">
                  <FaWhatsapp size={36}/>
               </a>
