@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
+import Wsp from './components/wsp/wsp';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Hero />
             <Clients />
             <Works />
+            <Wsp />
             <Reviews />
             <Services />
             <Footer />

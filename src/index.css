@@ -1,11 +1,132 @@
+@import 'boxicons';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
 html {
     scroll-behavior: smooth;
+    color: black;
   }
 
-  ::-webkit-scrollbar {
-    width: 0px;
+
+  /*scroll bar*/
+html::-webkit-scrollbar{
+  width: 0.5rem;
+
+}
+
+html::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: #9333ea;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*Para el titulo*/
+@keyframes fadeIn-title {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/*Para el subtitulo*/
+
+@keyframes fadeIn-subtitle {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+
+/*Duracion de cada animacion*/
+.show {
+  animation: fadeIn-title 1s;
+}
+
+.show-2{
+  animation: fadeIn-subtitle 1s;
+}
+
+.show-3{
+  animation: fadeIn 4s;
+}
+
+
+
+/*Para el efecto del zoom en la imagen de Works.jsx*/
+.zoomable {
+  transition: transform 0.3s ease;
+  border-radius: 1.5rem; 
+}
+
+.zoomable:hover {
+  transform: scale(1.1);
+  border-radius: 1.5rem; 
+}
+
+.zoom-container {
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+
+
+
+
+
+
+/*Pantallas pequeñas*/
+@media (min-width: 768px) {
+  .logo-image {
+    max-width: 200px; 
+  }
+  .bxl-whatsapp{
+    font-size: 50px;
+  }
+ .title-css{
+  font-size: 40px;
+ }
+
+
+
+}
+
+/*Pantallas moviles*/
+@media (min-width: 320px) and (max-width: 768px) {
+  .logo-image {
+    max-width: 200px; 
+  }
+  .bxl-whatsapp{
+   font-size: 50px;
+  }
+  .title-css{
+    font-size: 40px;
+   }
+ 
+}

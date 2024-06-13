@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 //<blockquote className="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C2kSJdxu3Mr/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style={{ background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '540px', minWidth: '326px', padding: 0, width: '99.375%', width: '-webkit-calc(100% - 2px)', width: 'calc(100% - 2px)' }}></blockquote><script async src="//www.instagram.com/embed.js"></script>
 import {
@@ -9,9 +9,12 @@ import {
 
 const Hero = () => {  
 
-  
-  
+  const [showText, setShowText] = useState(false); // Estado para controlar la visibilidad del texto, es para la animacion del movimiento inicial
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    setShowText(true); // Cuando el componente se monta, establece showText en true para mostrar el texto, es para la animacion de movimiento inicial
+  }, []);
 
   const openInstagramVideo = () => {
    console.log(showModal)
@@ -29,9 +32,12 @@ const Hero = () => {
       {/* Information */}
       <div className="md:col-span-5 flex items-center justify-center p-8 xl:p-16">
         <div className="flex flex-col gap-8">
-          <h1 className="text-5xl xl:text-7xl font-bold xl:leading-[7.5rem]">
+        <h1 className="text-5xl xl:text-7xl font-bold xl:leading-[7.5rem] "></h1>
+        <h1 className={`text-5xl xl:text-7xl font-bold xl:leading-[7.5rem] title-css ${showText ? "show" : ""
+                }`}>
             Diseño & Desarrollo Productos{" "}
-            <span className="text-primary py-2 px-6 border-8 border-primary relative inline-block">
+            <span className={`text-primary py-2 px-6 border-8 border-primary relative inline-block ${showText ? "show-2" : ""
+              }`}>
               Digitales
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -left-5 -top-5 p-2 bg-primary rounded-full box-content" />
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -right-5 -top-5 p-2 bg-primary rounded-full box-content" />
@@ -39,17 +45,19 @@ const Hero = () => {
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -left-5 -bottom-5 p-2 bg-primary rounded-full box-content" />
             </span>
           </h1>
-          <p className="text-gray-500 text-2xl leading-[2.5rem]">
+          <p className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
+              }`}>
           Encontrar soluciones que se adapten a las necesidades únicas de tu empresa, negocio o idea es nuestra prioridad.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <a href="#services">
-              <button className="w-full xl:w-auto bg-primary text-white py-2 px-8 rounded-xl text-xl">
+            <button
+              className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
+                }`}>
               Contáctanos
               </button>
             </a>
-            <button className="w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl"
-             onClick={openInstagramVideo} >
+            <button className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`}  onClick={openInstagramVideo}>
               <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
               Mira nuestro <br /> Vídeo de introducción
             </button>
