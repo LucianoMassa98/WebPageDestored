@@ -76,7 +76,7 @@ const Hero = () => {
         {/* Content image */}
         <div>
           <img
-            src="hero.png"
+            src="https://www.expacioweb.com/wp-content/uploads/2022/12/importancia-diseno-web.jpg"
             className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] object-cover xl:-mt-28"
           />
           <div className="relative bg-white shadow-xl rounded-lg p-2 flex flex-col justify-center gap-1 max-w-[250px] mx-auto -mt-12">
@@ -99,6 +99,8 @@ const Hero = () => {
             <div className="absolute -right-12 -bottom-12 -z-10">
               <div className="relative">
                 <RiCheckboxBlankCircleFill className="text-primary text-8xl" />
+                33
+                21
                 <div className="absolute left-0 top-0 bg-white w-14 h-14"></div>
               </div>
             </div>
@@ -126,3 +128,6 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
