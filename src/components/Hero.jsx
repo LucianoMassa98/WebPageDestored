@@ -76,7 +76,7 @@ const Hero = () => {
         {/* Content image */}
         <div>
           <img
-            src="https://www.expacioweb.com/wp-content/uploads/2022/12/importancia-diseno-web.jpg"
+            src="hero.png"
             className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] object-cover xl:-mt-28"
           />
           <div className="relative bg-white shadow-xl rounded-lg p-2 flex flex-col justify-center gap-1 max-w-[250px] mx-auto -mt-12">
