@@ -94,7 +94,7 @@ const Hero = () => {
               <RiStarFill className="text-primary" /> Chatbot
             </div>
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Soporte Ténico
+              <RiStarFill className="text-primary" /> Soporte Técnico
             </div>
             <div className="absolute -right-12 -bottom-12 -z-10">
               <div className="relative">
