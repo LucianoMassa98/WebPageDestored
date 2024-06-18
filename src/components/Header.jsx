@@ -36,6 +36,10 @@ const Header = () => {
         <Link to ="/Contact" target="_blank" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
           Contáctanos
         </Link>
+        <a href="/WebPage-Destored-Maquetado/index.html" target="_blank" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        WebPage
+        </a>
+       
       </nav>
       <button
         onClick={() => setShowMenu(!showMenu)}

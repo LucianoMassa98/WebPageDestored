@@ -3,26 +3,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 html,
 body {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 @media (max-width: 768px) {
-
     html,
     body {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
 @media (max-width: 320px) {
-
     html,
     body {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -128,10 +127,8 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.presentacion-contenido>h2,
-.presentacion-contenido>p {
-    margin: 2%;
-    padding: 2%;
+.presentacion-contenido>h2{
+    margin: 0% 0% 3% 0%;
 }
 
 /* Soluciones */
@@ -299,7 +296,7 @@ footer {
 .pie-pagina {
     padding: 3% 0% 10% 7%;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
 }
 

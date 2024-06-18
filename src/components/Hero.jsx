@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 //<blockquote className="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C2kSJdxu3Mr/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style={{ background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '540px', minWidth: '326px', padding: 0, width: '99.375%', width: '-webkit-calc(100% - 2px)', width: 'calc(100% - 2px)' }}></blockquote><script async src="//www.instagram.com/embed.js"></script>
 import {
@@ -9,12 +9,9 @@ import {
 
 const Hero = () => {  
 
-  const [showText, setShowText] = useState(false); // Estado para controlar la visibilidad del texto, es para la animacion del movimiento inicial
+  
+  
   const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    setShowText(true); // Cuando el componente se monta, establece showText en true para mostrar el texto, es para la animacion de movimiento inicial
-  }, []);
 
   const openInstagramVideo = () => {
    console.log(showModal)
@@ -32,12 +29,9 @@ const Hero = () => {
       {/* Information */}
       <div className="md:col-span-5 flex items-center justify-center p-8 xl:p-16">
         <div className="flex flex-col gap-8">
-        <h1 className="text-5xl xl:text-7xl font-bold xl:leading-[7.5rem] "></h1>
-        <h1 className={`text-5xl xl:text-7xl font-bold xl:leading-[7.5rem] title-css ${showText ? "show" : ""
-                }`}>
+          <h1 className="text-5xl xl:text-7xl font-bold xl:leading-[7.5rem]">
             Diseño & Desarrollo Productos{" "}
-            <span className={`text-primary py-2 px-6 border-8 border-primary relative inline-block ${showText ? "show-2" : ""
-              }`}>
+            <span className="text-primary py-2 px-6 border-8 border-primary relative inline-block">
               Digitales
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -left-5 -top-5 p-2 bg-primary rounded-full box-content" />
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -right-5 -top-5 p-2 bg-primary rounded-full box-content" />
@@ -45,19 +39,17 @@ const Hero = () => {
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -left-5 -bottom-5 p-2 bg-primary rounded-full box-content" />
             </span>
           </h1>
-          <p className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
-              }`}>
+          <p className="text-gray-500 text-2xl leading-[2.5rem]">
           Encontrar soluciones que se adapten a las necesidades únicas de tu empresa, negocio o idea es nuestra prioridad.
           </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <a href="#services">
-            <button
-              className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
-                }`}>
+              <button className="w-full xl:w-auto bg-primary text-white py-2 px-8 rounded-xl text-xl">
               Contáctanos
               </button>
             </a>
-            <button className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`}  onClick={openInstagramVideo}>
+            <button className="w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl"
+             onClick={openInstagramVideo} >
               <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
               Mira nuestro <br /> Vídeo de introducción
             </button>
@@ -84,7 +76,7 @@ const Hero = () => {
         {/* Content image */}
         <div>
           <img
-            src="hero.png"
+            src="https://www.expacioweb.com/wp-content/uploads/2022/12/importancia-diseno-web.jpg"
             className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] object-cover xl:-mt-28"
           />
           <div className="relative bg-white shadow-xl rounded-lg p-2 flex flex-col justify-center gap-1 max-w-[250px] mx-auto -mt-12">
@@ -102,11 +94,13 @@ const Hero = () => {
               <RiStarFill className="text-primary" /> Chatbot
             </div>
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Soporte Ténico
+              <RiStarFill className="text-primary" /> Soporte Técnico
             </div>
             <div className="absolute -right-12 -bottom-12 -z-10">
               <div className="relative">
                 <RiCheckboxBlankCircleFill className="text-primary text-8xl" />
+                33
+                21
                 <div className="absolute left-0 top-0 bg-white w-14 h-14"></div>
               </div>
             </div>
@@ -134,3 +128,6 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
