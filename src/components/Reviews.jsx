@@ -13,38 +13,44 @@ const Reviews = () => {
           <RiDoubleQuotesL />
         </span>
         <p className="max-w-2xl text-center text-gray-500">
-        Facilitar la Transformación Digital: Nos dedicamos a facilitar
-         la transformación digital de empresas y organizaciones mediante la
-          entrega de soluciones de software innovadoras y servicios de soporte
-           técnico de calidad.
+          Facilitar la Transformación Digital: Nos dedicamos a facilitar la transformación digital de empresas y organizaciones mediante la entrega de soluciones de software innovadoras y servicios de soporte técnico de calidad.
         </p>
         <span className="text-5xl text-primary">
           <RiDoubleQuotesR />
         </span>
       </div>
       <div className="flex flex-col items-center justify-center gap-8">
-        <div className="flex items-center justify-center gap-8 md:gap-12">         
-          <img
-            src="IMG_8767.jpg"
-            className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"
-          />
-           <img
-            src="IMG_8823.jpg"
-            className="w-12 h-12 md:w-20 md:h-20 object-cover shrink-0 grow-0 rounded-full ring-4 ring-primary p-1 bg-white"
-          />
-           <img
-            src="IMG_8824.jpg"
-            className="w-12 h-12 md:w-20 md:h-20 object-cover shrink-0 grow-0 rounded-full ring-4 ring-primary p-1 bg-white"
-          />    
-           <img
-            src="IMG_8753.jpg"
-            className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"
-          />
-           <img
-            src="IMG_8743.jpg"
-            className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"
-          />
-
+        <div className="flex items-center justify-center gap-8 md:gap-12">
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="IMG_8767.jpg"
+              className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"
+            />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="IMG_8823.jpg"
+              className="w-12 h-12 md:w-20 md:h-20 object-cover shrink-0 grow-0 rounded-full ring-4 ring-primary p-1 bg-white"
+            />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="IMG_8824.jpg"
+              className="w-12 h-12 md:w-20 md:h-20 object-cover shrink-0 grow-0 rounded-full ring-4 ring-primary p-1 bg-white"
+            />
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="IMG_8753.jpg"
+              className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"
+            />
+          </a>
+          <a href="https://www.instagram.com">
+            <img
+              src="IMG_8743.jpg"
+              className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white"
+            />
+          </a>
         </div>
         <div>
           <h3 className="text-center text-[24px] font-bold">#DestoTeam</h3>
