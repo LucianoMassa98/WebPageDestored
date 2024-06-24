@@ -6,27 +6,30 @@ import Reviews from "./components/Reviews";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import 'semantic-ui-css/semantic.min.css';
-import './index.css';
-import Wsp from './components/wsp/wsp';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import "semantic-ui-css/semantic.min.css";
+import "./index.css";
+import Wsp from "./components/wsp/wsp";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={
-          <>
-            <Header />
-            <Hero />
-            <Clients />
-            <Works />
-            <Wsp />
-            <Reviews />
-            <Services />
-            <Footer />
-          </>
-        } />
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Hero />
+              <Clients />
+              <Works />
+              <Wsp />
+              <Reviews />
+              <Services />
+              <Footer />
+            </>
+          }
+        />
         <Route path="/Contact" element={<Contact />} />
       </Routes>
     </Router>
