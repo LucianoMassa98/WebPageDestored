@@ -17,33 +17,32 @@ const Header = () => {
           <img className="" src="/Logo Destored.svg" alt="Icono personalizado"/>
       </div>
       <nav
-        className={`fixed bg-white w-[80%] md:w-[40%] xl:w-full h-full ${
+        className={`bg-white z-10 fixed w-[100%] md:w-[100%] xl:w-full h-full ${
           showMenu ? "left-0" : "-left-full"
-        } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500 z-50`}
+        } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500 `}
       >
-        <Link to ="/" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <Link to ="/" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Home
         </Link>
-        <a href="#aboutUs" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <a href="#aboutUs" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Nosotros
         </a>
-        <a href="#services" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <a href="#services" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Servicios
         </a>
-        <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Productos
         </a>
-        <Link to ="/Contact" target="_blank" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <Link to ="/Contact" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Contáctanos
         </Link>
-        <a href="/WebPage-Destored-Maquetado/index.html" target="_blank" className="text-slate-600 transition-colors hover:text-purple-600 text-lg">
+        <a href="/WebPage/index.html" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
         WebPage
         </a>
-       
       </nav>
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="xl:hidden text-2xl p-2 z-50"
+        className="xl:hidden text-3xl p-2 z-10"
       >
         {showMenu ? <RiCloseLine className="fixed" /> : <RiMenu3Fill />}
       </button>

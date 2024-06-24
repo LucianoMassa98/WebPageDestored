@@ -1,0 +1,42 @@
+.boton-flotante {
+    position: fixed;
+    /* top: 5%; */
+    bottom: 5%;
+    right: 5%;
+    background-color: rgb(79, 70, 229);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .boton-flotante a {
+    color: white;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    padding: 14px 17px;
+    margin: 0 auto;
+  }
+
+  .boton-flotante a:hover{
+    background-color: white;
+    color: rgb(79, 70, 229);
+    font-weight: bold;
+  }
+
+  /* EL boton totalmente redondo */  
+  
+  /* .boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3f51b5;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  } */

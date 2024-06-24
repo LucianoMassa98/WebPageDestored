@@ -12,6 +12,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     html,
     body {
         font-size: 20px;
@@ -19,6 +20,7 @@ body {
 }
 
 @media (max-width: 320px) {
+
     html,
     body {
         font-size: 16px;
@@ -91,6 +93,8 @@ body {
 }
 
 .introducción-btn {
+    display: flex;
+    gap: 10%;
     padding-left: 5%;
     padding-bottom: 5%;
 
@@ -108,7 +112,6 @@ body {
 }
 
 /* Presentación */
-
 .contenedor-presentacion {
     width: 100%;
     position: relative;
@@ -127,7 +130,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.presentacion-contenido>h2{
+.presentacion-contenido>h2 {
     margin: 0% 0% 3% 0%;
 }
 
@@ -168,7 +171,6 @@ body {
 }
 
 /* Servicios */
-
 .contenedor-servicios {
     width: 100%;
     background-color: white;
@@ -177,23 +179,8 @@ body {
 
 .contenedor-servicios>h3 {
     padding: 7% 0%;
-    /* animation: titulo 5s ease infinite; */
 }
 
-/* @keyframes titulo {
-    0% {
-        color: grey;
-    }
-
-    50% {
-        color: white;
-    }
-
-    100% {
-        font-size:xx-large;
-        color: black;
-    }
-} */
 
 .titulo-btnA,
 .titulo-btnB,
@@ -240,51 +227,26 @@ body {
     animation-name: transicion-texto;
     animation-duration: 3s;
     animation-timing-function: ease;
-
     transition: all 5s ease 1s;
 }
 
 @keyframes transicion-texto {
     0% {
         opacity: 0;
-        /* width: 50%; */
-        /* color: white; */
-        /* background-color: white; */
     }
 
     50% {
         opacity: 0.5;
-        /* width: 75%; */
-        /* color: grey; */
-        /* background-color: rgb(228, 228, 228); */
     }
 
     100% {
         opacity: 1;
-        /* width: 100%; */
-        /* color: black; */
-        /* background-color: white; */
     }
 }
 
 .descripcion.visible {
     display: block;
 }
-
-/* .transicion-parrafo {
-    animation: 3.5s cubic-bezier(.25, 0.5, .30, 1.14) transicion-parrafo both;
-}
-
-@keyframes transicion-parrafo {
-    from {
-        clip-path: inset(0 0 100% 0);
-    }
-
-    to {
-        clip-path: inset(0 0 0 0);
-    }
-} */
-
 
 /* pie de pagina */
 
@@ -304,10 +266,31 @@ footer {
     width: 100%;
     height: auto;
     padding: .5%;
-
 }
 
 .pie-pagina>p {
     padding-left: 1%;
-    font-size: 1.19rem; 
+    font-size: 1.19rem;
+}
+
+
+/* Boton Flotante - Regreso a Inicio  */
+.boton-flotante {
+    background-color: #3d66b3;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 7.3rem;
+    height: 2.33rem;
+}
+
+.boton-flotante a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.boton-flotante a:hover {
+    font-size: larger;
 }

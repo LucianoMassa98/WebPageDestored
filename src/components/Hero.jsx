@@ -7,18 +7,18 @@ import {
   RiStarFill,
 } from "react-icons/ri";
 
-const Hero = () => {  
+const Hero = () => {
 
   const [showText, setShowText] = useState(false); // Estado para controlar la visibilidad del texto, es para la animacion del movimiento inicial
 
   useEffect(() => {
     setShowText(true); // Cuando el componente se monta, establece showText en true para mostrar el texto, es para la animacion de movimiento inicial
   }, []);
-  
+
   const [showModal, setShowModal] = useState(false);
 
   const openInstagramVideo = () => {
-   console.log(showModal)
+    console.log(showModal)
     setShowModal(true);
   };
 
@@ -34,14 +34,14 @@ const Hero = () => {
       <div className="md:col-span-5 flex items-center justify-center p-8 xl:p-16">
         <div className="flex flex-col gap-8">
           <h1 className="text-5xl xl:text-7xl font-bold xl:leading-[7.5rem]"> <h1
-              className={`text-5xl xl:text-7xl font-bold xl:leading-[7.5rem] title-css ${showText ? "show" : ""
-                }`}
-            >
-              Diseño & Desarrollo Productos{" "}
-            </h1>
+            className={`text-5xl xl:text-7xl font-bold xl:leading-[7.5rem] title-css ${showText ? "show" : ""
+              }`}
+          >
+            Diseño & Desarrollo Productos{" "}
+          </h1>
             <span className={`text-primary py-2 px-6 border-8 border-primary relative inline-block ${showText ? "show-2" : ""
               }`}>
-           Digitales
+              Digitales
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -left-5 -top-5 p-2 bg-primary rounded-full box-content" />
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -right-5 -top-5 p-2 bg-primary rounded-full box-content" />
               <RiCheckboxBlankCircleFill className="text-white text-base absolute -right-5 -bottom-5 p-2 bg-primary rounded-full box-content" />
@@ -55,31 +55,61 @@ const Hero = () => {
           </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <a href="#services">
-            <button
-              className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
-                }`}>
-              Contáctanos
-            </button>
+              <button
+                className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
+                  }`}>
+                Contáctanos
+              </button>
             </a>
-            <button className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`} onClick={openInstagramVideo}>
+            <button
+              className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`}
+              onClick={openInstagramVideo}
+            >
+              <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
+              Mira nuestro <br /> Vídeo de introducción
+            </button>
+
+            {showModal && (
+              <div className="fixed inset-0 z-10 overflow-auto bg-black bg-opacity-80 flex items-center justify-center">
+                <div className="bg-white p-5 border border-gray-400 rounded-lg w-11/12 sm:w-3/4 md:w-2/3 lg:max-w-md m-4">
+                  <span
+                    className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black cursor-pointer"
+                    onClick={closeModal}
+                  >
+                    &times;
+                  </span>
+                  <iframe
+                    className="w-full h-screen"
+                    src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    allowTransparency="true"
+                    style={{ maxWidth: '100%', maxHeight: '700px' }} // Consider adjusting this based on content and design needs0
+                  ></iframe>
+                </div>
+              </div>
+            )}
+            {/* boton anterior */}
+            {/* <button className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`} onClick={openInstagramVideo}>
               <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
               Mira nuestro <br /> Vídeo de introducción
             </button>
             {showModal && (
               <div className="fixed inset-0 z-10 overflow-auto bg-black bg-opacity-40 flex items-center justify-center">
-              <div className="bg-white p-5 border border-gray-400 rounded-lg w-11/12 sm:w-3/4 md:w-2/3 lg:max-w-md m-4">
-              <span className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black cursor-pointer" onClick={closeModal}>&times;</span>
-              <iframe
-              className="w-full h-auto"
-              src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com"
-              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowfullscreen
-              allowTransparency="true"
-              style={{ minHeight: '310px' }} // Consider adjusting this based on content and design needs
-              ></iframe>
+                <div className="bg-white p-5 border border-gray-400 rounded-lg w-11/12 sm:w-3/4 md:w-2/3 lg:max-w-md m-4">
+                  <span className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black cursor-pointer" onClick={closeModal}>&times;</span>
+                  <iframe
+                    className="w-full h-auto"
+                    src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com"
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    allowTransparency="true"
+                    style={{ minHeight: '550px' }} // Consider adjusting this based on content and design needs
+                  ></iframe>
+                </div>
               </div>
-              </div>
-             )}
+            )} */}
           </div>
         </div>
       </div>
@@ -92,7 +122,7 @@ const Hero = () => {
             className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] object-cover xl:-mt-28"
           />
           <div className="relative bg-white shadow-xl rounded-lg p-2 flex flex-col justify-center gap-1 max-w-[250px] mx-auto -mt-12">
-            
+
             <h2 className="text-xl font-bold tracking-[1px] text-gray-800">
               Productos/Servicios
             </h2>
