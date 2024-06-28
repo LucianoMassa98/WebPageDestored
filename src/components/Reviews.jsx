@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 
 const Reviews = () => {
   const teamMembers = [
-    { image: 'IMG_8767.jpg', name: 'John Doe', instagram: 'https://www.instagram.com/johndoe' },
-    { image: 'IMG_8823.jpg', name: 'Jane Smith', instagram: 'https://www.instagram.com/janesmith' },
-    { image: 'IMG_8824.jpg', name: 'Alice Johnson', instagram: 'https://www.instagram.com/alicejohnson' },
-    { image: 'IMG_8753.jpg', name: 'Bob Brown', instagram: 'https://www.instagram.com/bobbrown' },
-    { image: 'IMG_8743.jpg', name: 'Charlie Davis', instagram: 'https://www.instagram.com/charliedavis' },
+    { image: 'IMG_8792.jpg', name: 'Martin Guevara', instagram: 'https://www.instagram.com/martin_guevara390045627919/' },
+    { image: 'IMG_8823.jpg', name: 'Ramiro Massa', instagram: 'https://www.instagram.com/ramibocajr/' },
+    { image: 'IMG_8824.jpg', name: 'Luciano Massa', instagram: 'https://www.instagram.com/lucianomassa98/' },
+    { image: 'IMG_8744.jpg', name: 'Agustin Leiva', instagram: 'https://www.instagram.com/agus_leiva_25/' },
+    { image: 'IMG_8743.jpg', name: 'Agustin Massa', instagram: 'https://www.instagram.com/ma.agustin_/' },
+    { image: 'IMG_8743.jpg', name: 'Braian Vargas', instagram: 'https://www.instagram.com/braian_gd/' },
     // Add more team members as needed
   ];
 

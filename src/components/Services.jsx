@@ -62,10 +62,10 @@ const Services = () => {
               <span className="text-2xl font-bold">{card.price}</span>
               <span className="text-xl font-normal text-gray-400"> US/mes</span>
             </p>
-            <button className="w-full block bg-[#9C1DD8] hover:text-[#00d9fa] hover:bg-gray-50 text-white
-           duration-150 rounded font-medium px-12 py-2 mt-8 mb-4">
+            <a href="https://calendar.app.google/yda9BeiMuCzenjVZ8" target="_blank" rel="noopener noreferrer" className="w-full block bg-[#9C1DD8] hover:text-[#00d9fa] hover:bg-gray-50 text-white
+           duration-150 rounded font-medium px-12 py-2 mt-8 mb-4 text-center">
               Agendar meet
-            </button>
+            </a>
             <div className="text-left mx-4 flex-1">
               <p className="font-medium pb-2 pt-3">Que Obtienes: </p>
               {card.features.map((feature, index) => (
