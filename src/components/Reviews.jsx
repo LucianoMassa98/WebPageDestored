@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 
 const Reviews = () => {
   const teamMembers = [
-    { image: 'IMG_8792.jpg', name: 'Martin Guevara', instagram: 'https://www.instagram.com/martin_guevara390045627919/' },
-    { image: 'IMG_8823.jpg', name: 'Ramiro Massa', instagram: 'https://www.instagram.com/ramibocajr/' },
-    { image: 'IMG_8824.jpg', name: 'Luciano Massa', instagram: 'https://www.instagram.com/lucianomassa98/' },
-    { image: 'IMG_8744.jpg', name: 'Agustin Leiva', instagram: 'https://www.instagram.com/agus_leiva_25/' },
-    { image: 'IMG_8743.jpg', name: 'Agustin Massa', instagram: 'https://www.instagram.com/ma.agustin_/' },
-    { image: 'IMG_8743.jpg', name: 'Braian Vargas', instagram: 'https://www.instagram.com/braian_gd/' },
+    { image: 'IMG_8792.JPG', name: 'Martin Guevara', instagram: 'https://www.instagram.com/martin_guevara390045627919/' },
+    { image: 'IMG_8823.JPG', name: 'Ramiro Massa', instagram: 'https://www.instagram.com/ramibocajr/' },
+    { image: 'IMG_8824.JPG', name: 'Luciano Massa', instagram: 'https://www.instagram.com/lucianomassa98/' },
+    { image: 'IMG_8744.JPG', name: 'Agustin Leiva', instagram: 'https://www.instagram.com/agus_leiva_25/' },
+    { image: 'IMG_8743.JPG', name: 'Agustin Massa', instagram: 'https://www.instagram.com/ma.agustin_/' },
+    { image: 'IMG_8743.JPG', name: 'Braian Vargas', instagram: 'https://www.instagram.com/braian_gd/' },
     // Add more team members as needed
   ];
 
