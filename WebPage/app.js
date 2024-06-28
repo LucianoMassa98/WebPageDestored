@@ -1,35 +1,3 @@
-// Funciones para mostrar Servicios
-// function mostrarDescripcionA(){
-//     var descripcion = document.getElementById("descripcionA");
-//     descripcion.style.display === "none" ? descripcion.style.display = "block" : descripcion.style.display = "none";
-// }
-
-// function mostrarDescripcionE(){
-//     var descripcion = document.getElementById("descripcionE");
-//     if (descripcion.style.display === "none") {
-//         descripcion.style.display = "block";
-//     } else {
-//         descripcion.style.display = "none";
-//     }
-// }
-
-// Opacidad del párrafo
-// var parrafo = document.getElementById("descripcionA");
-// parrafo.style.opacity = 0; // Inicializa la opacidad en 0
-
-// document.getElementById("descripcionBtn").addEventListener("click", function() {
-//   var opacity = 0;
-//   var interval = setInterval(function() {
-//     opacity += 0.1;
-//     parrafo.style.opacity = opacity;
-//     if (opacity >= 1) {
-//       clearInterval(interval);
-//     }
-//   }, 50); // Cambia la opacidad cada 50 milisegundos
-// });
-
-
-
 // Mostrar la descripcion en los Servicios Ofrecidos
 function mostrarDescripcionA() {
   var descripcion = document.getElementById("descripcionA");

@@ -1,0 +1,72 @@
+.logo1 {
+    animation: circle 20s linear infinite;
+    position: relative;
+    top: 50%; /*ajusta la posición inicial del logo  */
+    left: 50%; /*ajusta la posición inicial del logo */
+    transform: translate(-50%, -50%); /*centra el logo en su posición inicial*/
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.logo2 {
+    animation: circle 20s linear infinite alternate;
+    position: relative;
+    top: 50%; /*ajusta la posición inicial del logo  */
+    left: 50%; /*ajusta la posición inicial del logo */
+    
+    transform: translate(-50%, -50%); /*centra el logo en su posición inicial*/
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.logo3 {
+    animation: circle 20s linear infinite reverse;
+    position: relative;
+    top: 50%; /*ajusta la posición inicial del logo  */
+    left: 50%; /*ajusta la posición inicial del logo */
+    transform: translate(-50%, -50%); /*centra el logo en su posición inicial*/
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.logo4 {
+    animation: circle 20s linear infinite alternate-reverse;
+    position: relative;
+    top: 50%; /*ajusta la posición inicial del logo  */
+    left: 50%; /*ajusta la posición inicial del logo */
+    transform: translate(-50%, -50%); /*centra el logo en su posición inicial*/
+}
+
+@keyframes circle {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
