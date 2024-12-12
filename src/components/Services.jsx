@@ -3,45 +3,83 @@ import React, { useState } from 'react';
 
 const Services = () => {
 
-  const cardData = [{
-    image: 'e',
-    title: 'Paquete básico',
-    message: 'Tiempo producción: 100hs',
-    price: '1.000',
-    features: ['Desarrollo de software a medida', 'Soporte técnico y diseño', 'Consultoría de software', '1 informe semanal (meet opcional) + 1 informe mensual escrito']
-  },
-  {
-    image: 'd',
-    title: 'Paquete Estándar',
-    message: 'Tiempo producción: 100hs',
-    price: '1.500',
-    features: ['Desarrollo de software a medida con funcionalidades adicionales', 'Consultoría de software', '+2 informe inter-mensual(meets opcionales)', '1 informe mensual escrito', 'Equipo +4 devs']
-  },
-  {
-    image: 'b',
-    title: 'Paquete Premium',
-    message: 'Tiempo producción: 100hs',
-    price: '2.500',
-    features: ['Desarrollo de software a medida con características especiales', 'Diseño y soporte técnico avanzado, incluyendo asistencia prioritaria', 'Consultoría de software y team Leader', '+3 informe mensual escrito y equipo de +5 its']
-  },
-  {
-    image: 'x',
-    title: 'Paquete personalizable',
-    message: 'Proyectos específicos fuera de los paquetes de menor o mayor envergadura',
-    price: '',
-    features: ['Chatbots y software por suscripción', 'Consultoría de software', 'Creación de productos digitales', 'Diseño de maquetas con Figma', 'Despliegue de software en la nube']
-  }]
+
+
+        // Descuento 50%  para suscripcion de stakeholder para los produt owners  y codigo de referidos (descuento 10%) para ganar 25usd
+
+  const cardData = [
+    {
+      image: 'e',
+      title: 'Product Owner',
+      message: 'Lidera proyectos, prioriza objetivos y alinea equipos para garantizar el éxito del producto/servicio haciendo uso de la metodología Scrum',
+      price: 'Gratis',
+      features: [
+        
+        'Entrevista técnica',
+        'Acceso a nuevas oportunidades laborales',
+        'Beneficios exclusivos para miembros',
+        'Products Owners: 2'
+      ]
+    },
+    {
+      image: 'd',
+      title: 'Scrum Master',
+      message: 'Optimiza procesos ágiles, potencia la productividad y fomenta la mejora continua.',
+      price: 'Gratis',
+      features: [
+        
+        'Entrevista técnica',
+        'Acceso a nuevas oportunidades laborales',
+        'Beneficios exclusivos para miembros',
+        'Product Masters: 3'
+      ]
+    },
+    {
+      image: 'x',
+      title: 'Otros Roles',
+      message: 'Únete como colaborador y aporta ideas, visión o habilidades al desarrollo de proyectos.',
+      price: 'Challenge Ingreso',
+      features: [
+        'Entrevista técnica',
+        'Acceso a nuevas oportunidades laborales',
+        'Beneficios exclusivos para miembros',
+        'Diseñadores: 2',
+        'QaS: 2',
+        'Programadores: 25',
+        'Vendedores online: 2',
+        'Marketers y publicistas: 3',
+        'Analistas de datos: 1',
+        'Creadores de contenido: 2',
+        'DevOps: 3'
+      ]
+    },
+    {
+      image: 'b',
+      title: 'Stakeholder',
+      message: 'Contribuye a la toma de decisiones estratégicas y define la dirección del proyecto.',
+      price: '$50 USD',
+      features: [
+        'Reunión de cierre estratégico',
+        'Beneficios exclusivos para miembros',
+        'Descuentos exclusivos en servicios en la nube',
+        'Documentación detallada para crear tu producto o servicio digital',
+        ' 1 Mentoría sobre gestión de proyectos y metodología Scrum (Incluye tu plan de acción)',
+        'Acceso a un equipo de especialistas a tu medida en Profesionales TI del area Marketing, Ventas y Software',
+        ' Seguimiento 1 ciclo sprint',
+        ' Stakeholders: 5',
+      ]
+    }
+  ];
+  
   const [selectedCard, setSelectedCard] = useState(null);
 
   return (
     <section id="services">
       <div className="mb-8 mt-12 text-center">
         <h1 className="text-[40px] text-center font-black">
-          Apartado de Precios
-        </h1>
+        Únete a Nuestra Red de Porfesionales TI</h1>
         <p className="text-xl text-gray-500 text-center">
-          Elige el plan perfecto para tus necesidades
-        </p>
+        Si eres un Product Owner, un Scrum Master, o simplemente tienes una mentalidad innovadora, colaborativa y te apasiona el trabajo digital, ¡te estamos buscando!        </p>
       </div>
       <div className="max-w-[1400px] mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 mb-8 flex-col">
         {cardData.map((card, index) =>
@@ -58,16 +96,16 @@ const Services = () => {
               </p>
             </div>
             <p className="relative text-sm mx-4">
-              <span className="text-2xl font-bold">$</span>
+              <span className="text-2xl font-bold"></span>
               <span className="text-2xl font-bold">{card.price}</span>
-              <span className="text-xl font-normal text-gray-400"> US/mes</span>
+              <span className="text-xl font-normal text-gray-400"> </span>
             </p>
             <a href="https://calendar.app.google/yda9BeiMuCzenjVZ8" target="_blank" rel="noopener noreferrer" className="w-full block bg-[#9C1DD8] hover:text-[#00d9fa] hover:bg-gray-50 text-white
            duration-150 rounded font-medium px-12 py-2 mt-8 mb-4 text-center">
-              Agendar meet
+              Seleccionar
             </a>
             <div className="text-left mx-4 flex-1">
-              <p className="font-medium pb-2 pt-3">Que Obtienes: </p>
+              <p className="font-medium pb-2 pt-3">Más Información: </p>
               {card.features.map((feature, index) => (
                 <ul key={index}
                   className="space-y-2">

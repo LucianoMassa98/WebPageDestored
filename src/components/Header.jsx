@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 // Icons
-import { FaWhatsapp } from "react-icons/fa";
 
 import {
   RiMenu3Fill,

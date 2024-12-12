@@ -9,7 +9,6 @@ import {
 } from "react-icons/ri";
 
 
-
 const Hero = () => {
 
   const [showText, setShowText] = useState(false); // Estado para controlar la visibilidad del texto, es para la animacion del movimiento inicial
@@ -36,33 +35,24 @@ const Hero = () => {
       {/* Information */}
       <div className="md:col-span-4 flex items-center justify-center p-8 xl:p-10">
         <div className="flex flex-col gap-8">
-          <h1 className="text-5xl xl:text-7xl font-bold xl:leading-[7.5rem]"> <h1
-            className={`text-5xl xl:text-7xl font-bold xl:leading-[7.5rem] title-css ${showText ? "show" : ""
+          <h1 className="text-5xl xl:text-7xl  xl:leading-[7.5rem]"> <h1
+            className={`text-5xl xl:text-7xl  xl:leading-[7.5rem] title-css ${showText ? "show" : ""
               }`}
           >
-            Diseño & Desarrollo Productos{" "}
+           Bienvenido a {" "} <strong className="text-purple-600"> Destored</strong>
           </h1>
-            <span className={`text-primary py-2 px-6 border-8 border-primary relative inline-block ${showText ? "show-2" : ""
-              }`}>
-              Digitales
-              <RiCheckboxBlankCircleFill className="text-white text-base absolute -left-5 -top-5 p-2 bg-primary rounded-full box-content" />
-              <RiCheckboxBlankCircleFill className="text-white text-base absolute -right-5 -top-5 p-2 bg-primary rounded-full box-content" />
-              <RiCheckboxBlankCircleFill className="text-white text-base absolute -right-5 -bottom-5 p-2 bg-primary rounded-full box-content" />
-              <RiCheckboxBlankCircleFill className="text-white text-base absolute -left-5 -bottom-5 p-2 bg-primary rounded-full box-content" />
-            </span>
+          
           </h1>
           <p
             className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
               }`}>
-            Encontrar soluciones que se adapten a las necesidades únicas de tu empresa, negocio o idea es nuestra prioridad.
-          </p>
+Una red descentralizada de <strong>profesionales de TI y marketers para tu proyecto, empresa o negocio.</strong>          </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <a href="#services">
               <button
                 className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
                   }`}>
-                Contáctanos
-              </button>
+Únete a Destored              </button>
             </a>
             <button
               className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`}
@@ -93,26 +83,7 @@ const Hero = () => {
                 </div>
               </div>
             )}
-            {/* boton anterior */}
-            {/* <button className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`} onClick={openInstagramVideo}>
-              <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
-              Mira nuestro <br /> Vídeo de introducción
-            </button>
-            {showModal && (
-              <div className="fixed inset-0 z-10 overflow-auto bg-black bg-opacity-40 flex items-center justify-center">
-                <div className="bg-white p-5 border border-gray-400 rounded-lg w-11/12 sm:w-3/4 md:w-2/3 lg:max-w-md m-4">
-                  <span className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black cursor-pointer" onClick={closeModal}>&times;</span>
-                  <iframe
-                    className="w-full h-auto"
-                    src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    allowTransparency="true"
-                    style={{ minHeight: '550px' }} // Consider adjusting this based on content and design needs
-                  ></iframe>
-                </div>
-              </div>
-            )} */}
+           
           </div>
         </div>
       </div>
@@ -120,29 +91,41 @@ const Hero = () => {
       <div className="md:col-span-4 flex items-center justify-center relative xl:p-10 z-0">
         {/* Content image */}
         <div className="z-40 m-auto p-0">
-          <img
-            src="disenoweb.png"
-            className="w-[200px] h-[200px] md:w-[450px] md:h-[450px] object-cover xl:-mt-25 rounded-full"
-          />
+          
 
           <div className="bg-white shadow-xl rounded-lg flex-col justify-center max-w-[250px] mx-auto" >
 
-            <h2 className="text-xl font-bold tracking-[1px] text-gray-800">
-              Productos/Servicios
+            <h2 className="text-xl font-bold tracking-[1px] text-purple-600">
+              Networking
             </h2>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> App Web/Mobile
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Ecommerce
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Chatbot
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Soporte Técnico
-            </div>
 
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Publicistas Digitales
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Marketers Digitales
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Programadores
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Diseñadores
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Vendedores Online
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Creadores de contenido
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Product Owners
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Scrum Masters
+            </div>
+            <div className="flex items-center gap-2 text-lg text-gray-500">
+              <RiStarFill className="text-primary" /> Stakeholders
+            </div>
             {/* /*No tiene sentido que este aquí*/}
             {/* <div className="absolute -right-12 -bottom-12 -z-10">
               <div className="relative">
@@ -156,41 +139,37 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* /*No tiene sentido que este aquí*/}
-        {/* Circle - que esta debajo de la imagen ???? */}
-        {/* <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-[280px] h-[280px] md:w-[380px] md:h-[380px] bg-white border-[10px] border-primary rounded-full -z-10"></div> */}
+        <div className="logo-container absolute w-[100%] h-[100%] p-9 block xl:block">
 
-        {/* Logos */}
-        <div className="logo-container absolute w-full h-full p-9 hidden xl:block">
+  <div className="logo1">
+    <img
+      src="logo1.png"
+      className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[10%]"
+    />
+  </div>
 
-          <div className="logo1 hidden">
-            <img
-              src="sitio-web.png"
-              className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[10%]"
-            />
-          </div>
+  <div className="logo2">
+    <img
+      src="logo2.png"
+      className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[10%] left-[90%]"
+    />
+  </div>
 
-          <div className="logo2">
-            <img
-              src="chatbot.png"
-              className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[10%] left-[90%]"
-            />
-          </div>
+  <div className="logo3">
+    <img
+      src="logo3.png"
+      className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[85%]"
+    />
+  </div>
 
-          <div className="logo3">
-            <img
-              src="developer.png"
-              className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[85%]"
-            />
-          </div>
+  <div className="logo4">
+    <img
+      src="logo4.png"
+      className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[90%] left-[90%]"
+    />
+  </div>
+</div>
 
-          <div className="logo4">
-            <img
-              src="reactjs.png"
-              className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[90%] left-[90%]"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );

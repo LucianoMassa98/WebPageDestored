@@ -1,22 +1,10 @@
 import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
-import React, { useState } from 'react';
+import React from 'react';
+import imgVision from '../../public/vision.png';
 
 const Reviews = () => {
-  const teamMembers = [
-    { image: 'IMG_8792.JPG', name: 'Martin Guevara', instagram: 'https://www.instagram.com/martin_guevara390045627919/' },
-    { image: 'IMG_8823.JPG', name: 'Ramiro Massa', instagram: 'https://www.instagram.com/ramibocajr/' },
-    { image: 'IMG_8824.JPG', name: 'Luciano Massa', instagram: 'https://www.instagram.com/lucianomassa98/' },
-    { image: 'IMG_8744.JPG', name: 'Agustin Leiva', instagram: 'https://www.instagram.com/agus_leiva_25/' },
-    { image: 'IMG_8743.JPG', name: 'Agustin Massa', instagram: 'https://www.instagram.com/ma.agustin_/' },
-    { image: 'IMG_8743.JPG', name: 'Braian Vargas', instagram: 'https://www.instagram.com/braian_gd/' },
-    // Add more team members as needed
-  ];
 
-  const [showAllMembers, setShowAllMembers] = useState(false);
-
-  const handleShowAllMembers = () => {
-    setShowAllMembers(!showAllMembers);
-  };
+  
 
   return (
     <div id="aboutUs" className="p-8 flex flex-col gap-8 bg-gray-100">
@@ -28,57 +16,27 @@ const Reviews = () => {
           <RiDoubleQuotesL />
         </span>
         <p className="max-w-2xl text-center text-gray-500">
-          Facilitar la Transformación Digital: Nos dedicamos a facilitar la transformación digital de empresas y organizaciones mediante la entrega de soluciones de software innovadoras y servicios de soporte técnico de calidad.
-        </p>
+
+        Crear una herramienta que capacite a personas y organizaciones para diseñar, desarrollar y distribuir software y datos de manera descentralizada, utilizando marcos ágiles de desarrollo como Scrum para fomentar la eficiencia, la colaboración y la adaptabilidad en cada proyecto.        </p>
         <span className="text-5xl text-primary">
           <RiDoubleQuotesR />
         </span>
       </div>
       <div className="flex flex-col items-center justify-center gap-8">
-        <div className="flex justify-center gap-4">
-          {teamMembers.slice(0, 4).map((member, index) => (
-            <a key={index} href={member.instagram} target="_blank" rel="noopener noreferrer">
-              <img src={member.image} className="w-12 h-12 md:w-20 md:h-20 object-cover rounded-full ring-4 ring-primary p-1 bg-white" />
-            </a>
-          ))}
-        </div>
+        
+      <div class="relative max-w-full w-full md:max-w-[600px]">
+  <img src={imgVision} alt="img" class="rounded-lg w-full h-auto" />
+  <div class="absolute inset-0 bg-gray-800 opacity-50 rounded-lg"></div>
+</div>
+
         <div>
           <h3 className="text-center text-[24px] font-bold">#DestoTeam</h3>
-          <h5 className="text-center text-[20px] text-gray-500 cursor-pointer" onClick={handleShowAllMembers}>
+          <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
             +12 colaboradores
           </h5>
         </div>
       </div>
-      {showAllMembers && (
-        <div className="relative flex justify-center mt-4">
-          <div className="bg-gray-200 p-4 rounded-lg max-h-48 overflow-y-auto w-10/12 sm:w-2/3 md:w-1/3 lg:w-1/4 shadow-lg z-10 custom-scrollbar">
-            {teamMembers.map((member, index) => (
-              <a
-                key={index}
-                href={member.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-2 w-full bg-white rounded shadow hover:bg-gray-300 transition-colors duration-200 cursor-pointer"
-              >
-                <img src={member.image} className="w-8 h-8 md:w-12 md:h-12 object-cover rounded-full ring-2 ring-primary p-1 bg-white" />
-                <span className="text-gray-700">{member.name}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-      <style jsx>{`
-        .custom-scrollbar::-webkit-scrollbar {
-          width: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #a0aec0;
-          border-radius: 4px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: #e2e8f0;
-        }
-      `}</style>
+      
     </div>
   );
 };
