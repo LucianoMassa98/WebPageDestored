@@ -5,7 +5,7 @@ import Works from "./components/Works";
 import About from "./components/Reviews";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
-//import ComunidadDestored from "./components/ComunidadDestored";
+import ComunidadDestored from "./components/ComunidadDestored";
 import DestoredInfo from "./components/DestoredInfo";
 import SuccessCases from "./components/SuccessCases";
 
@@ -39,10 +39,10 @@ function App() {
             </>
           }
         />
+        <Route path="/ComunidadDestored" element={<ComunidadDestored />} />
       </Routes>
     </Router>
   );
 }
 
 export default App;
-//        <Route path="/ComunidadDestored" element={/*<ComunidadDestored />*/} />
