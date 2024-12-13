@@ -85,17 +85,7 @@ const DestoredInfo = () => {
         </div>
       </div>
 
-      <h1 className="text-3xl font-bold text-black text-center mb-4 mt-6">
-  Metodología Ágil: Un Enfoque Flexible y Colaborativo
-</h1>
-<p className="text-gray-600 text-justify mb-6 text-lg">
-  En Destored, utilizamos metodologías ágiles para gestionar nuestros proyectos de manera eficiente y flexible. Esto significa que trabajamos en ciclos cortos, adaptándonos rápidamente a los cambios y manteniendo una comunicación constante entre todos los miembros del equipo. El enfoque ágil permite que todos los involucrados, desde los líderes hasta los colaboradores, puedan tomar decisiones que mejoren el rumbo del proyecto.
-</p>
-<ul className="list-disc list-inside space-y-2 text-gray-700">
-  <li>Equipos que toman decisiones de manera colaborativa.</li>
-  <li>Adaptación rápida a los cambios y necesidades del proyecto.</li>
-  <li>Ambientes de trabajo flexibles y sin jerarquías estrictas.</li>
-</ul>
+   
 
       {/* Optional additional content for Scrum Descentralizado */}
       <div className="bg-white rounded-lg shadow-md p-4 mt-6">
@@ -104,7 +94,7 @@ const DestoredInfo = () => {
   </h3>
   <p className="text-gray-600 text-justify mt-2">
     <br />
-    Para conocer más sobre cómo Scrum puede transformar la gestión de proyectos en tu empresa, te invitamos a consultar la <a href="https://www.scrum.org/resources/what-is-scrum" className="text-purple-600" target="_blank" rel="noopener noreferrer">Guía de Scrum de Scrum.org</a> o explorar los recursos educativos y certificaciones oficiales que ofrece la organización.
+    Para conocer más sobre cómo Scrum puede transformar la gestión de proyectos en tu empresa, te invitamos a consultar la <a href="https://www.scrum.org/resources/what-is-scrum" className="text-purple-600" target="_blank" rel="noopener noreferrer">Guía de Scrum de Scrum.org</a> 
   </p>
 
   <button

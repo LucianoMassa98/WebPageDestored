@@ -33,10 +33,10 @@ const Header = () => {
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Productos
         </a>
-       
-        <a href="/WebPage/index.html" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
-        WebPage
-        </a>
+        <Link to ="/Comunidad" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+          Comunidad
+        </Link>
+        
       </nav>
       <button
         onClick={() => setShowMenu(!showMenu)}
@@ -49,8 +49,3 @@ const Header = () => {
 };
 
 export default Header;
-
-/*
- <Link to ="/Contact" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
-          Contáctanos
-        </Link> */

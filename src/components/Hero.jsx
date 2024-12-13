@@ -46,7 +46,7 @@ const Hero = () => {
           <p
             className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
               }`}>
-Una red descentralizada de <strong>profesionales de TI y marketers para tu proyecto, empresa o negocio.</strong>          </p>
+Una red descentralizada de <strong>profesionales digitales para tu proyecto, empresa o negocio.</strong>          </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
             <a href="#services">
               <button
@@ -96,50 +96,27 @@ Una red descentralizada de <strong>profesionales de TI y marketers para tu proye
           <div className="bg-white shadow-xl rounded-lg flex-col justify-center max-w-[250px] mx-auto" >
 
             <h2 className="text-xl font-bold tracking-[1px] text-purple-600">
-              Networking
+              Red Destored
             </h2>
 
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Publicistas Digitales
+              <RiStarFill className="text-primary" /> Marketing y Publicidad
             </div>
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Marketers Digitales
+              <RiStarFill className="text-primary" /> Ventas
             </div>
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Programadores
+              <RiStarFill className="text-primary" /> Informatica
             </div>
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Diseñadores
+              <RiStarFill className="text-primary" /> Empresas y Negocios
             </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Vendedores Online
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Creadores de contenido
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Product Owners
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Scrum Masters
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Stakeholders
-            </div>
-            {/* /*No tiene sentido que este aquí*/}
-            {/* <div className="absolute -right-12 -bottom-12 -z-10">
-              <div className="relative">
-                <RiCheckboxBlankCircleFill className="text-primary text-8xl" />
-                33
-                21
-                <div className="absolute left-0 top-0 bg-white w-14 h-14"></div>
-              </div>
-            </div> */}
+           
 
           </div>
         </div>
 
-        <div className="logo-container absolute w-[100%] h-[100%] p-9 block xl:block">
+        <div className="logo-container absolute w-[70%] h-[70%] p-9 block xl:block">
 
   <div className="logo1">
     <img
