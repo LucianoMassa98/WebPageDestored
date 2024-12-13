@@ -40,10 +40,11 @@ function App() {
             </>
           }
         />
-        <Route path="/Contact" element={<FormComponent />} />
+        
       </Routes>
     </Router>
   );
 }
 
 export default App;
+//<Route path="/Contact" element={<FormComponent />} />

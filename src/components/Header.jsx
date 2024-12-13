@@ -33,9 +33,7 @@ const Header = () => {
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Productos
         </a>
-        <Link to ="/Contact" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
-          Contáctanos
-        </Link>
+       
         <a href="/WebPage/index.html" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
         WebPage
         </a>
@@ -51,3 +49,8 @@ const Header = () => {
 };
 
 export default Header;
+
+/*
+ <Link to ="/Contact" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+          Contáctanos
+        </Link> */
