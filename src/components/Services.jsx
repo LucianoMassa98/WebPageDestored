@@ -9,16 +9,27 @@ const Services = () => {
 
   const cardData = [
     {
+      image: 'x',
+      title: 'Colaboradores',
+      message: 'Únete como colaborador y aporta ideas, visión o habilidades al desarrollo de proyectos.',
+      price: 'Challenge Ingreso',
+      features: [
+        'Entrevista técnica de tu area del conocimiento: Marketing, publicidad, ventas e infromática.',
+        'Completar challenge de ingreso con duración de 1 semana',
+        'Acceso a nuevas oportunidades laborales',
+        'Beneficios exclusivos para miembros'
+      ]
+    },
+    {
       image: 'e',
       title: 'Product Owner',
       message: 'Lidera proyectos, prioriza objetivos y alinea equipos para garantizar el éxito del producto/servicio haciendo uso de la metodología Scrum',
       price: 'Gratis',
       features: [
         
-        'Entrevista técnica',
+        'Entrevista y evaluación técnica con 10 preguntas',
         'Acceso a nuevas oportunidades laborales',
-        'Beneficios exclusivos para miembros',
-        'Products Owners: 2'
+        'Beneficios exclusivos para miembros'
       ]
     },
     {
@@ -28,31 +39,12 @@ const Services = () => {
       price: 'Gratis',
       features: [
         
-        'Entrevista técnica',
+        'Entrevista y evaluación técnica con 10 preguntas',
         'Acceso a nuevas oportunidades laborales',
         'Beneficios exclusivos para miembros',
-        'Product Masters: 3'
       ]
     },
-    {
-      image: 'x',
-      title: 'Otros Roles',
-      message: 'Únete como colaborador y aporta ideas, visión o habilidades al desarrollo de proyectos.',
-      price: 'Challenge Ingreso',
-      features: [
-        'Entrevista técnica',
-        'Acceso a nuevas oportunidades laborales',
-        'Beneficios exclusivos para miembros',
-        'Diseñadores: 2',
-        'QaS: 2',
-        'Programadores: 25',
-        'Vendedores online: 2',
-        'Marketers y publicistas: 3',
-        'Analistas de datos: 1',
-        'Creadores de contenido: 2',
-        'DevOps: 3'
-      ]
-    },
+    
     {
       image: 'b',
       title: 'Stakeholder',
@@ -64,9 +56,25 @@ const Services = () => {
         'Descuentos exclusivos en servicios en la nube',
         'Documentación detallada para crear tu producto o servicio digital',
         ' 1 Mentoría sobre gestión de proyectos y metodología Scrum (Incluye tu plan de acción)',
-        'Acceso a un equipo de especialistas a tu medida en Profesionales TI del area Marketing, Ventas y Software',
+        'Acceso a un equipo de especialistas a tu medida en Profesionales TI del area Marketing, Publicidad, Ventas e Informática',
         ' Seguimiento 1 ciclo sprint',
-        ' Stakeholders: 5',
+      ]
+    },
+    {
+      image: 'c',
+      title: 'Enterprise',
+      message: 'Diseñado para empresas que buscan soluciones estratégicas personalizadas y equipos especializados para maximizar el éxito de sus proyectos. Requiere un presupuesto desde $1000 USD en adelante.',
+      price: 'Personalizado',
+      features: [
+        'Consultoría estratégica personalizada para tu empresa',
+        'Planes de acción ajustados a los objetivos de negocio',
+        'Reunión ejecutiva para definir la visión del proyecto',
+        'Implementación de metodologías ágiles a medida',
+        'Documentación completa del proceso de desarrollo y gestión',
+        'Mentorías enfocadas en liderazgo y gestión de equipos en entornos Scrum',
+        'Acceso dedicado a un equipo de especialistas en Marketing, Ventas y Software, con roles ajustados a las necesidades de tu empresa',
+        'Seguimiento continuo durante múltiples ciclos de sprint',
+        'Descuentos especiales en servicios digitales y en la nube'
       ]
     }
   ];
