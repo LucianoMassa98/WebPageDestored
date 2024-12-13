@@ -33,7 +33,7 @@ const Header = () => {
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Productos
         </a>
-        <Link to ="/Comunidad" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+        <Link to ="/ComunidadDestored" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Comunidad
         </Link>
         

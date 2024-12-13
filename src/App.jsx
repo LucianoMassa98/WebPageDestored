@@ -8,7 +8,6 @@ import Footer from "./components/Footer";
 import ComunidadDestored from "./components/ComunidadDestored";
 import DestoredInfo from "./components/DestoredInfo";
 import SuccessCases from "./components/SuccessCases";
-import FormComponent from "./components/FormComponent";
 
 import "semantic-ui-css/semantic.min.css";
 import "./index.css";
@@ -40,7 +39,7 @@ function App() {
             </>
           }
         />
-        <Route path="/comunidad" element={<ComunidadDestored />} />
+        <Route path="/ComunidadDestored" element={<ComunidadDestored />} />
       </Routes>
     </Router>
   );
