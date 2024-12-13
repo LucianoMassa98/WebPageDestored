@@ -5,7 +5,7 @@ import Works from "./components/Works";
 import About from "./components/Reviews";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
-import Comunidad from "./components/Comunidad";
+import ComunidadDestored from "./components/ComunidadDestored";
 import DestoredInfo from "./components/DestoredInfo";
 import SuccessCases from "./components/SuccessCases";
 import FormComponent from "./components/FormComponent";
@@ -40,7 +40,7 @@ function App() {
             </>
           }
         />
-        <Route path="/comunidad" element={<Comunidad />} />
+        <Route path="/comunidad" element={<ComunidadDestored />} />
       </Routes>
     </Router>
   );
