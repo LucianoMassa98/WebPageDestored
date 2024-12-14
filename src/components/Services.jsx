@@ -58,7 +58,7 @@ const Services = () => {
             enlace: 'https://forms.gle/rKKx1xGFgN6BoxCs5',
             cta: 'Completar Formulario',
             title: 'Enterprise',
-            message: 'Diseñado para empresas que buscan soluciones estratégicas personalizadas y equipos especializados para maximizar el éxito de sus proyectos. Requiere un presupuesto desde $1000 USD en adelante.',
+            message: 'Diseñado para empresas que buscan soluciones estratégicas personalizadas y equipos especializados para maximizar el éxito de sus proyectos.',
             price: 'Personalizado',
             features: [
               'Consultoría estratégica personalizada para tu empresa.',

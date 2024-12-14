@@ -22,7 +22,7 @@ const Header = () => {
         } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500 `}
       >
         <Link to ="/" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
-          Home
+          Inicio
         </Link>
         <a href="#aboutUs" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Nosotros

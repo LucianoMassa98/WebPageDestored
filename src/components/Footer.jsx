@@ -22,15 +22,15 @@ const Footer = () => {
         {/* Social media */}
         <nav className="flex items-center gap-4">
 
-          <a href="#" className="block text-white p-4 bg-primary rounded-full">
+          <a href="https://www.instagram.com/destored_/" className="block text-white p-4 bg-primary rounded-full">
             {" "}
             <RiInstagramLine />{" "}
           </a>
-          <a href="#" className="block text-white p-4 bg-primary rounded-full">
+          <a href="https://www.facebook.com/destored0" className="block text-white p-4 bg-primary rounded-full">
             {" "}
             <RiFacebookLine />{" "}
           </a>
-          <a href="#" className="block text-white p-4 bg-primary rounded-full">
+          <a href="https://www.linkedin.com/company/destored" className="block text-white p-4 bg-primary rounded-full">
             {" "}
             <RiLinkedinFill />{" "}
           </a>

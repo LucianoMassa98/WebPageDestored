@@ -31,7 +31,7 @@ const Works = () => {
                     </p>
 
                     <a 
-  href="#"
+  href="https://forms.gle/rKKx1xGFgN6BoxCs5"
   class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
 >
   Agregar proyeto
@@ -48,7 +48,7 @@ const Works = () => {
               YMS APP
             </h3>
             <a 
-  href="#"
+  href="https://yms.up.railway.app/"
   class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
 >
   ¡Visitar Sitio Web!
@@ -64,7 +64,7 @@ const Works = () => {
               ATM
             </h3>
             <a 
-  href="#"
+  href="https://atm.up.railway.app/"
   class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
 >
   ¡Visitar Sitio Web!
@@ -80,7 +80,7 @@ const Works = () => {
               OFIX
             </h3>
             <a 
-  href="#"
+  href="https://ofix.up.railway.app/"
   class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
 >
   ¡Visitar Sitio Web!
@@ -96,7 +96,7 @@ const Works = () => {
               VendePorInsta
             </h3>
             <a 
-  href="#"
+  href="https://vendeporinsta.up.railway.app/"
   class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
 >
   ¡Visitar Sitio Web!
