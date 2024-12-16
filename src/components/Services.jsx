@@ -81,7 +81,7 @@ const Services = () => {
     <section id="services">
       <div className="mb-8 mt-12 text-center">
         <h1 className="text-[40px] text-center font-black">
-        Únete a Nuestra Red de Porfesionales Digitales</h1>
+        Únete a Nuestra Red de Profesionales Digitales</h1>
         <p className="text-xl text-gray-500 text-center">
         Si eres un Product Owner, un Scrum Master, o simplemente tienes una mentalidad innovadora, colaborativa y te apasiona el trabajo digital, ¡te estamos buscando!        </p>
       </div>
