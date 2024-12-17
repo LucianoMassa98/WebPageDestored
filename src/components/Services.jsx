@@ -10,22 +10,22 @@ const Services = () => {
         const cardData = [
           {
             image: 'x',
-            enlace: 'https://calendar.app.google/yda9BeiMuCzenjVZ8',
-            cta: 'Agendar renión',
-            title: 'Colaboradores',
+            enlace: 'https://wa.me/5492644631495?text=Solicito%20challenge%20de%20ingreso',
+            cta: 'Solicitar Challenge',
+            title: 'Colaborador',
             message: 'Únete como colaborador en tu área de conocimiento digital y aporta ideas, visión o habilidades al desarrollo de proyectos.',
             price: 'Challenge de Ingreso',
             features: [
-              'Entrevista técnica en tu área de conocimiento: Marketing, Publicidad, Ventas o Informática.',
               'Completar un challenge de ingreso con duración de 1 semana.',
+              'Entrevista estratégica',
               'Acceso a nuevas oportunidades laborales.',
               'Beneficios exclusivos para miembros.'
             ]
           },
           {
             image: 'e',
-            enlace: 'https://calendar.app.google/yda9BeiMuCzenjVZ8',
-            cta: 'Agendar renión',
+            enlace: 'https://wa.me/5492644631495?text=Solicito%20evaluacion%20para%20ingresar%20como%20Product%20Owner%20o%20ScrumMaster%20a%20la%20red%20Destored',
+            cta: 'Solicitar Evauluación',
             title: 'Product Owner / Scrum Master',
             message: 'Lidera proyectos, prioriza objetivos y alinea equipos para garantizar el éxito del producto o servicio. Optimiza procesos ágiles, potencia la productividad y fomenta la mejora continua con metodología Scrum.',
             price: 'Gratis',
@@ -38,18 +38,18 @@ const Services = () => {
           },
           {
             image: 'b',
-            enlace: 'https://forms.gle/rKKx1xGFgN6BoxCs5',
-            cta: 'Completar Formulario',
+            enlace: 'https://calendar.app.google/usZmaBHVtAmqQPD1A',
+            cta: 'Agendar Reunión Gratis',
             title: 'Stakeholder',
             message: 'Contribuye a la toma de decisiones estratégicas y define la dirección de los proyectos.',
             price: '$50 USD',
             features: [
-              'Reunión de cierre estratégico.',
+              'Guía y plan de acción detallado para crear tu solución digital.',
+              '1 Mentoría sobre gestión de proyectos y metodología Scrum.',
+              'Soporte Continuo 24/7.',
               'Beneficios exclusivos para miembros.',
               'Descuentos exclusivos en servicios en la nube.',
-              'Documentación detallada para crear tu producto o servicio digital.',
-              '1 Mentoría sobre gestión de proyectos y metodología Scrum (incluye plan de acción).',
-              'Acceso a un equipo de especialistas personalizados en Marketing, Publicidad, Ventas e Informática.',
+              'Acceso a un equipo de profesionales digitales.',
               'Seguimiento durante 1 ciclo de sprint.'
             ]
           },
@@ -57,7 +57,7 @@ const Services = () => {
             image: 'c',
             enlace: 'https://forms.gle/rKKx1xGFgN6BoxCs5',
             cta: 'Completar Formulario',
-            title: 'Enterprise',
+            title: 'Empresa',
             message: 'Diseñado para empresas que buscan soluciones estratégicas personalizadas y equipos especializados para maximizar el éxito de sus proyectos.',
             price: 'Personalizado',
             features: [
@@ -81,9 +81,9 @@ const Services = () => {
     <section id="services">
       <div className="mb-8 mt-12 text-center">
         <h1 className="text-[40px] text-center font-black">
-        Únete a Nuestra Red de Profesionales Digitales</h1>
+        Únete a Nuestra Red</h1>
         <p className="text-xl text-gray-500 text-center">
-        Si eres un Product Owner, un Scrum Master, o simplemente tienes una mentalidad innovadora, colaborativa y te apasiona el trabajo digital, ¡te estamos buscando!        </p>
+        ¡Se miembro y forma parte de la transformación digital del futuro!       </p>
       </div>
       <div className="max-w-[1400px] mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 mb-8 flex-col">
         {cardData.map((card, index) =>

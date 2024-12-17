@@ -106,10 +106,10 @@ Una red descentralizada de <strong>profesionales digitales para tu proyecto, emp
               <RiStarFill className="text-primary" /> Ventas
             </div>
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Informatica
+              <RiStarFill className="text-primary" /> Informatica y Software
             </div>
             <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Empresas y Negocios
+              <RiStarFill className="text-primary" /> Proyectos, Negocios y Empresas
             </div>
            
 

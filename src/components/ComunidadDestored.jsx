@@ -2,8 +2,12 @@ import React from "react";
 import { RiStarFill } from "react-icons/ri";
 
 const ComunidadDestored = () => {
+  const whatsappNumber = "+5492644631495"; // Reemplaza con el número de WhatsApp de Destored
+  const message = "Hola quiero formar parte de la comunidad de Destored";
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
   return (
-    <div className="bg-gray-100 min-h-screen py-10">
+    <div className="bg-gray-100 py-10">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <h2 className="text-3xl font-extrabold tracking-wide text-purple-600 text-center mb-6">
@@ -54,9 +58,11 @@ const ComunidadDestored = () => {
           <h3 className="text-2xl font-bold text-gray-800 mb-4">
             ¿Quieres ser parte de nuestra comunidad?
           </h3>
-          <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
-            Únete ahora
-          </button>
+          <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
+            <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
+              Únete ahora
+            </button>
+          </a>
         </div>
       </div>
     </div>

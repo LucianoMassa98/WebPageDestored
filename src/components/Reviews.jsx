@@ -2,7 +2,7 @@ import { RiDoubleQuotesL, RiDoubleQuotesR } from "react-icons/ri";
 import React from 'react';
 import imgVision from '../../public/vision.png';
 
-const Reviews = () => {
+const About = () => {
 
   
 
@@ -32,7 +32,7 @@ const Reviews = () => {
         <div>
           <h3 className="text-center text-[24px] font-bold">#DestoTeam</h3>
           <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
-            +12 colaboradores
+            +50 Miembros
           </h5>
         </div>
       </div>
@@ -41,4 +41,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default About;

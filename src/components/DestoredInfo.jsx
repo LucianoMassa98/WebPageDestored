@@ -32,58 +32,72 @@ const DestoredInfo = () => {
         ¿Qué es Destored?
       </h1>
       <p className="text-gray-600 text-justify mb-6 text-lg text-center">
-      Destored conecta tu proyecto, empresa o negocio con profesionales y equipos multidisciplinarios especializados en tecnología y publicidad digital. 
-      El objetivo con el cual armamos el equipo o encontramos un profesional es adaptar soluciones personalizadas a tus necesidades específicas, impulsando la transformación digital para llevar tu visión al siguiente nivel.
-      </p>
+      Destored es tu puente hacia la transformación digital, conectando tu proyecto, empresa o negocio con un equipo especializado y un plan adaptado a tus objetivos.
+</p>
       
 
       {/* Cards for each item */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        <div className="bg-white rounded-lg shadow-md p-4">
-          <img
-            className="w-full h-40 object-contain rounded-t-lg"
-            src="icono1.png" // Aquí pones la ruta de la imagen para "Equipos personalizados"
-            alt="Equipos personalizados"
-          />
-          <h3 className="text-xl font-semibold text-purple-600 mt-4 text-center">
-            Equipos personalizados
-          </h3>
-          <p className="text-gray-600 text-justify mt-2">
-          Crea equipos multidisciplinarios a tu medida, selecciona profesionales con las habilidades exactas que tu proyecto, negocio o empresa necesita.
-           Adaptamos el equipo según tus demandas, asegurando una ejecución eficiente y resultados de alta calidad.
-          </p>
-        </div>
+  {/* Proyectos */}
+  <div className="bg-white rounded-lg shadow-md p-4">
+    <img
+      className="w-full h-40 object-contain rounded-t-lg"
+      src="icono3.png" // Aquí pones la ruta de la imagen para "Equipos personalizados"
+      alt="Proyectos"
+    />
+    <h3 className="text-xl font-semibold text-purple-600 mt-4 text-center">
+      Proyectos
+    </h3>
+    <p className="text-gray-600 text-justify mt-2">
+      Ideales para pequeños emprendimientos o proyectos que recién comienzan.
+    </p>
+    <ul className="text-gray-600 text-justify mt-4 list-disc pl-5">
+      <li>Presupuestos flexibles para maximizar tu inversión con el menor costo posible del mercado.</li>
+      <li>Equipos compactos y adaptados específicamente a tus necesidades.</li>
+      <li>Planificación estratégica para garantizar la gestión eficiente de tu proyecto.</li>
+    </ul>
+  </div>
 
-        <div className="bg-white rounded-lg shadow-md p-4">
-          <img
-            className="w-full h-40 object-contain rounded-t-lg"
-            src="icono3.png" // Aquí pones la ruta de la imagen para "Presupuestos ágiles y flexibles"
-            alt="Presupuestos ágiles y flexibles"
-          />
-          <h3 className="text-xl font-semibold text-purple-600 mt-4 text-center">
-            Presupuestos ágiles y flexibles
-          </h3>
-          <p className="text-gray-600 text-justify mt-2">
-          Con presupuestos que se adaptan a las necesidades cambiantes de las tecnologías, permitiendo ajustes en el alcance y costos sin comprometer la calidad. 
-          Con transparencia y flexibilidad, optimizamos la gestión financiera a lo largo del proceso.
-          </p>
-        </div>
+  {/* Negocios */}
+  <div className="bg-white rounded-lg shadow-md p-4">
+    <img
+      className="w-full h-40 object-contain rounded-t-lg"
+      src="icono2.png" // Aquí pones la ruta de la imagen para "Presupuestos ágiles y flexibles"
+      alt="Negocios"
+    />
+    <h3 className="text-xl font-semibold text-purple-600 mt-4 text-center">
+      Negocios
+    </h3>
+    <p className="text-gray-600 text-justify mt-2">
+      Enfoque para negocios con cinco o más empleados.
+    </p>
+    <ul className="text-gray-600 text-justify mt-4 list-disc pl-5">
+      <li>Accede a profesionales especializados para impulsar la digitalización de tu negocio.</li>
+      <li>Forma equipos multidisciplinarios para diseñar, desarrollar y lanzar tu negocio al ámbito digital.</li>
+      <li>Agrega valor a través de la integración de soluciones tecnológicas.</li>
+    </ul>
+  </div>
 
-        <div className="bg-white rounded-lg shadow-md p-4">
-          <img
-            className="w-full h-40 object-contain rounded-t-lg"
-            src="icono2.png" // Aquí pones la ruta de la imagen para "Metodología Scrum Descentralizada"
-            alt="Metodología Scrum Descentralizada"
-          />
-          <h3 className="text-xl font-semibold text-purple-600 mt-4 text-center">
-            Metodología Scrum Descentralizada
-          </h3>
-          <p className="text-gray-600 text-justify mt-2">
-          Un enfoque ágil con equipos autónomos que colaboran de manera descentralizada.
-           Con ciclos de trabajo iterativos y entregas incrementales, garantiza flexibilidad y rapidez en la adaptación a cambios, manteniendo siempre los objetivos alineados.
-          </p>
-        </div>
-      </div>
+  {/* Empresas */}
+  <div className="bg-white rounded-lg shadow-md p-4">
+    <img
+      className="w-full h-40 object-contain rounded-t-lg"
+      src="icono1.png" // Aquí pones la ruta de la imagen para "Metodología Scrum Descentralizada"
+      alt="Empresas"
+    />
+    <h3 className="text-xl font-semibold text-purple-600 mt-4 text-center">
+      Empresas
+    </h3>
+    <p className="text-gray-600 text-justify mt-2">
+      Soluciones diseñadas para empresas con 10 o más empleados.
+    </p>
+    <ul className="text-gray-600 text-justify mt-4 list-disc pl-5">
+      <li>Implementa metodologías ágiles y Scrum para una dirección efectiva de tus proyectos.</li>
+      <li>Contrata y/o capacita roles clave para optimizar el rendimiento de tu empresa.</li>
+      <li>Sistematiza y digitaliza áreas estratégicas para aumentar la eficiencia operativa.</li>
+    </ul>
+  </div>
+</div>
 
    
 
@@ -94,7 +108,7 @@ const DestoredInfo = () => {
   </h3>
   <p className="text-gray-600 text-justify mt-2">
     <br />
-    Para conocer más sobre cómo Scrum puede transformar la gestión de proyectos en tu empresa, te invitamos a consultar la <a href="https://www.scrum.org/resources/what-is-scrum" className="text-purple-600" target="_blank" rel="noopener noreferrer">Guía de Scrum de Scrum.org</a> 
+    Para conocer más sobre cómo Scrum puede transformar la gestión de proyectos digitales en tu empresa, te invitamos a consultar la <a href="https://www.scrum.org/resources/what-is-scrum" className="text-purple-600" target="_blank" rel="noopener noreferrer">Guía de Scrum de Scrum.org</a> 
   </p>
 
   <button

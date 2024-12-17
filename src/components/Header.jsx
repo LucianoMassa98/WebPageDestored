@@ -33,8 +33,8 @@ const Header = () => {
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Productos
         </a>
-        <Link to ="/ComunidadDestored" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
-          Comunidad
+        <Link to ="/Scrums" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+          Scrums Abiertos
         </Link>
         
       </nav>

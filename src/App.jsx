@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 import ComunidadDestored from "./components/ComunidadDestored";
 import DestoredInfo from "./components/DestoredInfo";
 import SuccessCases from "./components/SuccessCases";
-import ScrumPage from "./components/ScrumPage";
+import Members from "./components/Members";
+import Scrums from "./components/Scrums";
 
 import "semantic-ui-css/semantic.min.css";
 import "./index.css";
@@ -40,18 +41,21 @@ function App() {
             </>
           }
         />
-        <Route path="/ComunidadDestored" element={<ComunidadDestored />} />
+        <Route path="/Scrums" element={
+      <>
+      <ComunidadDestored />
+      <Scrums />
+      </>
+      
+      } />
         <Route path="/Miembros" element={
           
-          <>
-      
-          <ScrumPage />
-          
-          </>
+          <Members />
 
           
           } />
-        <Route path="/Stakeholders" element={<ComunidadDestored />} />
+
+       
 
       </Routes>
     </Router>
