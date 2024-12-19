@@ -13,9 +13,13 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between xl:justify-start w-full pt-12 pb-8 px-12 h-[10vh] z-50">
-      <div className="w-auto mt-8 pt-[32px] md:w-42 lg:w-1/6">
-      <img className="" src="/Logo Destored.svg" alt="Icono personalizado"/>
-      </div>
+      <div className="flex-shrink-0">
+    <img
+      src="/Logo Destored.svg"
+      alt="Logo Destored"
+      className="h-full max-h-[8rem] object-contain"
+    />
+  </div>
       <nav
         className={`bg-white z-10 fixed w-[100%] md:w-[100%] xl:w-full h-full ${
           showMenu ? "left-0" : "-left-full"

@@ -104,27 +104,30 @@ Una red descentralizada de <strong>profesionales digitales para tu proyecto, emp
         <div className="z-40 m-auto p-0">
           
 
-          <div className="bg-white shadow-xl rounded-lg flex-col justify-center max-w-[250px] mx-auto" >
+        <div className="bg-white/o  rounded-lg flex-col justify-center max-w-[250px] mx-auto">
 
-            <h2 className="text-xl font-bold tracking-[1px] text-purple-600">
-              Red Destored
-            </h2>
+<h2 className="text-xl font-bold tracking-[1px] text-purple-600">
+  Red Destored
+</h2>
 
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Marketing y Publicidad
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Ventas
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Informatica y Software
-            </div>
-            <div className="flex items-center gap-2 text-lg text-gray-500">
-              <RiStarFill className="text-primary" /> Proyectos, Negocios y Empresas
-            </div>
-           
+<div className="flex items-center gap-2 text-lg text-gray-500">
+  <RiStarFill className="text-primary" /> Marketing y Publicidad
+</div>
+<div className="flex items-center gap-2 text-lg text-gray-500">
+  <RiStarFill className="text-primary" /> Ventas
+</div>
+<div className="flex items-center gap-2 text-lg text-gray-500">
+  <RiStarFill className="text-primary" /> Informática y Software
+</div>
+<div className="flex items-center gap-2 text-lg text-gray-500">
+  <RiStarFill className="text-primary" /> Proyectos, Negocios y Empresas
+</div>
 
-          </div>
+</div>
+
+
+
+
         </div>
 
         <div className="logo-container absolute w-[70%] h-[70%] p-9 block xl:block">

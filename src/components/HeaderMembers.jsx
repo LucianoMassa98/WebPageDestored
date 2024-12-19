@@ -18,7 +18,7 @@ const Header = () => {
     <img
       src="/Logo Destored.svg"
       alt="Logo Destored"
-      className="h-full max-h-[4rem] object-contain"
+      className="h-full max-h-[8rem] object-contain"
     />
   </div>
 
