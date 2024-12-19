@@ -21,6 +21,7 @@
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.5",
     "serve": "^14.2.1",
+    "tabletop": "^1.6.3",
     "yup": "^1.4.0"
   },
   "devDependencies": {

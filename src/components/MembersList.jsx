@@ -1,10 +1,10 @@
 import React from "react";
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaGlobe } from "react-icons/fa";
+
+import perfilGenerico from '../../public/perfil.webp'
+
 
 const MembersList = ({ members }) => {
-  const getPlaceholderImage = () =>
-    "https://via.placeholder.com/200?text=No+Profile+Picture";
-
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {members.map((member, index) => (
@@ -14,19 +14,33 @@ const MembersList = ({ members }) => {
         >
           {/* Imagen de Perfil */}
           <img
-            src={member.imagenUrl || getPlaceholderImage()} // Usa imagenUrl o placeholder
-            alt={`${member.nombre} ${member.apellido}`}
+            src={member.imagen || perfilGenerico} // Usa imagen o placeholder
+            alt={`${member.nombre}`}
             className="w-20 h-20 rounded-full mb-4 object-cover"
           />
+
           {/* Nombre del Miembro */}
-          <h3 className="text-lg font-semibold text-center mb-2">
-            {member.nombre} {member.apellido}
+          <h3 className="text-lg font-semibold text-center mb-1">
+            {member.nombre}
           </h3>
-          {/* Iconos de LinkedIn y Correo */}
+
+          {/* País y Área */}
+          <p className="text-sm text-gray-500 text-center">
+            {member.pais} • {member.area} • {member.rol}
+          </p>
+
+          {/* Presentación */}
+          {member.presentacion && (
+            <p className="text-sm text-gray-600 mt-2 text-center italic">
+              "{member.presentacion}"
+            </p>
+          )}
+
+          {/* Enlaces */}
           <div className="mt-auto flex space-x-4">
-            {member.urlLinkedin && (
+            {member.linkedin && (
               <a
-                href={member.urlLinkedin}
+                href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600"
@@ -42,6 +56,17 @@ const MembersList = ({ members }) => {
                 title="Enviar Correo"
               >
                 <FaEnvelope size={24} />
+              </a>
+            )}
+            {member.porfolio && (
+              <a
+                href={member.porfolio}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-600"
+                title="Portafolio"
+              >
+                <FaGlobe size={24} />
               </a>
             )}
           </div>

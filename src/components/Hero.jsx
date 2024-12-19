@@ -48,12 +48,23 @@ const Hero = () => {
               }`}>
 Una red descentralizada de <strong>profesionales digitales para tu proyecto, empresa o negocio.</strong>          </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
+
             <a href="#services">
               <button
                 className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
                   }`}>
-Únete a Destored              </button>
+              Contratar Servicios             
+            </button>
             </a>
+
+            <a href="#servicesContrato">
+              <button
+                className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
+                  }`}>
+             Ofrecer Servicios          
+            </button>
+            </a>
+
             <button
               className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`}
               onClick={openInstagramVideo}

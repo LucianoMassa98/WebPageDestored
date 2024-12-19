@@ -1,22 +1,33 @@
 import React from "react";
 import { RiStarFill } from "react-icons/ri";
+import bannerComunidad from "../../public/bannerComunidad.jpg";
 
 const ComunidadDestored = () => {
-  const whatsappNumber = "+5492644631495"; // Reemplaza con el número de WhatsApp de Destored
-  const message = "Hola quiero formar parte de la comunidad de Destored";
-  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappComunidad = "https://chat.whatsapp.com/LOal4051AfnLoxMlccbLNs";
 
   return (
-    <div className="bg-gray-100 py-10">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
-        <h2 className="text-3xl font-extrabold tracking-wide text-purple-600 text-center mb-6">
-          Comunidad en Destored
-        </h2>
-        <p className="text-lg text-gray-700 text-center mb-10">
-          Nuestra comunidad reúne a desarrolladores, emprendedores y creativos apasionados por el mundo de la tecnología y la innovación.
-        </p>
+    <div className="relative bg-gray-100">
+      {/* Banner Section */}
+      <div
+        className="relative w-full h-80 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bannerComunidad})` }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        {/* Title and Subtitle */}
+        <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
+          <h2 className="text-4xl font-extrabold text-white tracking-wide">
+            Comunidad en Destored
+          </h2>
+          <p className="text-lg text-gray-300 mt-4 px-4 text-2xl">
+            Conectando desarrolladores, emprendedores y creadores de contenido
+            en un espacio dedicado a la tecnología y la innovación.
+          </p>
+        </div>
+      </div>
 
+      {/* Content Section */}
+      <div className="max-w-7xl mx-auto px-6 py-10">
         {/* Cards Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1 */}
@@ -24,9 +35,12 @@ const ComunidadDestored = () => {
             <div className="flex justify-center items-center text-purple-600 text-4xl mb-4">
               <RiStarFill />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2">Desarrolladores</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">
+              Desarrolladores
+            </h3>
             <p className="text-gray-600">
-              Conéctate con otros profesionales para colaborar en proyectos de software y compartir conocimiento técnico.
+              Conéctate con otros profesionales para colaborar en proyectos de
+              software y compartir conocimiento técnico.
             </p>
           </div>
 
@@ -35,9 +49,12 @@ const ComunidadDestored = () => {
             <div className="flex justify-center items-center text-purple-600 text-4xl mb-4">
               <RiStarFill />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2">Emprendedores</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">
+              Emprendedores
+            </h3>
             <p className="text-gray-600">
-              Participa en nuestra red para impulsar tus ideas de negocio y encontrar oportunidades de crecimiento.
+              Participa en nuestra red para impulsar tus ideas de negocio y
+              encontrar oportunidades de crecimiento.
             </p>
           </div>
 
@@ -46,9 +63,12 @@ const ComunidadDestored = () => {
             <div className="flex justify-center items-center text-purple-600 text-4xl mb-4">
               <RiStarFill />
             </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2">Creadores de Contenido</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-2">
+              Creadores de Contenido
+            </h3>
             <p className="text-gray-600">
-              Únete a otros creativos para desarrollar contenido que inspire y eduque a nuestra comunidad.
+              Únete a otros creativos para desarrollar contenido que inspire y
+              eduque a nuestra comunidad.
             </p>
           </div>
         </div>
@@ -58,7 +78,7 @@ const ComunidadDestored = () => {
           <h3 className="text-2xl font-bold text-gray-800 mb-4">
             ¿Quieres ser parte de nuestra comunidad?
           </h3>
-          <a href={whatsappURL} target="_blank" rel="noopener noreferrer">
+          <a href={whatsappComunidad} target="_blank" rel="noopener noreferrer">
             <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
               Únete ahora
             </button>

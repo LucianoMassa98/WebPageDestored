@@ -67,10 +67,10 @@ const SuccessCases = () => {
       videoUrl: 'https://www.instagram.com/reel/C-1DY07OFxd/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1',
     },
     {
-      name: 'Martín Guevara',
-      role: 'Product Owner',
-      description: 'Martín ha liderado con éxito más de tres proyectos clave en Destored, incluyendo AConex y Digital Market. Su capacidad para gestionar equipos multidisciplinarios y alinear los objetivos de negocio con las necesidades del cliente ha sido clave para el cumplimiento de metas y la entrega de productos de alto impacto.',
-      videoUrl: 'https://www.instagram.com/reel/C-1DY07OFxd/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1',
+      name: 'Braian Vargas',
+      role: 'Marketer',
+      description: 'Braian Vargas destacó como marketer en Destored, contribuyendo al crecimiento de AdLab con estrategias de marketing innovadoras y campañas efectivas. Su creatividad, liderazgo y trabajo en equipo dejaron una huella significativa en nuestros proyectos y comunidad profesional. Un ejemplo de éxito impulsado por talento y visión.',
+      videoUrl: 'https://www.instagram.com/reel/C0z3utag_7o/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1',
     }
   ]);
 

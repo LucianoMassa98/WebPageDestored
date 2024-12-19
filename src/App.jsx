@@ -1,9 +1,14 @@
 import Clients from "./components/Clients";
 import Header from "./components/Header";
+import HeaderCommunity from "./components/HeaderCommunity";
+import HeaderMembers from "./components/HeaderMembers";
+
 import Hero from "./components/Hero";
 import Works from "./components/Works";
 import About from "./components/Reviews";
 import Services from "./components/Services";
+import ServicesContrato from "./components/ServicesContrato";
+
 import Footer from "./components/Footer";
 import ComunidadDestored from "./components/ComunidadDestored";
 import DestoredInfo from "./components/DestoredInfo";
@@ -34,6 +39,9 @@ function App() {
               <Wsp />
               <Services />
               <Works />
+              <ServicesContrato />
+
+             
               <SuccessCases />
 
               <About />
@@ -41,17 +49,20 @@ function App() {
             </>
           }
         />
-        <Route path="/Scrums" element={
+        <Route path="/Comunidad" element={
       <>
+      < HeaderCommunity/>
       <ComunidadDestored />
       <Scrums />
       </>
       
       } />
         <Route path="/Miembros" element={
-          
-          <Members />
 
+<>
+           <HeaderMembers />
+          <Members />
+          </>
           
           } />
 

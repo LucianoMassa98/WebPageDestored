@@ -13,8 +13,8 @@ const Header = () => {
 
   return (
     <header className="flex items-center justify-between xl:justify-start w-full pt-12 pb-8 px-12 h-[10vh] z-50">
-      <div className="w-32 mt-10 pt-[32px] md:w-42 lg:w-1/6">
-          <img className="" src="/Logo Destored.svg" alt="Icono personalizado"/>
+      <div className="w-auto mt-8 pt-[32px] md:w-42 lg:w-1/6">
+      <img className="" src="/Logo Destored.svg" alt="Icono personalizado"/>
       </div>
       <nav
         className={`bg-white z-10 fixed w-[100%] md:w-[100%] xl:w-full h-full ${
@@ -33,8 +33,8 @@ const Header = () => {
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Productos
         </a>
-        <Link to ="/Scrums" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
-          Scrums Abiertos
+        <Link to ="/Comunidad" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+          Comunidad
         </Link>
         
       </nav>

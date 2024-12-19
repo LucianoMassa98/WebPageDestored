@@ -8,34 +8,7 @@ const Services = () => {
         // Descuento 50%  para suscripcion de stakeholder para los produt owners  y codigo de referidos (descuento 10%) para ganar 25usd
 
         const cardData = [
-          {
-            image: 'x',
-            enlace: 'https://wa.me/5492644631495?text=Solicito%20challenge%20de%20ingreso',
-            cta: 'Solicitar Challenge',
-            title: 'Colaborador',
-            message: 'Únete como colaborador en tu área de conocimiento digital y aporta ideas, visión o habilidades al desarrollo de proyectos.',
-            price: 'Challenge de Ingreso',
-            features: [
-              'Completar un challenge de ingreso con duración de 1 semana.',
-              'Entrevista estratégica',
-              'Acceso a nuevas oportunidades laborales.',
-              'Beneficios exclusivos para miembros.'
-            ]
-          },
-          {
-            image: 'e',
-            enlace: 'https://wa.me/5492644631495?text=Solicito%20evaluacion%20para%20ingresar%20como%20Product%20Owner%20o%20ScrumMaster%20a%20la%20red%20Destored',
-            cta: 'Solicitar Evauluación',
-            title: 'Product Owner / Scrum Master',
-            message: 'Lidera proyectos, prioriza objetivos y alinea equipos para garantizar el éxito del producto o servicio. Optimiza procesos ágiles, potencia la productividad y fomenta la mejora continua con metodología Scrum.',
-            price: 'Gratis',
-            features: [
-              'Entrevista y evaluación técnica en vivo con 10 preguntas clave.',
-              'Experiencia en al menos un área de conocimiento: Marketing, Publicidad, Ventas o Informática.',
-              'Acceso a nuevas oportunidades laborales.',
-              'Beneficios exclusivos para miembros.'
-            ]
-          },
+          
           {
             image: 'b',
             enlace: 'https://calendar.app.google/usZmaBHVtAmqQPD1A',
@@ -81,11 +54,11 @@ const Services = () => {
     <section id="services">
       <div className="mb-8 mt-12 text-center">
         <h1 className="text-[40px] text-center font-black">
-        Únete a Nuestra Red</h1>
+        Comienza Contratando Profesionales Digitales </h1>
         <p className="text-xl text-gray-500 text-center">
-        ¡Se miembro y forma parte de la transformación digital del futuro!       </p>
+        ¡Transformación digital del futuro de los proyectos, negocios y empresas!       </p>
       </div>
-      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 mb-8 flex-col">
+      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 mb-8 flex-col">
         {cardData.map((card, index) =>
           <div key={index} className={`shadow-xl rounded-lg hover:scale-105 duration-300 border p-8 flex-col ${selectedCard === index ? 'border-[#9C1DD8]' : 'border-gray-200'
             }`}

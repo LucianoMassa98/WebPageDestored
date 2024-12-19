@@ -16,7 +16,7 @@ export default function wsp() {
             className={`fixed bottom-20 right-9 cursor-pointer z-20  ${showText ? "show-wsp" : ""
                 }`}>
             <div class="icon-container  zoom-container-wsp">
-              <a href="https://api.whatsapp.com/send?phone=5492644631495&text=Hola, Buenos días!"
+              <a href="https://api.whatsapp.com/send?phone=5492644631495&text=¡Hola! Me gustaría recibir más información sobre Destored. ¿Podrías ayudarme?"
                 className="fixed w-16 h-16 bottom-4 right-4 bg-[#0df053] shadow-lg hover:bg-green-600 
                 text-white hover:text-white p-3 rounded-full flex items-center justify-center z-[100] zoomable-wsp"
                 target="_blank" aria-label="WhatsApp">

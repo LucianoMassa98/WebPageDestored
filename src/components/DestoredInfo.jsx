@@ -32,7 +32,7 @@ const DestoredInfo = () => {
         ¿Qué es Destored?
       </h1>
       <p className="text-gray-600 text-justify mb-6 text-lg text-center">
-      Destored es tu puente hacia la transformación digital, conectando tu proyecto, empresa o negocio con un equipo especializado y un plan adaptado a tus objetivos.
+      Destored es tu puente hacia la transformación digital, conectando tu proyecto, empresa o negocio con un equipo especializado teconologías digitales y un plan adaptado a tus objetivos.
 </p>
       
 
