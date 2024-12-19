@@ -59,7 +59,7 @@ const Services = () => {
     <section id="servicesContrato">
       <div className="mb-8 mt-12 text-center">
         <h1 className="text-[40px] text-center font-black">
-        Únete Como Profesional Digital</h1>
+        Únete Como Miembro De Destored</h1>
         <p className="text-xl text-gray-500 text-center">
         ¡Se miembro y forma parte de la transformación digital del futuro!       </p>
       </div>
