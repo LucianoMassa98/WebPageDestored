@@ -28,7 +28,7 @@ const Services = () => {
           },
           {
             image: 'c',
-            enlace: 'https://forms.gle/rKKx1xGFgN6BoxCs5',
+            enlace: 'https://forms.gle/tf1zPxVgfpLMugZV8',
             cta: 'Completar Formulario',
             title: 'Empresa',
             message: 'Diseñado para empresas que buscan soluciones estratégicas personalizadas y equipos especializados para maximizar el éxito de sus proyectos.',
