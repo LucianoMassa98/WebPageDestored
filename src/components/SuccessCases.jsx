@@ -61,7 +61,7 @@ const SuccessCases = () => {
       videoUrl: 'https://www.instagram.com/reel/C-1DY07OFxd/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1',
     },
     {
-      name: 'Daniel López',
+      name: 'Daniel Mena',
       role: 'Diseñador UX/UI',
       description: 'Daniel contribuyó significativamente al diseño y desarrollo visual de YMS APP, Digital Market y Ofix. Su creatividad y habilidad para traducir conceptos en interfaces atractivas y funcionales han elevado la calidad de cada proyecto, impactando directamente en la experiencia del usuario.',
       videoUrl: 'https://www.instagram.com/reel/C-1DY07OFxd/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1',
