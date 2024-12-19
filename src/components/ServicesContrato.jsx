@@ -12,7 +12,7 @@ const Services = () => {
             image: 'x',
             enlace: 'https://wa.me/5492644631495?text=Solicito%20challenge%20de%20ingreso',
             cta: 'Solicitar Challenge',
-            title: 'Colaborador',
+            title: 'Profesional Digital',
             message: 'Únete como colaborador en tu área de conocimiento digital: Marketing, Publicidad, Ventas o Informática y aporta ideas, visión o habilidades al desarrollo de proyectos.',
             price: 'Challenge de Ingreso',
             features: [
