@@ -19,6 +19,8 @@ import Scrums from "./components/Scrums";
 import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 import Wsp from "./components/wsp/wsp";
+import Chatbot from "./components/Chatbot";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {

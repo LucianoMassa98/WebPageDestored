@@ -35,12 +35,7 @@ const Header = () => {
       Destored
     </Link>
 
-    <Link
-      to="/Miembros"
-      className="text-slate-600 transition-colors hover:text-purple-600 text-xl mt-6"
-    >
-      Miembros
-    </Link>
+  
     {/* Puedes agregar más enlaces aquí */}
   </nav>
 
