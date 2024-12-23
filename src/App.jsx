@@ -19,7 +19,7 @@ import Scrums from "./components/Scrums";
 import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 import Wsp from "./components/wsp/wsp";
-import Chatbot from "./components/Chatbot";
+import InstagramLandingPage from "./Pages/InstagramLandingPage";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -52,13 +52,13 @@ function App() {
           }
         />
         <Route path="/Comunidad" element={
-      <>
-      < HeaderCommunity/>
-      <ComunidadDestored />
-      <Scrums />
-      </>
+            <>
+            < HeaderCommunity/>
+            <ComunidadDestored />
+            <Scrums />
+            </>
       
-      } />
+          } />
         <Route path="/Miembros" element={
 
 <>
@@ -69,7 +69,7 @@ function App() {
           } />
 
        
-
+<Route path="/Instagram" element={ <InstagramLandingPage />} />
       </Routes>
     </Router>
   );
