@@ -19,7 +19,7 @@ import Scrums from "./components/Scrums";
 import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 import Wsp from "./components/wsp/wsp";
-import InstagramLandingPage from "./Pages/InstagramLandingPage";
+import DestoPlay from "./Pages/DestoPlay";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -69,7 +69,7 @@ function App() {
           } />
 
        
-<Route path="/Instagram" element={ <InstagramLandingPage />} />
+<Route path="/DestoPlay" element={ <DestoPlay />} />
       </Routes>
     </Router>
   );
