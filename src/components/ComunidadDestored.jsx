@@ -3,7 +3,6 @@ import { RiStarFill } from "react-icons/ri";
 import bannerComunidad from "../../public/bannerComunidad.jpg";
 
 const ComunidadDestored = () => {
-  const whatsappComunidad = "https://chat.whatsapp.com/LOal4051AfnLoxMlccbLNs";
 
   return (
     <div className="relative bg-gray-100">
@@ -73,17 +72,7 @@ const ComunidadDestored = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">
-            ¿Quieres ser parte de nuestra comunidad?
-          </h3>
-          <a href={whatsappComunidad} target="_blank" rel="noopener noreferrer">
-            <button className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition">
-              Únete ahora
-            </button>
-          </a>
-        </div>
+       
       </div>
     </div>
   );

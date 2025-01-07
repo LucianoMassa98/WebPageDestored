@@ -9,7 +9,7 @@ const About = () => {
   return (
     <div id="aboutUs" className="p-8 flex flex-col gap-8 bg-gray-100">
       <h1 className="text-[40px] text-center font-black">
-        Nuestra Misión
+        Misión
       </h1>
       <div className="flex justify-center gap-4">
         <span className="text-5xl text-primary">
@@ -17,7 +17,7 @@ const About = () => {
         </span>
         <p className="max-w-2xl text-center text-gray-500">
 
-        Crear una herramienta que capacite a personas y organizaciones para diseñar, desarrollar y distribuir software y datos de manera descentralizada, utilizando marcos ágiles de desarrollo como Scrum para fomentar la eficiencia, la colaboración y la adaptabilidad en cada proyecto.        </p>
+        Crear una herramienta que capacite a personas y organizaciones para diseñar, desarrollar y distribuir software y datos de manera descentralizada.</p>
         <span className="text-5xl text-primary">
           <RiDoubleQuotesR />
         </span>
@@ -29,12 +29,13 @@ const About = () => {
   <div class="absolute inset-0 bg-gray-800 opacity-50 rounded-lg"></div>
 </div>
 
-        <div>
-          <h3 className="text-center text-[24px] font-bold">#DestoTeam</h3>
-          <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
-            +50 Miembros
-          </h5>
-        </div>
+<div>
+  <h3 className="text-center text-[24px] font-bold">Trabajamos juntos con más de 200</h3>
+  <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
+    profesionales digitales en 2024, conectando talento de 7 países de Latinoamérica
+  </h5>
+</div>
+
       </div>
       
     </div>

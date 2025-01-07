@@ -3,6 +3,7 @@ import { FaLinkedin, FaEnvelope, FaGlobe } from "react-icons/fa";
 
 import perfilGenerico from '../../public/perfil.webp'
 
+import { RiStarFill } from "react-icons/ri";
 
 const MembersList = ({ members }) => {
   return (
@@ -35,6 +36,17 @@ const MembersList = ({ members }) => {
               "{member.presentacion}"
             </p>
           )}
+
+
+           {/* DesafioDesto */}
+           <div style={{ display: 'flex', alignItems: 'center', color: '#6A1B9A', gap: '4px' }}>
+  {member.desafio && (
+    <>
+      {member.desafio} <RiStarFill size={24} />
+    </>
+  )}
+</div>
+
 
           {/* Enlaces */}
           <div className="mt-auto flex space-x-4">
@@ -70,6 +82,8 @@ const MembersList = ({ members }) => {
               </a>
             )}
           </div>
+
+
         </div>
       ))}
     </div>

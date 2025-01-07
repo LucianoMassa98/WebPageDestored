@@ -8,22 +8,41 @@ const Services = () => {
         // Descuento 50%  para suscripcion de stakeholder para los produt owners  y codigo de referidos (descuento 10%) para ganar 25usd
 
         const cardData = [
-          
           {
             image: 'b',
-            enlace: 'https://calendar.app.google/usZmaBHVtAmqQPD1A',
-            cta: 'Agendar Reunión Gratis',
-            title: 'Stakeholder',
-            message: 'Contribuye a la toma de decisiones estratégicas y define la dirección de los proyectos.',
-            price: '$50 USD',
+            enlace: './Comunidad#members',
+            cta: 'Comunidad Destored',
+            title: 'Comunidad',
+            message: 'Explora nuestra red de expertos en software, marketing, diseño y gestión de proyectos ágiles. Encuentra soluciones para tus proyectos con profesionales capacitados.',
+            price: 'Acceso gratuito',
             features: [
-              'Guía y plan de acción detallado para crear tu solución digital.',
-              '1 Mentoría sobre gestión de proyectos y metodología Scrum.',
-              'Soporte Continuo 24/7.',
-              'Beneficios exclusivos para miembros.',
-              'Descuentos exclusivos en servicios en la nube.',
-              'Acceso a un equipo de profesionales digitales.',
-              'Seguimiento durante 1 ciclo de sprint.'
+              'Acceso a una comunidad de expertos certificados que completaron el #DesafioDesto.',
+              'Crecimiento constante con nuevas oportunidades y talentos.',
+              'Networking exclusivo para colaborar en proyectos digitales.',
+              'Participación en webinars y talleres gratuitos.',
+              'Acceso a recursos y herramientas compartidas por la comunidad.',
+              'Visibilidad para tus proyectos y servicios dentro de la red.',
+              'Oportunidad de formar parte de equipos multidisciplinarios.',
+              'Apoyo de mentores con experiencia en tecnología y marketing.',
+              'Foros interactivos para resolver dudas y compartir conocimientos.',
+              'Acceso anticipado a convocatorias de proyectos y desafíos especiales.'
+            ]
+          },
+          {
+            image: 'b',
+            enlace: 'https://mpago.la/2muX7cf',
+            cta: 'Comprar',
+            title: 'Negocio',
+            message: 'Accede a material exclusivo y sesiones de mentoría personalizadas.',
+            price: '$50.000 ARS',
+            features: [
+              'Guía detallada para crear tu propio producto digital desde cero.',
+              'Curso grabado de 1 hora con fundamentos sobre la creación de soluciones digitales.',
+              'Descuentos exclusivos en servicios en la nube como Railway para implementar tu proyecto.',
+              '2 sesiones de mentoría personalizadas para dueños de negocios digitales, con enfoque práctico.',
+              'Acceso a un grupo privado de negocios para intercambiar estrategias y recursos.',
+              '3 plantillas descargables para planificación de proyectos digitales.',
+              'Soporte técnico de dós meses para configurar herramientas digitales esenciales.'
             ]
           },
           {
@@ -42,10 +61,14 @@ const Services = () => {
               'Mentorías enfocadas en liderazgo y gestión de equipos en entornos Scrum.',
               'Acceso dedicado a un equipo de especialistas en Marketing, Ventas y Software, ajustados a las necesidades de tu empresa.',
               'Seguimiento continuo durante múltiples ciclos de sprint.',
-              'Descuentos especiales en servicios digitales y en la nube.'
+              'Descuentos especiales en servicios digitales y en la nube.',
+              'Análisis de mercado y recomendaciones estratégicas.',
+              'Reportes trimestrales con métricas clave de desempeño del proyecto.',
+              'Soporte extendido para la adopción de nuevas tecnologías en tu empresa.'
             ]
           }
         ];
+        
         
   
   const [selectedCard, setSelectedCard] = useState(null);
@@ -54,11 +77,11 @@ const Services = () => {
     <section id="services">
       <div className="mb-8 mt-12 text-center">
         <h1 className="text-[40px] text-center font-black">
-        Comienza Contratando Profesionales Digitales </h1>
+         Nuestros Servicios</h1>
         <p className="text-xl text-gray-500 text-center">
         ¡Transformación digital del futuro de los proyectos, negocios y empresas!       </p>
       </div>
-      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 mb-8 flex-col">
+      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 mb-8 flex-col">
         {cardData.map((card, index) =>
           <div key={index} className={`shadow-xl rounded-lg hover:scale-105 duration-300 border p-8 flex-col ${selectedCard === index ? 'border-[#9C1DD8]' : 'border-gray-200'
             }`}

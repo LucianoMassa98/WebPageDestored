@@ -1,5 +1,6 @@
 import "./Hero.css"
 import React, { useState, useEffect } from "react";
+import {Link} from "react-router-dom"
 
 //<blockquote className="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C2kSJdxu3Mr/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style={{ background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '540px', minWidth: '326px', padding: 0, width: '99.375%', width: '-webkit-calc(100% - 2px)', width: 'calc(100% - 2px)' }}></blockquote><script async src="//www.instagram.com/embed.js"></script>
 import {
@@ -53,17 +54,21 @@ Una red descentralizada de <strong>profesionales digitales para tu proyecto, emp
               <button
                 className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
                   }`}>
-              Contratar Servicios             
+              Contratar Talento             
             </button>
             </a>
 
-            <a href="#servicesContrato">
-              <button
-                className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
-                  }`}>
-             Ofrecer Servicios          
-            </button>
-            </a>
+          
+
+            <Link to="/Comunidad" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+  <button
+    className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""}`}
+  >
+    Soy Talento
+  </button>
+</Link>
+
+
 
             <button
               className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`}
@@ -107,22 +112,22 @@ Una red descentralizada de <strong>profesionales digitales para tu proyecto, emp
         <div className="bg-white/o  rounded-lg flex-col justify-center max-w-[250px] mx-auto">
 
 <h2 className="text-xl font-bold tracking-[1px] text-purple-600">
-  Red Destored
+ Talentos del
 </h2>
 
 <div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiStarFill className="text-primary" /> Marketing y Publicidad
+  <RiCheckboxBlankCircleFill className="text-primary" /> Marketing
 </div>
 <div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiStarFill className="text-primary" /> Ventas
+  <RiCheckboxBlankCircleFill className="text-primary" /> Diseño
 </div>
 <div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiStarFill className="text-primary" /> Informática y Software
-</div>
-<div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiStarFill className="text-primary" /> Proyectos, Negocios y Empresas
+  <RiCheckboxBlankCircleFill className="text-primary" /> Software
 </div>
 
+<div className="flex items-center gap-2 text-lg text-gray-500">
+  <RiCheckboxBlankCircleFill className="text-primary" /> Gestión Ágil
+</div>
 </div>
 
 

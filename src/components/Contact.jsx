@@ -1,229 +1,82 @@
-import useForms from "../hooks/useForms"
-import BotonFlotante from "./BotonFlotante/BotonFlotante";
+import React from "react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTiktok,
+  FaYoutube,
+} from "react-icons/fa";
+
+import { RiLiveLine } from "react-icons/ri";
 
 const Contact = () => {
-
-  const initialData = {
-    email: '',
-    companyName: '',
-    industry: '',
-    projectDescription: '',
-    projectObjectives: '',
-    requiredFeatures: '',
-    integrations: '',
-    securityRequirements: '',
-    projectDeadline: '',
-    budget: '',
-    additionalInfo: ''
-  };
-
-  const isValidDate = (dateString) => {
-    const date = new Date(dateString);
-    return !isNaN(date.getTime());
-  };
-
-  const isFutureDate = (dateString) => {
-    const date = new Date(dateString);
-    const now = new Date();
-    return date > now;
-  };
-
-  const onValidate = (form) => {
-
-    let errors = {};
-    let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-    let regexEmail = /\S+@\S+\.\S+/;
-    let regexComments = /^.{1,255}$/;
-
-    // Email validation
-    if (!form.email.trim()) {
-      errors.email = 'El campo "Correo" no debe estar vació.'
-    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      errors.email = 'El campo "Correo" contiene un formato no valido.'
-    }
-
-    // Required fields validation  
-    if (!form.companyName.trim()) {
-      errors.companyName = 'El campo "CompanyName" no debe estar vació.'
-    } else if (!regexName.test(form.companyName)) {
-      errors.companyName = 'El campo "CompanyName" solo acepta letras y espacios.'
-    }
-
-    if (!form.industry.trim()) {
-      errors.industry = 'El campo "industry" no debe ser vació.'
-    } else if (!regexName.test(form.industry)) {
-      errors.industry = 'El campo "industry" solo acepta letras y espacios.'
-    }
-
-    if (!form.projectDescription.trim()) {
-      errors.projectDescription = 'El campo "projectDescription" no debe estar vació.'
-    } else if (!regexComments.test(form.projectDescription)) {
-      errors.projectDescription = 'El campo "projectDescription" acepta solo 255 caracteres.'
-    }
-
-    if (!form.projectObjectives.trim()) {
-      errors.projectObjectives = 'El campo "projectObjectives" no debe estar vació.'
-    } else if (!regexComments.test(form.projectObjectives)) {
-      errors.projectObjectives = 'El campo "projectObjectives" acepta solo 255 caracteres.'
-    }
-
-    if (!form.requiredFeatures.trim()) {
-      errors.requiredFeatures = 'El campo "requiredFeatures" no debe estar vació.'
-    } else if (!regexComments.test(form.requiredFeatures)) {
-      errors.requiredFeatures = 'El campo "requiredFeatures" acepta solo 255 caracteres.'
-    }
-
-    /*if (!form.integrations.trim()) {
-      errors.integrations = 'El campo "integrations" no debe ser vació.'
-    } else if (!regexComments.test(form.integrations)){
-      errors.integrations = 'El campo "integrations" acepta solo 255 caracteres.'
-    }
-
-    if (!form.securityRequirements.trim()) {
-      errors.securityRequirements = 'El campo "securityRequirements" no debe ser vació.'
-    } else if (!regexComments.test(form.securityRequirements)){
-      errors.securityRequirements = 'El campo "securityRequirements" acepta solo 255 caracteres.'
-    }*/
-
-
-    if (!form.projectDeadline.trim()) {
-      errors.projectDeadline = 'El campo "projectDeadline" no debe estar vació.';
-    } else if (!isValidDate(form.projectDeadline)) {
-      errors.projectDeadline = 'El campo "projectDeadline" contiene una fecha no válida.';
-    } else if (!isFutureDate(form.projectDeadline)) {
-      errors.projectDeadline = 'El campo "projectDeadline" debe ser una fecha futura.';
-    }
-
-    if (!form.budget.trim()) {
-      errors.budget = 'El campo "budget" no debe estar vació.';
-    } else if (isNaN(form.budget)) {
-      errors.budget = 'El campo "budget" solo acepta números.';
-    }
-    return errors
-  };
-
-  const { form, errors, loading, handleChange, handleSubmit, inputRefs } = useForms(initialData, onValidate)
-
   return (
-    <div id="contactUs" className="flex relative flex-col justify-center items-center px-16 py-20 min-h-[1324px] max-md:px-5">
-      <div className="absolute inset-y-32 inset-x-0 z-[-1] bg-repeat-space bg-[length:600px_700px]" style={{
-        backgroundImage: "url('/fondo3.png')"
-      }}></div>
-      <form className="flex relative flex-col mt-3.5 max-w-full w-[833px] bg-white" onSubmit={handleSubmit}>
-        <p className="self-center text-4xl font-semibold leading-10 text-center text-[#4B3F7D] max-md:max-w-full mt-1.5">
-          Formulario de Requisitos para{" "}
-        </p>
-        <p className="self-center mt-1.5 text-4xl font-semibold leading-10 text-center text-[#4B3F7D] max-md:max-w-full">
-          Desarrollo de Software a Medida
-        </p>
-        <p className="self-center mt-3 text-xl leading-7 text-center text-[#4B3F7D] max-md:max-w-full">
-          Para capturar los requisitos de un potencial cliente que desea un{" "}
-        </p>
-        <p className="self-center mt-2 text-xl leading-7 text-center text-[#4B3F7D]">
-          software a medida
-        </p>
-        <div className="mt-9 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Correo electrónico del Cliente
-          <div className="flex items-center mt-1 w-full px-4 py-2 text-xl border-2 rounded border-solid shadow-md shadow-indigo-400/80 bg-white hover:border-[#4B3F7D]">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/63b7c82d3a9e81e87ba06c26ee78f0bf38faf3b8a0fdf94645b93a745919e236?"
-              alt="Email Icon" className="shrink-0 w-7 h-7 mr-3" />
-            <input type="email" name="email" value={form.email} onChange={handleChange}
-              ref={(el) => (inputRefs.current.email = el)}
-              placeholder="Ingrese el correo electrónico del cliente" className="flex-grow outline-none bg-white" />
-          </div>
-          {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
+    <div className="bg-white text-center py-10 px-5" id="contact">
+      <h2 className="text-2xl font-semibold text-violet-600 mb-6">Contáctanos</h2>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-10 text-morado">
+        <div>
+          <h3 className="text-lg font-medium text-violet-700"> Únete al programa de comisiones para vendedores</h3>
+          <a
+            href="mailto:hello@destored.com"
+            className="text-morado-500 hover:text-violet-800"
+          >
+            destored57@gmail.com
+          </a>
         </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Nombre de la Empresa u Organización
-          <input type="text" className="mt-1 block w-full px-4 py-2 text-xl border-2 rounded border-solid shadow-md shadow-indigo-400/80 bg-white hover:border-[#4B3F7D] outline-none"
-            placeholder="Ejemplo: Empresa XYZ" name="companyName" value={form.companyName} onChange={handleChange}
-            ref={(el) => (inputRefs.current.companyName = el)}
-          />
-          {errors.companyName && <p className="text-red-500 text-sm">{errors.companyName}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Rubro
-          <input type="text" className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-md shadow-indigo-400/80 bg-white hover:border-[#4B3F7D] outline-none"
-            placeholder="Ejemplo: Tecnología, Salud, Finanzas, etc."
-            name="industry" value={form.industry} onChange={handleChange}
-            ref={(el) => (inputRefs.current.industry = el)}
-          />
-          {errors.industry && <p className="text-red-500 text-sm">{errors.industry}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Breve descripción del proyecto
-          <textarea className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-sm shadow-indigo-500/80 bg-white hover:border-[#4B3F7D] outline-none resize-none" rows="4" placeholder="Describa brevemente el proyecto que necesita el software a medida"
-            name="projectDescription" value={form.projectDescription} onChange={handleChange}
-            ref={(el) => (inputRefs.current.projectDescription = el)}>
-          </textarea>
-          {errors.projectDescription && <p className="text-red-500 text-sm">{errors.projectDescription}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Presupuesto
-          <input type="text" className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-sm shadow-indigo-500/80 bg-white hover:border-[#4B3F7D] outline-none"
-            name="budget" value={form.budget} onChange={handleChange} ref={(el) => (inputRefs.current.budget = el)} placeholder="Ingrese el presupuesto estimado" />
-          {errors.budget && <p className="text-red-500 text-sm">{errors.budget}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Fecha límite del proyecto
-          <input type="date" className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-sm shadow-indigo-500/80 bg-white hover:border-[#4B3F7D] outline-none"
-            name="projectDeadline" value={form.projectDeadline} onChange={handleChange} />
-          {errors.projectDeadline && <p className="text-red-500 text-sm">{errors.projectDeadline}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Objetivos del proyecto
-          <textarea className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-sm shadow-indigo-500/80 bg-white hover:border-[#4B3F7D] outline-none resize-none" rows="4" placeholder="Describa los objetivos que espera alcanzar con este proyecto"
-            name="projectObjectives" value={form.projectObjectives} onChange={handleChange}>
-          </textarea>
-          {errors.projectObjectives && <p className="text-red-500 text-sm">{errors.projectObjectives}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Funcionalidades requeridas
-          <textarea className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-sm shadow-indigo-500/80 bg-white hover:border-[#4B3F7D] outline-none resize-none" rows="4" placeholder="Enumere las funcionalidades clave que desea en el software a medida"
-            name="requiredFeatures" value={form.requiredFeatures} onChange={handleChange}>
-          </textarea>
-          {errors.requiredFeatures && <p className="text-red-500 text-sm">{errors.requiredFeatures}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Integraciones necesarias
-          <textarea className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-sm shadow-indigo-500/80 bg-white hover:border-[#4B3F7D] outline-none resize-none" rows="4" placeholder="Detalle las integraciones con otros sistemas que sean necesarias"
-            name="integrations" value={form.integrations} onChange={handleChange}>
-          </textarea>
-          {errors.integrations && <p className="text-red-500 text-sm">{errors.integrations}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Requisitos de seguridad y cumplimiento
-          <textarea className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-sm shadow-indigo-500/80 bg-white hover:border-[#4B3F7D] outline-none resize-none" rows="4" placeholder="Indique los requisitos específicos de seguridad y cumplimiento que deben cumplir"
-            name="securityRequirements" value={form.securityRequirements} onChange={handleChange}>
-          </textarea>
-          {errors.securityRequirements && <p className="text-red-500 text-sm">{errors.securityRequirements}</p>}
-        </div>
-        <div className="mt-8 text-2xl font-medium leading-8 text-[#4B3F7D] max-md:max-w-full">
-          Información adicional
-          <textarea className="mt-1 block w-full px-4 py-2 text-xl rounded border-2 border-solid shadow-sm shadow-indigo-500/80 bg-white hover:border-[#4B3F7D] outline-none resize-none" rows="4" placeholder="Proporcione cualquier información adicional que considere relevante"
-            name="additionalInfo" value={form.additionalInfo} onChange={handleChange}></textarea>
-          {errors.additionalInfo && <p className="text-red-500 text-sm">{errors.additionalInfo}</p>}
-        </div>
-        <button type="submit" className="justify-center self-start px-7 py-4 mt-6 text-xl font-medium leading-8 text-center text-white whitespace-nowrap bg-indigo-600 rounded-md shadow max-md:px-5 " disabled={loading}>{loading ? "Enviando..." : "Enviar"}</button>
-        <BotonFlotante />
-      </form>
-
+        
+      </div>
+      <div className="flex justify-center items-center gap-6 mt-8">
+        <a
+          href="https://www.facebook.com/destored0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-morado hover:text-violet-600 text-2xl"
+        >
+          <FaFacebook />
+        </a>
+        <a
+          href="https://www.instagram.com/destored_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-morado hover:text-violet-600 text-2xl"
+        >
+          <FaInstagram />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/destored"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-morado hover:text-violet-600 text-2xl"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://kick.com/destoplay"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-morado hover:text-violet-600 text-2xl"
+        >
+          <RiLiveLine />
+        </a>
+        <a
+          href="https://www.youtube.com/channel/destored"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-morado hover:text-violet-600 text-2xl"
+        >
+          <FaYoutube />
+        </a>
+        <a
+          href="https://www.tiktok.com/@destored"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-morado hover:text-violet-600 text-2xl"
+        >
+          <FaTiktok />
+        </a>
+      </div>
     </div>
   );
 };
 
 export default Contact;
-
-/*
-<div className="absolute inset-0 z-[-1] bg-cover bg-center bg-no-repeat" style={{ 
-      backgroundImage: "url('/fondo.png')" }}></div>
-
-       <div className="absolute inset-0 bg-cover z-[-1]" style={{   background: `
-           linear-gradient(135deg, #0000 20.5%, #ffffff 0 29.5%, #0000 0) 0 16px,
-      linear-gradient(45deg, #0000 8%, #ffffff 0 17%, #0000 0 58%) 32px 0,
-      linear-gradient(135deg, #0000 8%, #ffffff 0 17%, #0000 0 58%, #ffffff 0 67%, #0000 0),
-      linear-gradient(45deg, #0000 8%, #ffffff 0 17%, #0000 0 58%, #ffffff 0 67%, #0000 0 83%, #ffffff 0 92%, #0000 0),
-      #f6f6fa
-    `,
-    backgroundSize: '64px 64px'}}></div>
-      */

@@ -32,10 +32,18 @@ const Header = () => {
       to="/"
       className="text-slate-600 transition-colors hover:text-purple-600 text-xl"
     >
-      Destored
+      Inicio
     </Link>
 
-  
+    <a href="#members" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+          Profesionales
+        </a>
+
+        <a href="#scrums" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+          Equipos
+        </a>
+
+        
     {/* Puedes agregar más enlaces aquí */}
   </nav>
 
