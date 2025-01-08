@@ -9,6 +9,7 @@ import {
   RiStarFill,
 } from "react-icons/ri";
 
+//import  TechIconsRow from "./TechIconsRow.jsx";
 
 const Hero = () => {
 
@@ -47,7 +48,7 @@ const Hero = () => {
           <p
             className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
               }`}>
-Una red descentralizada de <strong>profesionales digitales para tu proyecto, empresa o negocio.</strong>          </p>
+Una red <strong>descentralizada</strong> de talento digital para tu proyecto, negocio o empresa. </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
 
             <a href="#services">
@@ -115,18 +116,19 @@ Una red descentralizada de <strong>profesionales digitales para tu proyecto, emp
  Talentos del
 </h2>
 
+
+
 <div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiCheckboxBlankCircleFill className="text-primary" /> Marketing
+  <RiCheckboxBlankCircleFill className="text-primary" /> Gestión Ágil
 </div>
 <div className="flex items-center gap-2 text-lg text-gray-500">
   <RiCheckboxBlankCircleFill className="text-primary" /> Diseño
 </div>
 <div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiCheckboxBlankCircleFill className="text-primary" /> Software
+  <RiCheckboxBlankCircleFill className="text-primary" /> Marketing
 </div>
-
 <div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiCheckboxBlankCircleFill className="text-primary" /> Gestión Ágil
+  <RiCheckboxBlankCircleFill className="text-primary" /> Software
 </div>
 </div>
 
@@ -167,6 +169,9 @@ Una red descentralizada de <strong>profesionales digitales para tu proyecto, emp
 </div>
 
       </div>
+
+
+
     </section>
   );
 };

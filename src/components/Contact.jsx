@@ -15,7 +15,7 @@ const Contact = () => {
       <h2 className="text-2xl font-semibold text-violet-600 mb-6">Contáctanos</h2>
       <div className="flex flex-col md:flex-row justify-center items-center gap-10 text-morado">
         <div>
-          <h3 className="text-lg font-medium text-violet-700"> Únete al programa de comisiones para vendedores</h3>
+          <h3 className="text-lg font-medium text-violet-700"> Únete a nuestro programa de comisiones para vendedores, colabora con nosotros o resuelve tus dudas con una consulta.</h3>
           <a
             href="mailto:hello@destored.com"
             className="text-morado-500 hover:text-violet-800"

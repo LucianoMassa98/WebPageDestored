@@ -66,12 +66,14 @@ const Scrums = () => {
               <p className="text-lg max-w-2xl mx-auto mb-4">
                 Únete y/o crea equipos para proyectos innovadores y colabora con profesionales de todas partes.
               </p>
-              <button
-                className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200"
-                onClick={() => console.log("Agregar Scrum")}
-              >
-                Agregar Equipo
-              </button>
+              <a 
+    href="https://forms.gle/dVayVfVRZuiRbuWd6" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200 mt-4 text-center"
+  >
+    Agregar Equipo
+  </a>
             </div>
           </div>
         </div>

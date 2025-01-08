@@ -30,11 +30,19 @@ const About = () => {
 </div>
 
 <div>
-  <h3 className="text-center text-[24px] font-bold">Trabajamos juntos con más de 200</h3>
+  <h3 className="text-center text-[24px] font-bold">
+    Más de 300 profesionales de 7 países se unieron en 2024.
+  </h3>
   <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
-    profesionales digitales en 2024, conectando talento de 7 países de Latinoamérica
+    +50 capacitaciones y 9 equipos destacados.
   </h5>
+  <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
+    Súmate al <a href="https://forms.gle/HRuD9aoqfeFihSDw9" className="text-purple-600 no-underline">#DesafioDesto2025</a> y descubre más.
+  </h5>
+ 
 </div>
+
+
 
       </div>
       
