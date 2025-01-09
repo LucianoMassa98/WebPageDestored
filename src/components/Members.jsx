@@ -120,7 +120,7 @@ const Members = () => {
   </a>
 
   <a 
-    href="https://forms.gle/HRuD9aoqfeFihSDw9" 
+    href="https://chat.whatsapp.com/LOal4051AfnLoxMlccbLNs" 
     target="_blank" 
     rel="noopener noreferrer" 
     className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200 mt-4 text-center"

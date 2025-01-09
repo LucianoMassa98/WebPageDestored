@@ -21,10 +21,13 @@ import "./index.css";
 import Wsp from "./components/wsp/wsp";
 import DestoPlay from "./Pages/DestoPlay";
 import Contact from "./components/Contact"
+//import GoogleSlidesEmbed from './components/GoogleSlidesEmbed'; // Ajusta la ruta si es necesario
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
+  const slideUrl = "https://docs.google.com/presentation/d/e/2PACX-1vR0yI-QCZFSgqzCeK7aMb9PGG_nlcIaOgz1vX1gvT8O5m2M918Zo8scMSH0hyaF622SYVyu8MpD2qaE/embed?start=true&loop=true&delayms=3000";  // Asegúrate de poner la URL correcta
+
   return (
     <Router>
         <Wsp />
@@ -41,6 +44,7 @@ function App() {
             <Services /> 
             <Works /> 
             <SuccessCases /> 
+
             <Contact /> 
             <Footer /> 
           </>
@@ -68,3 +72,6 @@ function App() {
 }
 
 export default App;
+
+
+//<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR0yI-QCZFSgqzCeK7aMb9PGG_nlcIaOgz1vX1gvT8O5m2M918Zo8scMSH0hyaF622SYVyu8MpD2qaE/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
