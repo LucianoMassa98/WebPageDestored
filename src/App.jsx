@@ -21,7 +21,6 @@ import "./index.css";
 import Wsp from "./components/wsp/wsp";
 import DestoPlay from "./Pages/DestoPlay";
 import Contact from "./components/Contact"
-//import GoogleSlidesEmbed from './components/GoogleSlidesEmbed'; // Ajusta la ruta si es necesario
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 

@@ -62,10 +62,11 @@ const Scrums = () => {
           />
           <div className="absolute inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
             <div className="text-center text-white">
-              <h1 className="text-4xl font-bold mb-4">Equipos Abiertos</h1>
-              <p className="text-lg max-w-2xl mx-auto mb-4">
-                Únete y/o crea equipos para proyectos innovadores y colabora con profesionales de todas partes.
-              </p>
+            <h1 className="text-4xl font-bold mb-4">Equipos Abiertos</h1>
+<p className="text-lg max-w-2xl mx-auto mb-4">
+  Forma tu propio equipo y lidera proyectos innovadores con profesionales de todo el mundo. Si tienes una visión, únete a nosotros y trae tus ideas a la vida, mientras colaboras con expertos en diversas áreas. ¡Es el momento perfecto para construir algo grande juntos!
+</p>
+
               <a 
     href="https://forms.gle/dVayVfVRZuiRbuWd6" 
     target="_blank" 

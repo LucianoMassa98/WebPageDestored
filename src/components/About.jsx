@@ -16,8 +16,8 @@ const About = () => {
           <RiDoubleQuotesL />
         </span>
         <p className="max-w-2xl text-center text-gray-500">
-
-        Crear una herramienta que capacite a personas y organizaciones para diseñar, desarrollar y distribuir software y datos de manera descentralizada.</p>
+        crear una herramienta que permita a personas y organizaciones diseñar, desarrollar y distribuir software y datos de manera descentralizada.
+       </p>
         <span className="text-5xl text-primary">
           <RiDoubleQuotesR />
         </span>

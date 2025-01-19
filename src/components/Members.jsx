@@ -105,10 +105,16 @@ const Members = () => {
           <div className="relative text-center text-white px-4 py-8 sm:py-16">
             <h2 className="text-3xl font-bold mb-4">Miembros</h2>
             <p className="text-lg max-w-3xl mx-auto mb-6">
-              Conecta con una comunidad de expertos en tecnología, diseño y marketing. En Destored, creemos en el poder de las redes colaborativas para 
-              impulsar ideas innovadoras, compartir conocimiento y construir juntos el futuro digital.
-              <strong>¡Únete ahora, accede y completa al #DesafioDesto2025 en el tiempo que quieras!</strong>
-            </p>
+  Conecta con una comunidad de expertos en tecnología, diseño y marketing.  
+  En Destored, creemos en el poder de las redes colaborativas para impulsar ideas innovadoras, compartir conocimiento y construir juntos el futuro digital.  
+  Para unirte a nuestra red, obtendrás acceso a:
+</p>
+<ul className=" pl-6 mb-6">
+  <li>Participar en el <strong>#DesafíoDesto2025</strong>.</li>
+  <li>Proyectos colaborativos en tiempo real.</li>
+  <li>Recursos exclusivos para desarrollar tus habilidades.</li>
+</ul>
+
             <div className="flex flex-col items-center">
   <a 
     href="https://forms.gle/HRuD9aoqfeFihSDw9" 
@@ -116,17 +122,10 @@ const Members = () => {
     rel="noopener noreferrer" 
     className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200 mt-4 text-center"
   >
-    #DesafioDesto
+    Unirme
   </a>
 
-  <a 
-    href="https://chat.whatsapp.com/LOal4051AfnLoxMlccbLNs" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200 mt-4 text-center"
-  >
-    WhatsApp Community
-  </a>
+  
 </div>
 
           </div>

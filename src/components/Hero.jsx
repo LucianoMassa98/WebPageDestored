@@ -48,7 +48,8 @@ const Hero = () => {
           <p
             className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
               }`}>
-Una red <strong>descentralizada</strong> de talento digital para tu proyecto, negocio o empresa. </p>
+
+Conéctate a una red colaborativa de expertos, creada para acelerar tu transformación digital. </p>
           <div className="flex flex-col md:flex-row items-center gap-4">
 
             <a href="#services">
@@ -76,7 +77,7 @@ Una red <strong>descentralizada</strong> de talento digital para tu proyecto, ne
               onClick={openInstagramVideo}
             >
               <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
-              Mira nuestro <br /> Vídeo de introducción
+             Intro
             </button>
 
             {showModal && (
@@ -110,27 +111,31 @@ Una red <strong>descentralizada</strong> de talento digital para tu proyecto, ne
         <div className="z-40 m-auto p-0">
           
 
-        <div className="bg-white/o  rounded-lg flex-col justify-center max-w-[250px] mx-auto">
+        <div className="bg-transparent  rounded-lg p-6 max-w-[280px] mx-auto">
+  <h2 className="text-2xl font-semibold text-purple-600 mb-4 text-center">
+    Sobre Destored
+  </h2>
 
-<h2 className="text-xl font-bold tracking-[1px] text-purple-600">
- Talentos del
-</h2>
+  <ul className="space-y-0  transparent text-gray-500">
+    <li className="flex items-center gap-3">
+      <RiCheckboxBlankCircleFill className="text-primary " />
+      <span className="text-lg">Cloud</span>
+    </li>
+    <li className="flex items-center gap-3">
+      <RiCheckboxBlankCircleFill className="text-primary" />
+      <span className="text-lg">IA</span>
+    </li>
+    <li className="flex items-center gap-3">
+      <RiCheckboxBlankCircleFill className="text-primary" />
+      <span className="text-lg">Blockchain</span>
+    </li>
+    <li className="flex items-center gap-3">
+      <RiCheckboxBlankCircleFill className="text-primary" />
+      <span className="text-lg">Agile Nexus</span>
+    </li>
+  </ul>
+</div>
 
-
-
-<div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiCheckboxBlankCircleFill className="text-primary" /> Gestión Ágil
-</div>
-<div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiCheckboxBlankCircleFill className="text-primary" /> Diseño
-</div>
-<div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiCheckboxBlankCircleFill className="text-primary" /> Marketing
-</div>
-<div className="flex items-center gap-2 text-lg text-gray-500">
-  <RiCheckboxBlankCircleFill className="text-primary" /> Software
-</div>
-</div>
 
 
 

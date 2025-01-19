@@ -31,13 +31,46 @@ const Works = () => {
                     </p>
 
                     <a 
-  href="https://forms.gle/rKKx1xGFgN6BoxCs5"
+  href="https://forms.gle/Giu9mXr67217JVLD9"
   class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
 >
   Agregar proyeto
 </a>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <div className="flex flex-col gap-4 zoom-container">
+            <img
+              src="work4.png"
+              className="w-full h-56 object-cover rounded-3xl zoomable"
+            />
+            <p className="text-gray-500">Una nueva forma de contratar y ofrecer servicios para el hogar</p>
+            <h3 className="text-2xl font-bold">
+              OFIX
+            </h3>
+            <a 
+  href="https://ofix.up.railway.app/"
+  class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
+>
+  ¡Visitar Sitio Web!
+</a>
+          </div>
+          <div className="flex flex-col gap-4 zoom-container">
+            <img
+              src="work1.png"
+              className="w-full h-56 object-cover rounded-3xl zoomable"
+            />
+            <p className="text-gray-500">Gestión inteligente para tu consultorio o clínica odontológica.</p>
+            <h3 className="text-2xl font-bold">
+              VendePorInsta
+            </h3>
+            <a 
+  href="https://vendeporinsta.up.railway.app/"
+  class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
+>
+  ¡Visitar Sitio Web!
+</a>
+          </div>
           <div className="flex flex-col gap-4 zoom-container">
             <img
               src="work2.png"
@@ -59,44 +92,12 @@ const Works = () => {
               src="work3.png"
               className="w-full h-56 object-cover rounded-3xl zoomable"
             />
-            <p className="text-gray-500">Landing / Ecommerce / Plataforma: Desktop & Web App - 2024</p>
+            <p className="text-gray-500">Gestiona y cronometra competencias automovilísticas más un marketplace.</p>
             <h3 className="text-2xl font-bold">
               ATM
             </h3>
             <a 
   href="https://atm.up.railway.app/"
-  class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
->
-  ¡Visitar Sitio Web!
-</a>
-          </div>
-          <div className="flex flex-col gap-4 zoom-container">
-            <img
-              src="work4.png"
-              className="w-full h-56 object-cover rounded-3xl zoomable"
-            />
-            <p className="text-gray-500">Landing / Ecommerce / Plataforma: Desktop & Web App - 2025</p>
-            <h3 className="text-2xl font-bold">
-              OFIX
-            </h3>
-            <a 
-  href="https://ofix.up.railway.app/"
-  class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
->
-  ¡Visitar Sitio Web!
-</a>
-          </div>
-          <div className="flex flex-col gap-4 zoom-container">
-            <img
-              src="work1.png"
-              className="w-full h-56 object-cover rounded-3xl zoomable"
-            />
-            <p className="text-gray-500">Landing / Plataforma: Desktop & Web App - 2024</p>
-            <h3 className="text-2xl font-bold">
-              VendePorInsta
-            </h3>
-            <a 
-  href="https://vendeporinsta.up.railway.app/"
   class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
 >
   ¡Visitar Sitio Web!
