@@ -26,7 +26,7 @@ const Footer = () => {
         {/* Información del footer */}
         <div className="text-center mt-4">
           <p className="text-gray-300 text-sm md:text-base">
-            San Juan - Argentina
+            Argentina
           </p>
           <p className="text-gray-300 text-sm md:text-base">
             <a href="https://www.destored.org" target="_blank" rel="noopener noreferrer">

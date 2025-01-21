@@ -18,6 +18,8 @@ import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 import Wsp from "./components/wsp/wsp";
 import DestoPlay from "./Pages/DestoPlay";
+import Sorteo from "./Pages/Sorteo";
+
 import Contact from "./components/Contact"
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -55,7 +57,7 @@ function App() {
             <ComunidadDestored />
             <Members />
             <Scrums />
-
+            <DestoPlay />
             <Footer />
 
             </>
@@ -63,7 +65,25 @@ function App() {
           } />
         
        
-<Route path="/destoplay" element={ <DestoPlay />} />
+<Route path="/destoplay" element={
+  
+  <>
+            <DestoPlay />
+            <Footer />
+
+            </>
+  
+  } />
+
+
+<Route path="/sorteo" element={
+  
+            <>
+            <Sorteo />
+            <Footer />
+            </>
+  
+  } />
       </Routes>
     </Router>
   );

@@ -34,7 +34,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-[90vh] grid grid-cols-1 xl:grid-cols-8">
-      {/* Information */}
+      {/* mensaje bienvenida */}
       <div className="md:col-span-4 flex items-center justify-center p-8 xl:p-10">
         <div className="flex flex-col gap-8">
           <h1 className="text-5xl xl:text-7xl  xl:leading-[7.5rem]"> <h1
@@ -50,6 +50,8 @@ const Hero = () => {
               }`}>
 
 Conéctate a una red colaborativa de expertos, creada para acelerar tu transformación digital. </p>
+         
+         {/* accionables */}
           <div className="flex flex-col md:flex-row items-center gap-4">
 
             <a href="#services">
@@ -105,10 +107,11 @@ Conéctate a una red colaborativa de expertos, creada para acelerar tu transform
           </div>
         </div>
       </div>
-      {/* Image */}
+
+      {/* Imagen publicitaria*/}
       <div className="md:col-span-4 flex items-center justify-center relative xl:p-10 z-0">
         {/* Content image */}
-        <div className="z-40 m-auto p-0">
+      <div className="z-40 m-auto p-0">
           
 
         <div className="bg-transparent  rounded-lg p-6 max-w-[280px] mx-auto">
@@ -142,7 +145,7 @@ Conéctate a una red colaborativa de expertos, creada para acelerar tu transform
 
         </div>
 
-        <div className="logo-container absolute w-[70%] h-[70%] p-9 block xl:block">
+      <div className="logo-container absolute w-[70%] h-[70%] p-9 block xl:block">
 
   <div className="logo1">
     <img
@@ -171,7 +174,7 @@ Conéctate a una red colaborativa de expertos, creada para acelerar tu transform
       className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[90%] left-[90%]"
     />
   </div>
-</div>
+        </div>
 
       </div>
 
