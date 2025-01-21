@@ -29,11 +29,11 @@ const SorteoDigital = () => {
           ¿Qué incluye el premio?
         </h2>
         <ul className="list-disc list-inside text-lg sm:text-xl space-y-2">
-          <li>Diseño y desarrollo de una Landing Page personalizada.</li>
-          <li>Implementación de un CRM adaptado a tus necesidades.</li>
-          <li>Reunión de entrega con capacitación base de soluciones digitales</li>
-          <li>Soporte técnico durante 1 mes.</li>
-        </ul>
+  <li>Recopilación de requisitos para transformar tu idea en realidad.</li>
+  <li>Plan de acción mensual detallado en marketing, informática o ventas.</li>
+  <li>Implementación completa del plan estratégico.</li>
+  <li>Soporte técnico y asesoramiento durante 2 meses.</li>
+</ul>
       </div>
 
       {/* Footer */}
