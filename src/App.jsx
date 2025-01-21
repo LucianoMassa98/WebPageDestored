@@ -1,13 +1,11 @@
 import Clients from "./components/Clients";
 import Header from "./components/Header";
-import HeaderCommunity from "./components/HeaderCommunity";
-import HeaderMembers from "./components/HeaderMembers";
 
 import Hero from "./components/Hero";
 import Works from "./components/Works";
 import About from "./components/About";
 import Services from "./components/Services";
-import ServicesContrato from "./components/ServicesContrato";
+import TechIconsRow from "./components/TechIconsRow";
 
 import Footer from "./components/Footer";
 import ComunidadDestored from "./components/ComunidadDestored";
@@ -37,7 +35,9 @@ function App() {
           element={
             <>
             <Header />
-            <Hero /> 
+            <Hero />
+            <TechIconsRow /> 
+ 
             <About /> 
             <DestoredInfo /> 
             <Services /> 
@@ -52,7 +52,6 @@ function App() {
         />
         <Route path="/Comunidad" element={
             <>
-            < HeaderCommunity/>
             <ComunidadDestored />
             <Members />
             <Scrums />
@@ -64,7 +63,7 @@ function App() {
           } />
         
        
-<Route path="/DestoPlay" element={ <DestoPlay />} />
+<Route path="/destoplay" element={ <DestoPlay />} />
       </Routes>
     </Router>
   );

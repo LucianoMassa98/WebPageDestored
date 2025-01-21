@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MembersList from "./MembersList";
-import bannerMiembros from '../../public/bannerMiembros.webp'; // Asegúrate de que esta ruta sea correcta
+import bannerMiembros from '../../public/miembros.jpg'; // Asegúrate de que esta ruta sea correcta
 import { RiStarFill } from "react-icons/ri";
 
 const Members = () => {
@@ -100,37 +100,32 @@ const Members = () => {
     <div className="members mx-auto p-6" id="members">
       {/* Banner con capa oscura y diseño responsivo */}
       <div className="relative w-full">
-        <div className="relative flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${bannerMiembros})` }}>
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-          <div className="relative text-center text-white px-4 py-8 sm:py-16">
-            <h2 className="text-3xl font-bold mb-4">Miembros</h2>
-            <p className="text-lg max-w-3xl mx-auto mb-6">
-  Conecta con una comunidad de expertos en tecnología, diseño y marketing.  
-  En Destored, creemos en el poder de las redes colaborativas para impulsar ideas innovadoras, compartir conocimiento y construir juntos el futuro digital.  
-  Para unirte a nuestra red, obtendrás acceso a:
-</p>
-<ul className=" pl-6 mb-6">
-  <li>Participar en el <strong>#DesafíoDesto2025</strong>.</li>
-  <li>Proyectos colaborativos en tiempo real.</li>
-  <li>Recursos exclusivos para desarrollar tus habilidades.</li>
-</ul>
-
-            <div className="flex flex-col items-center">
-  <a 
-    href="https://forms.gle/HRuD9aoqfeFihSDw9" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200 mt-4 text-center"
+  <div
+    className="relative flex items-center justify-center bg-cover bg-center"
+    style={{ backgroundImage: `url(${bannerMiembros})` }}
   >
-    Unirme
-  </a>
-
-  
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div className="relative text-center text-white px-4 py-6 sm:py-10">
+      <h2 className="text-3xl font-bold mb-4">Miembros</h2>
+      <p className="text-lg max-w-3xl mx-auto mb-4">
+        Conecta con una comunidad de expertos en informática y publicidad de más de 5 años.
+        En Destored, creemos en el poder de las redes colaborativas para impulsar ideas innovadoras,
+        compartir conocimiento y construir juntos el futuro digital.
+      </p>
+      <div className="flex flex-col items-center">
+        <a
+          href="https://forms.gle/HRuD9aoqfeFihSDw9"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200 mt-4 text-center"
+        >
+          Regístrate
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
-          </div>
-        </div>
-      </div>
 
       {/* Filtros */}
       <div className="mb-6 text-center">

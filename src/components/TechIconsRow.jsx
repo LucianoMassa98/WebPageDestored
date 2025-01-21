@@ -1,37 +1,30 @@
 import React from "react";
+import { FaGoogle, FaFacebook, FaMicrosoft, FaAmazon, FaGithub,
 
-const TechIconsRow = () => {
-  const icons = [
-    "https://img.icons8.com/ios-filled/50/808080/internet-of-things.png",
-    "https://img.icons8.com/ios-filled/100/808080/cloud.png",
-    "https://img.icons8.com/ios-filled/100/808080/blockchain.png",
-    "https://img.icons8.com/ios-filled/100/808080/artificial-intelligence.png",
-    "https://img.icons8.com/ios-filled/100/808080/security-shield-green.png",
+ } from "react-icons/fa";
+
+const TechLogosRow = () => {
+  const logos = [
+    { icon: <FaGoogle />, alt: "Google" },
+    { icon: <FaFacebook />, alt: "Meta" },
+    { icon: <FaMicrosoft />, alt: "Microsoft" },
+    { icon: <FaAmazon />, alt: "Amazon" },
+    { icon: <FaGithub />, alt: "GitHub" },
+
   ];
 
   return (
-    <div className="w-full bg-transparent flex justify-center items-center">
-      <div className="flex animate-scroll space-x-8 py-4">
-        {icons.map((icon, index) => (
-          <img
-            key={index}
-            src={icon}
-            alt={`Tech Icon ${index}`}
-            className="w-8 h-8 object-contain"
-          />
-        ))}
-        {/* Repite los iconos para crear un efecto continuo */}
-        {icons.map((icon, index) => (
-          <img
-            key={index + icons.length}
-            src={icon}
-            alt={`Tech Icon ${index}`}
-            className="w-8 h-8 object-contain"
-          />
+    <div className="w-full bg-transparent flex justify-center items-center overflow-hidden">
+      <div className="flex  space-x-8 py-4">
+        {/* Muestra los íconos de las empresas */}
+        {logos.map((logo, index) => (
+          <div key={index} className="w-30 h-30 flex justify-center items-center text-gray-500">
+            {logo.icon}
+          </div>
         ))}
       </div>
     </div>
   );
 };
 
-export default TechIconsRow;
+export default TechLogosRow;

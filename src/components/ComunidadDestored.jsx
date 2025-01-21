@@ -3,7 +3,6 @@ import { RiStarFill } from "react-icons/ri";
 import bannerComunidad from "../../public/bannerComunidad.jpg";
 
 const ComunidadDestored = () => {
-
   return (
     <div className="relative bg-gray-100">
       {/* Banner Section */}
@@ -22,6 +21,14 @@ const ComunidadDestored = () => {
             Conectando desarrolladores, emprendedores y creadores de contenido
             en un espacio dedicado a la tecnología y la innovación.
           </p>
+          <a
+            href="https://www.destored.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-lg mt-6 underline"
+          >
+            Visita www.destored.org
+          </a>
         </div>
       </div>
 
@@ -41,6 +48,14 @@ const ComunidadDestored = () => {
               Conéctate con otros profesionales para colaborar en proyectos de
               software y compartir conocimiento técnico.
             </p>
+            <a
+              href="https://www.destored.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-600 mt-4 inline-block"
+            >
+              Aprende más en Destored
+            </a>
           </div>
 
           {/* Card 2 */}
@@ -55,6 +70,14 @@ const ComunidadDestored = () => {
               Participa en nuestra red para impulsar tus ideas de negocio y
               encontrar oportunidades de crecimiento.
             </p>
+            <a
+              href="https://www.destored.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-600 mt-4 inline-block"
+            >
+              Aprende más en Destored
+            </a>
           </div>
 
           {/* Card 3 */}
@@ -69,10 +92,16 @@ const ComunidadDestored = () => {
               Únete a otros creativos para desarrollar contenido que inspire y
               eduque a nuestra comunidad.
             </p>
+            <a
+              href="https://www.destored.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-600 mt-4 inline-block"
+            >
+              Aprende más en Destored
+            </a>
           </div>
         </div>
-
-       
       </div>
     </div>
   );

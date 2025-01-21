@@ -24,7 +24,6 @@ const ScrumList = ({ scrums }) => {
           key={scrum.id}
           title={scrum.title}
           description={scrum.description}
-          openSpots={scrum.openSpots}
           onClick={() => redirectToUrl(scrum.urlCta)}
         />
       ))}

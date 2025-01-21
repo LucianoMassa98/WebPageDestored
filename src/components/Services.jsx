@@ -11,63 +11,58 @@ const Services = () => {
           {
             image: 'b',
             enlace: './Comunidad#members',
-            cta: 'Comunidad Destored',
+            cta: 'Unirte a la Comunidad',
             title: 'Comunidad',
-            message: 'Explora nuestra red de expertos en software, marketing, diseño y gestión de proyectos ágiles. Encuentra soluciones para tus proyectos con profesionales capacitados.',
+            message: 'Conecta con nuestra red de expertos en software, marketing, diseño y gestión ágil. Encuentra profesionales capacitados y recursos para tus proyectos.',
             price: 'Acceso gratuito',
             features: [
-              'Acceso a una comunidad de expertos certificados que completaron el #DesafioDesto.',
-              'Crecimiento constante con nuevas oportunidades y talentos.',
-              'Networking exclusivo para colaborar en proyectos digitales.',
-              'Participación en webinars y talleres gratuitos.',
-              'Acceso a recursos y herramientas compartidas por la comunidad.',
-              'Visibilidad para tus proyectos y servicios dentro de la red.',
-              'Oportunidad de formar parte de equipos multidisciplinarios.',
-              'Apoyo de mentores con experiencia en tecnología y marketing.',
-              'Foros interactivos para resolver dudas y compartir conocimientos.',
-              'Acceso anticipado a convocatorias de proyectos y desafíos especiales.'
+              'Participación en un grupo y comunidad abierta en WhatsApp.',
+              'Acceso exclusivo al #DesafioDesto2025 de transformación digital.',
+              'Oportunidad de unirte a equipos colaborativos.',
+              'Mayor visibilidad para tus proyectos y servicios dentro de la red.',
+              'Acceso compartido a recursos y herramientas comunitarias.',
+              'Soporte de mentores con más de 5 años de experiencia en informática y publicidad.'
             ]
           },
           {
             image: 'b',
             enlace: 'https://mpago.la/2muX7cf',
-            cta: 'Comprar',
+            cta: 'Adquirir Plan',
             title: 'Negocio',
-            message: 'Accede a material exclusivo y sesiones de mentoría personalizadas.',
+            message: 'Obtén material exclusivo, plantillas prácticas y mentorías personalizadas para potenciar tu negocio.',
             price: '$50.000 ARS',
             features: [
-              'Guía detallada para crear tu propio producto digital desde cero.',
-              'Curso grabado de 1 hora con fundamentos sobre la creación de soluciones digitales.',
-              'Descuentos exclusivos en servicios en la nube como Railway para implementar tu proyecto.',
-              '2 sesiones de mentoría personalizadas para dueños de negocios digitales, con enfoque práctico.',
-              'Acceso a un grupo privado de negocios para intercambiar estrategias y recursos.',
-              '3 plantillas descargables para planificación de proyectos digitales.',
-              'Soporte técnico de dós meses para configurar herramientas digitales esenciales.'
+              'Acceso vitalicio a una guía completa para crear tu producto digital.',
+              'Grupo privado de WhatsApp para networking y estrategias de negocio.',
+              'Descarga de tres plantillas y planes de acción para proyectos digitales.',
+              'Dos sesiones de mentoría en el uso práctico de IA para dueños de negocios.',
+              'Soporte técnico por dos meses para configurar herramientas digitales.',
+              'Beneficios exclusivos en licencias de ciertos SaaS.'
             ]
           },
           {
             image: 'c',
             enlace: 'https://forms.gle/tf1zPxVgfpLMugZV8',
-            cta: 'Completar Formulario',
+            cta: 'Solicitar Propuesta',
             title: 'Empresa',
-            message: 'Diseñado para empresas que buscan soluciones estratégicas personalizadas y equipos especializados para maximizar el éxito de sus proyectos.',
+            message: 'Soluciones estratégicas personalizadas y equipos especializados para alcanzar el éxito de tus proyectos empresariales.',
             price: 'Personalizado',
             features: [
-              'Consultoría estratégica personalizada para tu empresa.',
-              'Planes de acción ajustados a los objetivos de negocio.',
-              'Reunión ejecutiva para definir la visión del proyecto.',
-              'Implementación de metodologías ágiles a medida.',
-              'Documentación completa del proceso de desarrollo y gestión.',
-              'Mentorías enfocadas en liderazgo y gestión de equipos en entornos Scrum.',
-              'Acceso dedicado a un equipo de especialistas en Marketing, Ventas y Software, ajustados a las necesidades de tu empresa.',
-              'Seguimiento continuo durante múltiples ciclos de sprint.',
-              'Descuentos especiales en servicios digitales y en la nube.',
-              'Análisis de mercado y recomendaciones estratégicas.',
-              'Reportes trimestrales con métricas clave de desempeño del proyecto.',
-              'Soporte extendido para la adopción de nuevas tecnologías en tu empresa.'
+              'Sesión ejecutiva para definir objetivos y visión del proyecto.',
+              'Consultoría estratégica ajustada a las necesidades de tu empresa.',
+              'Análisis de mercado con recomendaciones personalizadas.',
+              'Desarrollo de planes de acción enfocados en tus metas comerciales.',
+              'Implementación de metodologías ágiles específicas para tu equipo.',
+              'Documentación completa del proceso de desarrollo y ejecución.',
+              'Mentorías centradas en liderazgo y gestión de equipos.',
+              'Seguimiento continuo y optimización durante los ciclos de trabajo.',
+              'Informes periódicos con métricas clave y análisis de desempeño.',
+              'Soporte técnico y estratégico disponible 24/7.'
             ]
           }
         ];
+        
+        
         
         
   

@@ -26,28 +26,28 @@ const DestoPlay = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-violet-600 via-purple-700 to-white relative">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-violet-600 via-purple-700 to-white relative px-4 sm:px-6 lg:px-8">
       {/* Logo */}
-      <div className="absolute top-6">
+      <div className="top-6 mb-10">
         <img
           src={logoDestored}
           alt="Logo Destored"
-          className="h-64 w-auto"
+          className="h-auto max-w-full w-32 sm:w-40 md:w-48"
         />
       </div>
 
       {/* Main Content */}
-      <div className="text-center mt-20">
-        <h1 className="text-4xl font-bold text-white mb-4">DestoPlay</h1>
-        <p className="text-lg text-white mb-8">
-          Cada miércoles a las 10 PM (Argentina), 
-          <a href="https://lucianomassa.up.railway.app/" className="text-orange-400 underline ml-1">Luciano Massa</a>
-          utilizará su experiencia como Product Manager y Software Developer para realizar una transformación digital 
-          <a href="https://kick.com" className="text-green-400 underline ml-1">en vivo por Kick</a> a los participantes ganadores cada mes.
+      <div className="text-center mt-8 sm:mt-20">
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">DestoPlay</h1>
+        <p className="text-lg sm:text-xl text-white mb-8 px-4 sm:px-10">
+          Cada miércoles a las 10 PM (Argentina),
+          <a href="https://lucianomassa.destored.org" className="text-orange-400 underline ml-1">Luciano Massa</a>
+          utilizará su experiencia como Product Manager y Software Developer para realizar una transformación digital
+          <a href="https://kick.com/destoplay" className="text-green-400 underline ml-1">en vivo por Kick</a> a los participantes ganadores cada mes.
         </p>
 
         <section className="mt-10">
-          <h2 className="text-xl font-bold text-white mb-4">¿Qué encontrarás en DestoPlay?</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">¿Qué encontrarás en DestoPlay?</h2>
           <ul className="list-disc list-inside text-white">
             <li>Temas educativos y herramientas digitales.</li>
             <li>Casos de éxito y experiencias reales.</li>
@@ -58,9 +58,9 @@ const DestoPlay = () => {
 
       {/* How to Participate Section */}
       <div className="flex flex-col items-center mt-10">
-        <p className="text-2xl font-bold text-white mb-4">¿Cómo participar este mes?</p>
+        <p className="text-xl sm:text-2xl font-bold text-white mb-4">¿Cómo participar este mes?</p>
         <a
-          href="https://www.instagram.com/destored_/"
+          href="https://www.instagram.com/destored_/ "
           className="px-8 py-4 text-lg font-semibold text-white bg-purple-800 rounded-full hover:bg-purple-900 transition"
         >
           Síguenos en Instagram
@@ -68,12 +68,12 @@ const DestoPlay = () => {
       </div>
 
       {/* Footer Link */}
-      <div className="absolute bottom-4">
+      <div className="absolute bottom-4 w-full text-center">
         <a
-          href="https://www.destored.com"
+          href="https://www.destored.org"
           className="text-black text-sm hover:underline"
         >
-          Visítanos en nuestro sitio web
+         www.destored.org
         </a>
       </div>
     </div>
