@@ -9,9 +9,8 @@ const SorteoDigital = () => {
           ¡Sorteamos una Transformacion Digital!
         </h1>
         <p className="text-lg sm:text-xl max-w-2xl mx-auto">
-          Estamos sorteando increíbles premios para potenciar tu negocio o marca. 
-          Participa y obtén la oportunidad de ganar una transformación digital gratuita, 
-          incluyendo el desarrollo de landing pages, la instalación de CRMs y mucho más.
+        ¡Participa en nuestro sorteo y gana increíbles premios para impulsar tu negocio o marca!
+        Cada mes, tienes la oportunidad de obtener una transformación digital gratuita, que incluye el desarrollo de sitios webs, la implementación de CRMs y mucho más.
         </p>
       </div>
 
@@ -29,10 +28,10 @@ const SorteoDigital = () => {
           ¿Qué incluye el premio?
         </h2>
         <ul className="list-disc list-inside text-lg sm:text-xl space-y-2">
-  <li>Recopilación de requisitos para transformar tu idea en realidad.</li>
-  <li>Plan de acción mensual detallado en marketing, informática o ventas.</li>
-  <li>Implementación completa del plan estratégico.</li>
-  <li>Soporte técnico y asesoramiento durante 2 meses.</li>
+  <li>Recopilación de requisitos para transformar tu idea, marca o negocio.</li>
+  <li>Plan de acción mensual detallado en marketing, informática y/o ventas.</li>
+  <li>Implementación completa del plan.</li>
+  <li>Soporte técnico y asesoramiento durante 1 mes.</li>
 </ul>
       </div>
 
