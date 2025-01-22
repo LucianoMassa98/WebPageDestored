@@ -18,6 +18,8 @@ import "semantic-ui-css/semantic.min.css";
 import "./index.css";
 import Wsp from "./components/wsp/wsp";
 import DestoPlay from "./Pages/DestoPlay";
+import EGameChampionship from "./Pages/EGameChampionship";
+
 import Sorteo from "./Pages/Sorteo";
 
 import Contact from "./components/Contact"
@@ -84,6 +86,15 @@ function App() {
             </>
   
   } />
+
+<Route path="/EGameChampionship" element={
+  
+  <>
+  <EGameChampionship />
+  <Footer />
+  </>
+
+} />
       </Routes>
     </Router>
   );

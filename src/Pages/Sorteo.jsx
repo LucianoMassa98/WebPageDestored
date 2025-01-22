@@ -22,18 +22,25 @@ const SorteoDigital = () => {
        className="bg-purple-600 hover:bg-purple-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-200 mt-2"
       > Seguirnos en Instagram </a>
 
-      {/* List of Benefits */}
-      <div className="mt-12 text-center">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6">
-          ¿Qué incluye el premio?
-        </h2>
-        <ul className="list-disc list-inside text-lg sm:text-xl space-y-2">
-  <li>Recopilación de requisitos para transformar tu idea, marca o negocio.</li>
-  <li>Plan de acción mensual detallado en marketing, informática y/o ventas.</li>
-  <li>Implementación completa del plan.</li>
-  <li>Soporte técnico y asesoramiento durante 1 mes.</li>
-</ul>
-      </div>
+  {/* Benefits Section */}
+<div className="mt-12 text-center">
+  <h2 className="text-2xl sm:text-3xl font-semibold mb-6">
+    ¿Qué incluye el premio?
+  </h2>
+  <ul className="list-disc list-inside text-lg sm:text-xl space-y-2">
+    <li>Recopilación de requisitos para transformar tu idea, marca o negocio.</li>
+    <li>Plan de acción mensual detallado en marketing, informática y/o ventas.</li>
+    <li>Implementación del 10% del plan.</li>
+  </ul>
+  <h2 className="text-2xl sm:text-3xl font-semibold my-6">
+    Puntos extra por compartir al menos 1 contenido
+  </h2>
+  <ul className="list-disc list-inside text-lg sm:text-xl space-y-2">
+    <li>Implementación completa del plan.</li>
+    <li>Soporte técnico y asesoramiento durante 1 mes.</li>
+  </ul>
+</div>
+
 
       {/* Footer */}
       <div className="mt-16 text-center mb-6">
