@@ -27,9 +27,9 @@ const Services = () => {
           {
             image: 'b',
             enlace: 'https://mpago.la/2muX7cf',
-            cta: 'Adquirir Plan',
+            cta: 'Comprar',
             title: 'Partner Hub',
-            message: 'Obtén material exclusivo, plantillas prácticas y mentorías personalizadas para potenciar tu negocio.',
+            message: 'Accede a material exclusivo, plantillas prácticas y mentorías personalizadas para implementar IA y potenciar tu negocio.',
             price: '$50.000 ARS',
             features: [
               'Acceso vitalicio a una guía completa para crear tu producto digital.',
