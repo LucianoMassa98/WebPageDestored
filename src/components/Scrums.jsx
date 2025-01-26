@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import bannerScrum from '../../public/equipos.png'
 const Scrums = () => {
   const [scrumData, setScrumData] = useState([]);
+    const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     // URL del archivo Google Sheets en formato JSON
@@ -65,14 +66,44 @@ const Scrums = () => {
         <p className="text-lg max-w-2xl mx-auto mb-4">
           ¿Tienes una visión y estás listo para liderar? En Destored, ofrecemos la oportunidad de formar tu propio equipo y desarrollar proyectos innovadores junto a profesionales de todo el mundo. Colabora con expertos en diversas áreas, convierte tus ideas en realidad y sé parte de algo grande.
         </p>
-        <a 
-          href="https://forms.gle/dVayVfVRZuiRbuWd6" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200 mt-4"
-        >
+        
+        {/* Botón Agregarme */}
+        <button
+          className="bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
+          onClick={() => setShowModal(true)}
+              >
           Crear Equipo
-        </a>
+        </button>
+
+               {/* Modal */}
+        {showModal && (
+          <div
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+            onClick={() => setShowModal(false)}
+          >
+            <div
+              className="bg-white rounded-lg w-11/12 max-w-lg p-6 relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSewsb7Ww-yFlmkZ0X30xwUBokfUeqnRwZbgamuis1fPWr8Efg/viewform?embedded=true"
+                width="100%"
+                height="500"
+                frameBorder="0"
+                className="rounded-lg"
+                title="Formulario de Google"
+              >
+                Cargando…
+              </iframe>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   </div>

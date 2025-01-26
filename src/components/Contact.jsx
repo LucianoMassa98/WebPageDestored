@@ -11,7 +11,7 @@ import { RiLiveLine } from "react-icons/ri";
 
 const Contact = () => {
   return (
-    <div className="bg-white text-center py-10 px-5" id="contact">
+    <div className="bg-white text-center py-10 px-5" id="contacto">
       <h2 className="text-2xl font-semibold text-violet-600 mb-6">Contáctanos</h2>
       <div className="flex flex-col md:flex-row justify-center items-center gap-10 text-morado">
         <div>

@@ -25,20 +25,24 @@ const Header = () => {
           showMenu ? "left-0" : "-left-full"
         } top-0 xl:static flex-1 flex flex-col xl:flex-row items-center justify-center gap-10 transition-all duration-500 `}
       >
-        <Link to ="/" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
-          Inicio
-        </Link>
+    
         <a href="#aboutUs" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Nosotros
         </a>
         <a href="#services" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Servicios
         </a>
+        <a href="#contacto" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+          Contáctanos
+        </a>
         <a href="#products" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Productos
         </a>
         <Link to ="/Comunidad" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
           Comunidad
+        </Link>
+        <Link to ="/eGame" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
+          eGame
         </Link>
         
       </nav>

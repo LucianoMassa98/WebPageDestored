@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Works = () => {
+    const [showModal, setShowModal] = useState(false);
+  
   return (
     <div id="products" className="p-8 xl:p-20">
       <div className="mb-8">
@@ -30,12 +32,43 @@ const Works = () => {
           Cada mes realizamos sorteos y desarrollamos MVPs (Productos Mínimos Viables) para impulsar los proyectos más destacados.
                     </p>
 
-                    <a 
-  href="https://forms.gle/Giu9mXr67217JVLD9"
-  class="text-purple-600 text-lg font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-400"
->
-  Agregar proyeto
-</a>
+                    
+<button
+          className="bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
+          onClick={() => setShowModal(true)}
+        >
+          Agregar
+        </button>
+
+{/* Modal */}
+{showModal && (
+          <div
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+            onClick={() => setShowModal(false)}
+          >
+            <div
+              className="bg-white rounded-lg w-11/12 max-w-lg p-6 relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeuIb-cpT4yCvVjT8wFcets0hqW84ybdcnQEvCU4FQ5xQgQkg/viewform?embedded=true"
+                width="100%"
+                height="500"
+                frameBorder="0"
+                className="rounded-lg"
+                title="Formulario de Google"
+              >
+                Cargando…
+              </iframe>
+            </div>
+          </div>
+        )}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           

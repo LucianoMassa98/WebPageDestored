@@ -3,6 +3,7 @@ import MembersList from "./MembersList";
 import bannerMiembros from '../../public/miembros.jpg'; // Asegúrate de que esta ruta sea correcta
 import { RiStarFill } from "react-icons/ri";
 
+import RegisterModal from "./ProjectFormModal";
 const Members = () => {
   const [membersData, setMemberData] = useState([]);
   const [filteredMembers, setFilteredMembers] = useState([]);
@@ -12,10 +13,12 @@ const Members = () => {
     rol: ''
   });
   const [currentPage, setCurrentPage] = useState(1);
-  const membersPerPage = 3;  // Para que solo se muestren 3 miembros por página
+  const membersPerPage = 3; // Para que solo se muestren 3 miembros por página
   const [areaOptions, setAreaOptions] = useState([]);
   const [paisOptions, setPaisOptions] = useState([]);
   const [rolOptions, setRolOptions] = useState([]);
+    const [showModal, setShowModal] = useState(false);
+  
 
   useEffect(() => {
     const url = 'https://docs.google.com/spreadsheets/d/1pkwgZF-9fg2-0VUCA9T4Wmw76rQ_xeJPLeP6mvM4WVM/gviz/tq?tqx=out:json';
@@ -100,35 +103,63 @@ const Members = () => {
     <div className="members mx-auto p-6" id="members">
       {/* Banner con capa oscura y diseño responsivo */}
       <div className="relative w-full">
-  <div
-    className="relative flex items-center justify-center bg-cover bg-center"
-    style={{ backgroundImage: `url(${bannerMiembros})` }}
-  >
-    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div className="relative text-center text-white px-4 py-6 sm:py-10">
-      <h2 className="text-3xl font-bold mb-4">Miembros</h2>
-      <p className="text-lg max-w-3xl mx-auto mb-4">
-        Conecta con una comunidad de expertos en informática y publicidad de más de 5 años.
-        En Destored, creemos en el poder de las redes colaborativas para impulsar ideas innovadoras,
-        compartir conocimiento y construir juntos el futuro digital.
-      </p>
-      <div className="flex flex-col items-center">
-        <a
-          href="https://forms.gle/HRuD9aoqfeFihSDw9"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-purple-600 hover:bg-green-600 text-white font-bold py-2 px-6 rounded shadow-md transition duration-200 mt-4 text-center"
+        <div
+          className="relative flex items-center justify-center bg-cover bg-center"
+          style={{ backgroundImage: `url(${bannerMiembros})` }}
         >
-          Regístrate
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+          <div className="relative text-center text-white px-4 py-6 sm:py-10">
+            <h2 className="text-3xl font-bold mb-4">Miembros Destacados</h2>
+            <p className="text-lg max-w-3xl mx-auto mb-4">
+              Regístrate como miembro destacado de la comunidad, participa en el #DesafíoDesto2025 y destaca en una comunidad en constante crecimiento.
+            </p>
 
+            <div className="flex flex-col items-center">
+             {/* Botón Agregarme */}
+            <button
+          className="bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
+          onClick={() => setShowModal(true)}
+              >
+          Registrarme
+        </button>
+
+               {/* Modal */}
+        {showModal && (
+          <div
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+            onClick={() => setShowModal(false)}
+          >
+            <div
+              className="bg-white rounded-lg w-11/12 max-w-lg p-6 relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdhwM7vfVmMAVx_1R8xUSSnYGOOijKpFASJo--Om2hU2QKaQg/viewform?embedded=true"
+                width="100%"
+                height="500"
+                frameBorder="0"
+                className="rounded-lg"
+                title="Formulario de Google"
+              >
+                Cargando…
+              </iframe>
+            </div>
+          </div>
+        )}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Filtros */}
       <div className="mb-6 text-center">
+        <h1 className="text-xl font-semibold mt-12">Perfiles Destacados</h1>
         <h3 className="text-xl font-semibold mt-6">Filtrar por</h3>
         <div className="flex flex-wrap justify-center">
           <select

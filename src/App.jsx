@@ -25,6 +25,7 @@ import Sorteo from "./Pages/Sorteo";
 import Contact from "./components/Contact"
 
 import PartnerHub from "./Pages/PartnerHub";
+import DigitalMastery from "./Pages/DigitalMastery";
 
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -85,6 +86,15 @@ function App() {
   
   <>
             <PartnerHub />
+            <Footer />
+
+            </>
+  
+  } />
+  <Route path="/digitalmastery" element={
+  
+  <>
+            <DigitalMastery />
             <Footer />
 
             </>
