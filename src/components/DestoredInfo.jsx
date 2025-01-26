@@ -10,6 +10,7 @@ const DestoredInfo = () => {
       transition: { duration: 0.6 },
     },
     hover: { scale: 1.05, transition: { duration: 0.3 } },
+    tap: { scale: 0.95, transition: { duration: 0.2 } }, // Animación al hacer clic
   };
 
   return (
@@ -71,6 +72,7 @@ const DestoredInfo = () => {
             initial="initial"
             animate="animate"
             whileHover="hover"
+            whileTap="tap" // Agregar animación al hacer clic
           >
             <motion.img
               className="w-full h-40 object-cover rounded-md shadow-lg"

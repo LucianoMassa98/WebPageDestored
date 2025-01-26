@@ -44,10 +44,10 @@ const Services = () => {
           {
             image: 'c',
             enlace: './digitalmastery',
-            cta: 'Solicitar Propuesta',
+            cta: 'Conocer Más',
             title: 'Digital Mastery',
             message: 'Soluciones estratégicas personalizadas y equipos especializados para alcanzar el éxito de tus proyectos empresariales.',
-            price: 'Desde $200.000 ARS',
+            price: 'Personalizado',
             features: [
               'Acceso a Partner Hub.',
               'Consultoría estratégica ajustada a las necesidades de tu empresa.',
