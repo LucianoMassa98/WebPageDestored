@@ -27,80 +27,33 @@ const ComunidadDestored = () => {
             rel="noopener noreferrer"
             className="text-white text-lg mt-6 underline"
           >
-            Visita www.destored.org
+            www.destored.org
           </a>
         </div>
       </div>
 
       {/* Content Section */}
       <div className="max-w-7xl mx-auto px-6 py-10">
-        {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-            <div className="flex justify-center items-center text-purple-600 text-4xl mb-4">
-              <RiStarFill />
-            </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
-              Desarrolladores
-            </h3>
-            <p className="text-gray-600">
-              Conéctate con otros profesionales para colaborar en proyectos de
-              software y compartir conocimiento técnico.
-            </p>
-            <a
-              href="https://www.destored.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-600 mt-4 inline-block"
-            >
-              Aprende más en Destored
-            </a>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-            <div className="flex justify-center items-center text-purple-600 text-4xl mb-4">
-              <RiStarFill />
-            </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
-              Emprendedores
-            </h3>
-            <p className="text-gray-600">
-              Participa en nuestra red para impulsar tus ideas de negocio y
-              encontrar oportunidades de crecimiento.
-            </p>
-            <a
-              href="https://www.destored.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-600 mt-4 inline-block"
-            >
-              Aprende más en Destored
-            </a>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
-            <div className="flex justify-center items-center text-purple-600 text-4xl mb-4">
-              <RiStarFill />
-            </div>
-            <h3 className="text-xl font-bold text-gray-800 mb-2">
-              Creadores de Contenido
-            </h3>
-            <p className="text-gray-600">
-              Únete a otros creativos para desarrollar contenido que inspire y
-              eduque a nuestra comunidad.
-            </p>
-            <a
-              href="https://www.destored.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-purple-600 mt-4 inline-block"
-            >
-              Aprende más en Destored
-            </a>
-          </div>
+        {/* Community Info */}
+        <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <h3 className="text-2xl font-bold text-gray-800 mb-4">
+            Comunidad Abierta de Destored
+          </h3>
+          <p className="text-lg text-gray-600 mb-6">
+            Únete a un espacio donde  <strong> desarrolladores, emprendedores y creadores
+            de contenido </strong> se conectan, comparten conocimientos y colaboran en
+            proyectos. Recibirás avisos importantes, aprenderás de los mentores
+            de la comunidad y serás parte de un grupo que impulsa la tecnología
+            y la innovación.
+          </p>
+          <a
+            href="https://chat.whatsapp.com/LOal4051AfnLoxMlccbLNs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 px-6 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 block"
+          >
+            Comunidad en WhatsApp
+          </a>
         </div>
       </div>
     </div>

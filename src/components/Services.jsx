@@ -10,34 +10,35 @@ const Services = () => {
         const cardData = [
           {
             image: 'b',
-            enlace: './Comunidad#members',
-            cta: 'Unirte a la Comunidad',
+            enlace: './Comunidad',
+            cta: 'Conocer Más',
             title: 'TalentTech Community',
-            message: 'Conecta con nuestra red de expertos en software, marketing, diseño y gestión ágil. Encuentra profesionales capacitados y recursos para tus proyectos.',
+            message: 'Conecta con nuestra red de talento digital y accede a recursos valiosos para tu carrea o negocio.',
             price: 'Acceso gratuito',
             features: [
               'Participa de una comunidad abierta en WhatsApp.',
-              'Acceso exclusivo al #DesafioDesto2025 de transformación digital.',
+              'Acceso exclusivo al #DesafioDesto2025.',
               'Oportunidad de unirte a equipos colaborativos.',
               'Mayor visibilidad para tus proyectos y servicios dentro de la red.',
               'Acceso compartido a recursos y herramientas comunitarias.',
-              'Soporte de mentores con más de 5 años de experiencia en informática y publicidad.'
+              'Soporte de mentores con más de 5 años de experiencia en tecnologías digitales.'
             ]
           },
           {
             image: 'b',
-            enlace: 'https://mpago.la/2muX7cf',
-            cta: 'Comprar',
+            enlace: './partnerhub',
+            cta: 'Conocer Más',
             title: 'Partner Hub',
             message: 'Accede a material exclusivo, plantillas prácticas y mentorías personalizadas para implementar IA y potenciar tu negocio.',
-            price: '$50.000 ARS',
+            price: '$50.000 ARS / 50 USDT',
             features: [
-              'Acceso vitalicio a una guía completa para crear tu producto digital.',
+              'Guía completa para crear tu producto digital.',
+              'Tres plantillas y planes de acción para proyectos digitales.',
               'Grupo privado de WhatsApp para networking y estrategias de negocio.',
-              'Descarga de tres plantillas y planes de acción para proyectos digitales.',
               'Dos sesiones de mentoría en el uso práctico de IA para dueños de negocios.',
               'Soporte técnico por dos meses para configurar herramientas digitales.',
-              'Beneficios exclusivos en licencias de ciertos SaaS.'
+              'Soporte técnico disponible 24/7.'
+
             ]
           },
           {
@@ -48,15 +49,12 @@ const Services = () => {
             message: 'Soluciones estratégicas personalizadas y equipos especializados para alcanzar el éxito de tus proyectos empresariales.',
             price: 'Desde $200.000 ARS',
             features: [
-              'Sesión ejecutiva para definir objetivos y visión del proyecto.',
+              'Acceso a Partner Hub.',
               'Consultoría estratégica ajustada a las necesidades de tu empresa.',
-              'Análisis de mercado con recomendaciones personalizadas.',
-              'Desarrollo de planes de acción enfocados en tus metas comerciales.',
+              'Desarrollo de planes de acción enfocados en tus metas.',
               'Implementación de metodologías ágiles específicas para tu equipo.',
-              'Documentación completa del proceso de desarrollo y ejecución.',
-              'Mentorías centradas en liderazgo y gestión de equipos.',
               'Seguimiento continuo y optimización durante los ciclos de trabajo.',
-              'Informes periódicos con métricas clave y análisis de desempeño.',
+              'Informes periódicos con métricas claves y análisis de desempeño.',
               'Soporte técnico y estratégico disponible 24/7.'
             ]
           }
@@ -100,7 +98,7 @@ const Services = () => {
               {card.cta}
             </a>
             <div className="text-left mx-4 flex-1">
-              <p className="font-medium pb-2 pt-3">Más Información: </p>
+              <p className="font-medium pb-2 pt-3">Detalle</p>
               {card.features.map((feature, index) => (
                 <ul key={index}
                   className="space-y-2">

@@ -58,7 +58,7 @@ Conéctate a una red colaborativa de expertos, creada para acelerar tu transform
               <button
                 className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
                   }`}>
-              Contratar Talento             
+              Contratar             
             </button>
             </a>
 

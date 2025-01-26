@@ -46,7 +46,7 @@ const DestoPlay = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-gradient-to-t from-violet-600 via-purple-700 to-white relative px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex flex-col items-center bg-gradient-to-t from-gray-900 via-purple-700 to-white relative px-4 sm:px-6 lg:px-8">
       {/* Logo */}
       <div className="mt-6 mb-10">
         <img

@@ -24,6 +24,9 @@ import Sorteo from "./Pages/Sorteo";
 
 import Contact from "./components/Contact"
 
+import PartnerHub from "./Pages/PartnerHub";
+
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -42,9 +45,10 @@ function App() {
             <Hero />
             <TechIconsRow /> 
  
-            <About /> 
             <DestoredInfo /> 
             <Services /> 
+            <About /> 
+
             <Works /> 
             <SuccessCases /> 
 
@@ -77,6 +81,16 @@ function App() {
   
   } />
 
+<Route path="/partnerhub" element={
+  
+  <>
+            <PartnerHub />
+            <Footer />
+
+            </>
+  
+  } />
+
 
 <Route path="/sorteo" element={
   
@@ -87,7 +101,7 @@ function App() {
   
   } />
 
-<Route path="/EGameChampionship" element={
+<Route path="/EGame" element={
   
   <>
   <EGameChampionship />

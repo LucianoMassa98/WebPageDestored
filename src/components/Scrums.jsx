@@ -58,7 +58,7 @@ const Scrums = () => {
       src={bannerScrum}
       alt="Banner Scrums"
       className="w-full h-[300px] sm:h-[400px] object-cover"
-    />
+    />   
     <div className="absolute inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
       <div className="text-center text-white px-4 sm:px-8">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">Forma tu Equipo</h1>
