@@ -130,8 +130,17 @@ const IABanner = () => {
 
       {/* Conclusión */}
       <p className="text-lg font-semibold text-center mt-4">
-        Accede ahora al Destored Partner Hub y transforma tu capacidad de ofrecer soluciones inteligentes y personalizadas que mejoren la experiencia del cliente mientras maximizas la eficiencia de tus operaciones. ¡La oportunidad está a tu alcance!
-      </p>
+  Accede ahora al  
+  <a 
+    href="/partnerhub" 
+    className="ml-1 px-1 py-1 border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-white mr-1"
+  >
+    Partner Hub
+  </a> 
+   y transforma tu capacidad de ofrecer soluciones inteligentes y personalizadas que mejoren la experiencia del cliente mientras maximizas la eficiencia de tus operaciones. ¡La oportunidad está a tu alcance!
+</p>
+
+
 
 
 

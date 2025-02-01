@@ -79,7 +79,7 @@ function App() {
                 <Route path="/digitalmastery" element={<><DigitalMastery /><Footer /></>} />
                 <Route path="/sorteo" element={<><Sorteo /><Footer /></>} />
                 <Route path="/EGame" element={<><EGameChampionship /><Footer /></>} />
-                <Route path="/IABeta" element={<>
+                <Route path="/IA" element={<>
                     <IABanner/>     
                 <Footer /></>} />
 

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const Chatbot = () => {
+
+  
   const [messages, setMessages] = useState([]); // Almacena el historial de mensajes
   const [inputText, setInputText] = useState(""); // Almacena el mensaje actual del usuario
 
@@ -38,53 +40,51 @@ const Chatbot = () => {
 
   return (
 
-    <div className="flex flex-col max-w-sm w-full bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-      {/* Cabecera del chatbot */}
-      <div className="bg-violet-700 text-white p-4">
-        <h2 className="text-lg font-semibold">Chatbot de Destored</h2>
-      </div>
-
-      {/* Área de mensajes */}
-      <div className="flex-1 p-4 overflow-y-auto bg-gray-900">
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`mb-4 ${
-              msg.sender === "user" ? "text-right" : "text-left"
+    <div className="flex flex-col max-w-full sm:max-w-md lg:max-w-4xl w-full bg-gray-800 shadow-lg rounded-lg overflow-hidden mt-6">
+    {/* Cabecera del chatbot */}
+    <div className="bg-purple-700 text-white p-4">
+      <h2 className="text-lg font-semibold">Chatbot de Destored</h2>
+    </div>
+  
+    {/* Área de mensajes */}
+    <div className="flex-1 p-4 overflow-y-auto bg-gray-900">
+      {messages.map((msg, index) => (
+        <div
+          key={index}
+          className={`mb-4 ${msg.sender === "user" ? "text-right" : "text-left"}`}
+        >
+          <span
+            className={`inline-block px-4 py-2 rounded-lg ${
+              msg.sender === "user"
+                ? "bg-purple-700 text-white"
+                : "bg-gray-700 text-gray-200"
             }`}
           >
-            <span
-              className={`inline-block px-4 py-2 rounded-lg ${
-                msg.sender === "user"
-                  ? "bg-violet-700 text-white"
-                  : "bg-gray-700 text-gray-200"
-              }`}
-            >
-              {msg.text}
-            </span>
-          </div>
-        ))}
-      </div>
-
-      {/* Input y botón de enviar */}
-      <div className="flex p-4 bg-gray-800">
-  <input
-    type="text"
-    value={inputText}
-    onChange={(e) => setInputText(e.target.value)}
-    onKeyPress={(e) => e.key === "Enter" && sendMessage(inputText)}
-    placeholder="Escribe tu mensaje..."
-    className="flex-1 p-2 border border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-violet-500 text-violet-500"
-  />
-  <button
-    onClick={() => sendMessage(inputText)} // Cambio aquí
-    className="px-4 bg-violet-700 text-white rounded-r-lg hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-500"
-  >
-    Enviar
-  </button>
-</div>
-
+            {msg.text}
+          </span>
+        </div>
+      ))}
     </div>
+  
+    {/* Input y botón de enviar */}
+    <div className="flex p-4 bg-gray-800">
+      <input
+        type="text"
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+        onKeyPress={(e) => e.key === "Enter" && sendMessage(inputText)}
+        placeholder="Escribe tu mensaje..."
+        className="flex-1 p-2 border border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-purple-500"
+      />
+      <button
+        onClick={() => sendMessage(inputText)}  // Llamada de la función en referencia
+        className="px-4 bg-purple-700 text-white rounded-r-lg hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
+      >
+        Enviar
+      </button>
+    </div>
+  </div>
+  
   );
 };
 
