@@ -6,7 +6,7 @@ const Chatbot = () => {
   const [inputText, setInputText] = useState(""); // Almacena el mensaje actual del usuario
 
   // Función para enviar el mensaje al backend
-  const sendMessage = async () => {
+  const sendMessage = async (message) => {
     if (!inputText.trim()) return; // Evita enviar mensajes vacíos
 
     // Añade el mensaje del usuario al historial
@@ -15,7 +15,7 @@ const Chatbot = () => {
 
     try {
       // Envía el mensaje al backend
-      const response =await axios.post('https://chatbot-deepseek-production.up.railway.app/chat', { user_message: 'Hola' }, {
+      const response =await axios.post('https://chatbot-deepseek-production.up.railway.app/chat', { user_message: message }, {
         headers: {
           'Content-Type': 'application/json',
         }
@@ -68,21 +68,22 @@ const Chatbot = () => {
 
       {/* Input y botón de enviar */}
       <div className="flex p-4 bg-gray-800">
-        <input
-          type="text"
-          value={inputText}
-          onChange={(e) => setInputText(e.target.value)}
-          onKeyPress={(e) => e.key === "Enter" && sendMessage()}
-          placeholder="Escribe tu mensaje..."
-          className="flex-1 p-2 border border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-violet-500 text-violet-500"
-        />
-        <button
-          onClick={sendMessage}
-          className="px-4 bg-violet-700 text-white rounded-r-lg hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-500"
-        >
-          Enviar
-        </button>
-      </div>
+  <input
+    type="text"
+    value={inputText}
+    onChange={(e) => setInputText(e.target.value)}
+    onKeyPress={(e) => e.key === "Enter" && sendMessage(inputText)}
+    placeholder="Escribe tu mensaje..."
+    className="flex-1 p-2 border border-gray-600 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-violet-500 text-violet-500"
+  />
+  <button
+    onClick={() => sendMessage(inputText)} // Cambio aquí
+    className="px-4 bg-violet-700 text-white rounded-r-lg hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-violet-500"
+  >
+    Enviar
+  </button>
+</div>
+
     </div>
   );
 };
