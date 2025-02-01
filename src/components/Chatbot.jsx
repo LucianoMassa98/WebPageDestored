@@ -15,10 +15,12 @@ const Chatbot = () => {
 
     try {
       // Envía el mensaje al backend
-      const response = await axios.post(
-        "https://chatbot-deepseek-production.up.railway.app/chat",
-        { user_message: inputText }
-      );
+      const response =await axios.post('https://chatbot-deepseek-production.up.railway.app/chat', { user_message: 'Hola' }, {
+        headers: {
+          'Content-Type': 'application/json',
+        }
+      })
+      
 
       // Añade la respuesta del chatbot al historial
       setMessages((prev) => [
