@@ -14,6 +14,8 @@ import SuccessCases from "./components/SuccessCases";
 import Members from "./components/Members";
 import Scrums from "./components/Scrums";
 import Wsp from "./components/wsp/wsp";
+import IABanner from "./components/IABanner";
+
 import DestoPlay from "./Pages/DestoPlay";
 import EGameChampionship from "./Pages/EGameChampionship";
 import Sorteo from "./Pages/Sorteo";
@@ -77,6 +79,10 @@ function App() {
                 <Route path="/digitalmastery" element={<><DigitalMastery /><Footer /></>} />
                 <Route path="/sorteo" element={<><Sorteo /><Footer /></>} />
                 <Route path="/EGame" element={<><EGameChampionship /><Footer /></>} />
+                <Route path="/IABeta" element={<>
+                    <IABanner/>     
+                <Footer /></>} />
+
             </Routes>
         </Router>
     );
