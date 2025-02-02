@@ -49,7 +49,7 @@ const Hero = () => {
             className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
               }`}>
 
-Conéctate a una red colaborativa de expertos, creada para acelerar tu transformación digital. </p>
+Transformación Digital para tu Negocio: Impulsa tu Marca en la Era de la Inteligencia Artificial </p>
          
          {/* accionables */}
           <div className="flex flex-col md:flex-row items-center gap-4">
@@ -58,19 +58,11 @@ Conéctate a una red colaborativa de expertos, creada para acelerar tu transform
               <button
                 className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
                   }`}>
-              Contratar             
+              Servicios             
             </button>
             </a>
 
           
-
-            <Link to="/Comunidad" className="text-slate-600 transition-colors hover:text-purple-600 text-xl">
-  <button
-    className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""}`}
-  >
-    Soy Talento
-  </button>
-</Link>
 
 
 

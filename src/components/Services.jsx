@@ -13,15 +13,14 @@ const Services = () => {
             enlace: './Comunidad',
             cta: 'Conocer Más',
             title: 'TalentTech Community',
-            message: 'Conecta con nuestra red de talento digital y accede a recursos valiosos para tu carrea o negocio.',
+            message: 'Conecta con nuestra red de talento digital y accede a recursos valiosos para tu negocio o marca personal.',
             price: 'Acceso gratuito',
             features: [
-              'Participa de una comunidad abierta en WhatsApp.',
-              'Acceso exclusivo al #DesafioDesto2025.',
-              'Oportunidad de unirte a equipos colaborativos.',
-              'Mayor visibilidad para tus proyectos y servicios dentro de la red.',
-              'Acceso compartido a recursos y herramientas comunitarias.',
-              'Soporte de mentores con más de 5 años de experiencia en tecnologías digitales.'
+              'Regístrate como miembro destacado',
+              'Participa en desafíos exclusivos',
+              'Crea y/o únete a equipos colaborativos',
+              'Accede a recursos y herramientas compartidos por la comunidad',
+              'Soporte técnico intermitente'
             ]
           },
           {
@@ -29,14 +28,13 @@ const Services = () => {
             enlace: './partnerhub',
             cta: 'Conocer Más',
             title: 'Partner Hub',
-            message: 'Accede a material exclusivo, plantillas prácticas y mentorías personalizadas para implementar IA y potenciar tu negocio.',
-            price: '$50.000 ARS / 50 USDT',
+            message: 'Obtén acceso exclusivo a recursos estratégicos para impulsar y digitalizar tu negocio o marca.',
+            price: '$50 USD anuales',
             features: [
-              'Guía completa para crear tu producto digital.',
-              'Tres plantillas y planes de acción para proyectos digitales.',
-              'Grupo privado de WhatsApp para networking y estrategias de negocio.',
-              'Dos sesiones de mentoría en el uso práctico de IA para dueños de negocios.',
-              'Soporte técnico por dos meses para configurar herramientas digitales.',
+              'Mentorías 1 a 1 sobre uso de IA en negocio o marca.',
+              'Guía para desarrollar y lanzar tu M.V.P.',
+              'Grupo privado de WhatsApp.',
+              'Ecosistema de herramientas digitales de Google, Meta y OpenAI.',
               'Soporte técnico disponible 24/7.'
 
             ]
@@ -44,20 +42,19 @@ const Services = () => {
           {
             image: 'c',
             enlace: './digitalmastery',
-            cta: 'Conocer Más',
+            cta: 'Descubrir Más',
             title: 'Digital Mastery',
-            message: 'Soluciones estratégicas personalizadas y equipos especializados para alcanzar el éxito de tus proyectos empresariales.',
-            price: 'Personalizado',
+            message: 'Ofrecemos soluciones estratégicas personalizadas y equipos especializados para impulsar el éxito de tus proyectos empresariales.',
+            price: 'A medida',
             features: [
-              'Acceso a Partner Hub.',
-              'Consultoría estratégica ajustada a las necesidades de tu empresa.',
-              'Desarrollo de planes de acción enfocados en tus metas.',
-              'Implementación de metodologías ágiles específicas para tu equipo.',
-              'Seguimiento continuo y optimización durante los ciclos de trabajo.',
-              'Informes periódicos con métricas claves y análisis de desempeño.',
-              'Soporte técnico y estratégico disponible 24/7.'
+              'Consultoría estratégica adaptada a tus necesidades.',
+              'Diseño y desarrollo completamente personalizado.',
+              'Capacitación en metodologías ágiles para tu equipo.',
+              'Informes periódicos con métricas clave y análisis de rendimiento.',
+              'Soporte técnico y estratégico 24/7.'
             ]
           }
+          
         ];
         
         

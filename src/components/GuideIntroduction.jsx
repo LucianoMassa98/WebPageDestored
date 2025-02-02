@@ -1,30 +1,76 @@
-import React from 'react';
+import React, { useState } from "react";
+import { FileText, Download } from "lucide-react";
+import { X } from "lucide-react"; // Added for the close icon
 
 const GuideIntroduction = () => {
-  const handleDownload = () => {
-    // Aquí puedes colocar la URL de descarga de la guía
-    window.location.href = 'https://docs.google.com/document/d/1SK3XW19cF8shUkxEVaEpZ5O84Qe8SA_JJHQcGGWelNs/edit?usp=sharing'; // Reemplaza con la ruta correcta
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="bg-white rounded-lg shadow-md p-6 mt-6 max-w-4xl mx-auto">
-      <h2 className="text-2xl font-semibold text-center text-purple-700 mb-6">Introducción a la Guía</h2>
-      <p className="text-gray-700 mb-4 text-center">
-      Esta guía ofrece un marco completo para diseñar, desarrollar e implementar soluciones digitales, con un enfoque en la contratación de profesionales clave para formar equipos sólidos.
-       Incluye tres planes de acción genéricos para informática, marketing y ventas, basados en la experiencia de más de 300 profesionales y 15 proyectos. 
-       Su contenido práctico y estratégico, condensado en 16 páginas, está diseñado para ser leído en una hora.
+    <section className="mt-8 max-w-4xl mx-auto bg-gradient-to-r from-indigo-600 to-purple-800 p-6 rounded-2xl shadow-lg text-white relative overflow-hidden">
+      {/* Forma decorativa */}
+      <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-400 rounded-full opacity-20 transform translate-x-12 -translate-y-12"></div>
+      <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500 rounded-full opacity-25 transform -translate-x-8 translate-y-8"></div>
+
+      <h2 className="text-3xl font-bold text-center mb-4 flex items-center justify-center gap-2">
+        <FileText className="w-7 h-7" /> Introducción a la Guía
+      </h2>
+
+      <p className="text-lg text-gray-200 mb-6 text-center leading-relaxed">
+        Esta guía ofrece un marco completo para diseñar, desarrollar e implementar soluciones digitales, con un enfoque en la contratación de profesionales clave para formar equipos sólidos. Incluye tres planes de acción genéricos para informática, marketing y ventas, basados en la experiencia de más de 300 profesionales y 15 proyectos. Su contenido práctico y estratégico, condensado en 16 páginas, está diseñado para ser leído en una hora.
       </p>
 
-
-
-      <div className="text-center mt-6">
+      {/* Botón para abrir el modal */}
+      <div className="text-center">
         <button
-          onClick={handleDownload}
-          className="px-6 py-3 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800"
+          onClick={openModal}
+          className="px-6 py-3 bg-white text-purple-700 font-semibold rounded-full shadow-md hover:bg-purple-200 transition-all flex items-center justify-center gap-2"
         >
-          Acceder a la Guía
+          <Download className="w-5 h-5" /> Acceder a la Guía
         </button>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 bg-gray-900 bg-opacity-60 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-xl w-11/12 md:w-3/4 lg:w-1/2 p-6 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Botón de cierre con icono */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 text-purple-700 hover:text-purple-900 transition"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            <h3 className="text-2xl font-semibold text-purple-700 text-center mb-4">
+              Accede a la Guía
+            </h3>
+
+            <p className="text-gray-700 text-center mb-4">
+              Aprende los marcos prácticos para tu negocio con nuestra guía.
+            </p>
+
+            <div className="flex justify-center">
+              <a
+                href="https://docs.google.com/document/d/1SK3XW19cF8shUkxEVaEpZ5O84Qe8SA_JJHQcGGWelNs/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 bg-green-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 transition-all flex items-center justify-center gap-2"
+              >
+                <Download className="w-5 h-5" /> Acceder Ahora
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
