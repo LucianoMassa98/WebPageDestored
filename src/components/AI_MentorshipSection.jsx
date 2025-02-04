@@ -14,11 +14,11 @@ const AI_MentorshipSection = () => {
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500 rounded-full opacity-25 transform -translate-x-8 translate-y-8"></div>
 
       <h2 className="text-3xl font-bold text-center mb-4 flex items-center justify-center gap-2">
-        <Calendar className="w-7 h-7" /> Agenda De Mentorías de IA
+        <Calendar className="w-7 h-7" /> Mentorías de IA
       </h2>
 
       <p className="text-lg text-gray-200 mb-6 text-center leading-relaxed">
-        Las mentorías de Inteligencia Artificial están diseñadas para ayudar a los negocios a comprender y aplicar tecnologías de IA en sus procesos. Recibe orientación personalizada sobre integración de IA en marketing, software, informática y gestión ágil.
+      Las mentorías de Inteligencia Artificial están dirigidas a negocios y profesionales digitales que buscan comprender y aplicar tecnologías de IA en sus procesos. Ofrecen orientación personalizada sobre su integración en marketing, software, informática y gestión ágil, con un límite de 2 sesiones mensuales.
       </p>
 
       {/* Botón para abrir el modal */}

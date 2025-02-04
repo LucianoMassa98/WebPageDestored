@@ -11,7 +11,7 @@ const Services = () => {
           {
             image: 'b',
             enlace: './Comunidad',
-            cta: 'Conocer Más',
+            cta: 'Más',
             title: 'TalentTech Community',
             message: 'Conecta con nuestra red de talento digital y accede a recursos valiosos para tu negocio o marca personal.',
             price: 'Acceso gratuito',
@@ -26,7 +26,7 @@ const Services = () => {
           {
             image: 'b',
             enlace: './partnerhub',
-            cta: 'Conocer Más',
+            cta: 'Más',
             title: 'Partner Hub',
             message: 'Obtén acceso exclusivo a recursos estratégicos para impulsar y digitalizar tu negocio o marca.',
             price: '$50 USD anuales',
@@ -42,10 +42,10 @@ const Services = () => {
           {
             image: 'c',
             enlace: './digitalmastery',
-            cta: 'Descubrir Más',
+            cta: 'Más',
             title: 'Digital Mastery',
             message: 'Ofrecemos soluciones estratégicas personalizadas y equipos especializados para impulsar el éxito de tus proyectos empresariales.',
-            price: 'A medida',
+            price: 'Personalizado',
             features: [
               'Consultoría estratégica adaptada a tus necesidades.',
               'Diseño y desarrollo completamente personalizado.',

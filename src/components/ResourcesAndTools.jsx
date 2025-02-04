@@ -1,25 +1,25 @@
 import React, { useState } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { FileText, Download } from "lucide-react";
+import { X } from "lucide-react"; // Added for the close icon
 
-const AccessRequest = () => {
+const ResourcesAndTools  = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="mt-8 max-w-4xl mx-auto bg-gradient-to-r from-purple-700 to-indigo-700 p-6 rounded-2xl shadow-lg text-white relative overflow-hidden">
+    <section className="mt-8 max-w-4xl mx-auto bg-gradient-to-r from-indigo-600 to-purple-800 p-6 rounded-2xl shadow-lg text-white relative overflow-hidden">
       {/* Forma decorativa */}
       <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-400 rounded-full opacity-20 transform translate-x-12 -translate-y-12"></div>
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500 rounded-full opacity-25 transform -translate-x-8 translate-y-8"></div>
 
       <h2 className="text-3xl font-bold text-center mb-4 flex items-center justify-center gap-2">
-        <MessageCircle className="w-7 h-7" /> Acceso al Grupo Privado de WhatsApp
+        <FileText className="w-7 h-7" /> Recursos y Herramientas
       </h2>
 
       <p className="text-lg text-gray-200 mb-6 text-center leading-relaxed">
-        Únete a nuestro grupo privado de WhatsApp para conectar con emprendedores y expertos, acceder a contenido exclusivo sobre el uso de IA en negocios, recibir actualizaciones sobre las últimas tendencias y aprovechar oportunidades de colaboración en proyectos digitales innovadores.
-      </p>
+      Te ayudamos a desarrollar y lanzar tu MVP con una guía detallada, proporcionándote documentación y soporte para configurar Meta Business, Google Workspace y Ads según tu estrategia. Te orientamos en la integración de OpenAI y su API, y en la gestión de GitHub y Railway. Además, te ofrecemos 1 mes de hosting gratuito.          </p>
 
       {/* Botón para abrir el modal */}
       <div className="text-center">
@@ -27,7 +27,7 @@ const AccessRequest = () => {
           onClick={openModal}
           className="px-6 py-3 bg-white text-purple-700 font-semibold rounded-full shadow-md hover:bg-purple-200 transition-all flex items-center justify-center gap-2"
         >
-          <MessageCircle className="w-5 h-5" /> Unirme al Grupo
+          <Download className="w-5 h-5" /> Acceder
         </button>
       </div>
 
@@ -50,21 +50,21 @@ const AccessRequest = () => {
             </button>
 
             <h3 className="text-2xl font-semibold text-purple-700 text-center mb-4">
-              Únete a nuestro Grupo Privado de WhatsApp
+              Accede a la documentación
             </h3>
 
             <p className="text-gray-700 text-center mb-4">
-              Conéctate con nuestra comunidad y accede a contenido exclusivo.
+              Aprende los marcos prácticos para tu negocio con nuestra documentación.
             </p>
 
             <div className="flex justify-center">
               <a
-                href="https://chat.whatsapp.com/Kxs6cq6r4CoIFTqIwUtLOq"
+                href="https://docs.google.com/document/d/1SK3XW19cF8shUkxEVaEpZ5O84Qe8SA_JJHQcGGWelNs/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-green-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 transition-all flex items-center justify-center gap-2"
               >
-                <MessageCircle className="w-5 h-5" /> Unirme Ahora
+                <Download className="w-5 h-5" /> Acceder Ahora
               </a>
             </div>
           </div>
@@ -74,4 +74,4 @@ const AccessRequest = () => {
   );
 };
 
-export default AccessRequest;
+export default ResourcesAndTools ;

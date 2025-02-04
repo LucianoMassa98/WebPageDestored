@@ -16,11 +16,12 @@ const PartnerHubHero = ({ partnerimg }) => {
 
       <div className="container mx-auto px-6 relative z-10">
         <h1 className="text-5xl font-extrabold text-center text-white mb-8">
-          Partner Hub
+          Desto Partner Hub
         </h1>
         <p className="text-lg text-center mb-12">
-        Obtén acceso exclusivo a recursos estratégicos para impulsar y digitalizar tu negocio o marca.
-        </p>
+
+        Digitaliza tu negocio y marca con IA al mejor precio del mercado.    
+            </p>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <img
@@ -31,7 +32,7 @@ const PartnerHubHero = ({ partnerimg }) => {
 
           <ul className="list-disc text-white space-y-6 md:w-1/2">
             <li>
-              <strong className="text-xl">2 Mentorías 1 a 1 sobre uso de IA:</strong>
+              <strong className="text-xl">Mentorías 1 a 1 sobre uso de IA:</strong>
               <ul className="list-disc pl-5 space-y-1">
                 <li>Aplicada a marketing e informática.</li>
                 <li>Aplicada al desarrollo de software y metodologías ágiles.</li>
@@ -40,8 +41,14 @@ const PartnerHubHero = ({ partnerimg }) => {
             <li>
               <strong className="text-xl">Recursos y herramientas:</strong>
               <ul className="list-disc pl-5 space-y-1">
-                <li>Guía escrita para desarrollar y lanzar tu producto digital M.V.P.</li>
-                <li>Configuración de ecosistema de herramientas digitales de Google, Meta y OpenAI.</li>
+              <li>Guía detallada para desarrollar y lanzar tu producto digital MVP.</li>  
+              <li>Configuración profesional de Meta Business y Ads.</li>  
+              <li>Configuración optimizada de Google Workspace y Ads.</li>  
+              <li>Integración y configuración de OpenAI y su API.</li>  
+              <li>Implementación y configuración de GitHub y Railway.</li>  
+              <li>1 mes de hosting gratuito.</li>
+
+
               </ul>
             </li>
             <li>
