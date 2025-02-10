@@ -28,7 +28,7 @@ const Services = () => {
             enlace: './partnerhub',
             cta: 'Más',
             title: 'Partner Hub',
-            message: 'Obtén acceso exclusivo a recursos estratégicos para impulsar y digitalizar tu negocio o marca.',
+            message: 'Transforma tu negocio con acceso exclusivo a recursos estratégicos, mentorías personalizadas y herramientas digitales líderes.',
             price: '$50 USD anuales',
             features: [
               'Mentorías 1 a 1 sobre uso de IA en negocio o marca.',
@@ -36,26 +36,22 @@ const Services = () => {
               'Grupo privado de WhatsApp.',
               'Ecosistema de herramientas digitales de Google, Meta y OpenAI.',
               'Soporte técnico disponible 24/7.'
-
             ]
           },
           {
             image: 'c',
-            enlace: './digitalmastery',
-            cta: 'Más',
-            title: 'Digital Mastery',
-            message: 'Ofrecemos soluciones estratégicas personalizadas y equipos especializados para impulsar el éxito de tus proyectos empresariales.',
-            price: 'Personalizado',
+            enlace: './demo',
+            cta: 'Solicitar Demo',
+            title: 'Partner Hub Demo',
+            message: 'Obtén acceso exclusivo y limitado a recursos estratégicos para impulsar y digitalizar tu negocio o marca.',
+            price: 'Completar Requisitos',
             features: [
-              'Consultoría estratégica adaptada a tus necesidades.',
-              'Diseño y desarrollo completamente personalizado.',
-              'Capacitación en metodologías ágiles para tu equipo.',
-              'Informes periódicos con métricas clave y análisis de rendimiento.',
-              'Soporte técnico y estratégico 24/7.'
+              'Acceder a los servicios del Partner Hub durante 15 días'
             ]
           }
-          
         ];
+        
+        
         
         
         

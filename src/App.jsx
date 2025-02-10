@@ -22,6 +22,7 @@ import Sorteo from "./Pages/Sorteo";
 import Contact from "./components/Contact";
 import PartnerHub from "./Pages/PartnerHub";
 import DigitalMastery from "./Pages/DigitalMastery";
+import Demo from "./Pages/Demo";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 
@@ -76,6 +77,8 @@ function App() {
                 />
                 <Route path="/partnerhub" element={<><PartnerHub /><Footer /></>} />
                 <Route path="/digitalmastery" element={<><DigitalMastery /><Footer /></>} />
+                <Route path="/demo" element={<><Demo /><Footer /></>} />
+
                 <Route path="/sorteo" element={<><Sorteo /><Footer /></>} />
                 <Route path="/EGame" element={<><EGameChampionship /><Footer /></>} />
                 <Route path="/IA" element={<>

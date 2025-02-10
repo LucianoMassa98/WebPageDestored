@@ -14,7 +14,7 @@ const ProjectFormModal = () => {
         onClick={openModal}
         className="bg-gradient-to-r from-indigo-300 to-purple-500 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full sm:w-auto"
       >
-        Solicitar Servicios
+        Completar Formulario
       </button>
 
       {/* Modal */}
@@ -37,7 +37,7 @@ const ProjectFormModal = () => {
 
             {/* Título */}
             <h2 className="text-2xl font-bold text-indigo-700 text-center mb-4">
-              Formulario de Proyecto
+              Caso de estudio
             </h2>
 
             {/* Descripción */}

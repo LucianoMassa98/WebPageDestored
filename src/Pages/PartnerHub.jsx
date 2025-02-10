@@ -20,12 +20,12 @@ const PartnerHub = () => {
 
 {/* Sección de información */}
 <div className="info-section mt-8" id="info-section">
-  <h1 className="text-2xl font-bold">¿Cómo empezar?</h1>
-  <p>
-    Agenda tus mentorías en los horarios que mejor se adapten a ti. Si no encuentras disponibilidad compatible, contáctanos.  
-    Además, accede a los recursos exclusivos.  
-    <strong>Importante:</strong> Si aún no realizaste la compra, abstente de acceder a cualquier recurso y solicita la atención de un asistente de ventas en la sección superior.
-  </p>
+<h1 className="text-2xl font-bold">¿Cómo empezar?</h1>
+<p>
+  <strong>¡Atención!</strong> Si aún no has realizado la compra, detén tu lectura y solicita una demostración gratuita dirigiéndote a <a href="https://www.destored.org/demo" className="text-blue-500">www.destored.org/demo</a>.
+</p>
+
+
 
   <section id="mentorship-section" className="space-y-4"> 
   <AI_MentorshipSection />

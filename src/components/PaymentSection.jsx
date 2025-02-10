@@ -19,9 +19,13 @@ const PaymentSection = () => {
   const whatsappMessage = "Comprobante de pago realizado. Aquí está la información.";
 
   return (
-    <section className="bg-white rounded-lg shadow-md p-6 mt-6">
+    <section className="bg-white rounded-lg shadow-md p-6 mt-6 max-w-2xl mx-auto w-full">
       <h2 className="text-2xl font-semibold text-center text-purple-700 mb-6">Formas de Pago</h2>
       
+      <p className="text-center text-red-600 font-semibold mb-4">
+        ⚠️ Importante: Si tienes un código de descuento exclusivo, dirígete a la opción de ser atendido por un representante.
+      </p>
+
       <div className="flex flex-col gap-4">
         {/* Transferencia Bancaria */}
         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
@@ -47,7 +51,6 @@ const PaymentSection = () => {
               <p className="text-gray-600">Titular: <span className="font-semibold">Luciano Gaston Massa Iribarren</span></p>
               <p className="text-gray-600">Monto: <span className="font-semibold text-purple-700">$52,000 ARS</span></p>
 
-              {/* Botón Compartir Comprobante */}
               <a
                 href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
                 className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
@@ -84,7 +87,6 @@ const PaymentSection = () => {
               <p className="text-gray-600">Monto: <span className="font-semibold text-purple-700">50 USDT</span></p>
               <p className="text-red-600 font-semibold mt-2">🚨 Recuerda: solo utiliza la red ERC20 para transferencias. Usar otra red podría ocasionar la pérdida de fondos.</p>
 
-              {/* Botón Compartir Comprobante */}
               <a
                 href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
                 className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
@@ -103,7 +105,7 @@ const PaymentSection = () => {
             className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
             onClick={() => toggleSection("support")}
           >
-            Atención de un Asistente de Ventas
+            Atención de un representante
             {openSection === "support" ? <ChevronUp /> : <ChevronDown />}
           </button>
           {openSection === "support" && (
@@ -122,7 +124,6 @@ const PaymentSection = () => {
         </div>
       </div>
       
-      {/* Mensaje de Copiado */}
       {copiedText && (
         <p className="text-green-600 text-center mt-4">¡Copiado al portapapeles: {copiedText}!</p>
       )}

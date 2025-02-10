@@ -14,7 +14,7 @@ const CommunityAndSupport  = () => {
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500 rounded-full opacity-25 transform -translate-x-8 translate-y-8"></div>
 
       <h2 className="text-3xl font-bold text-center mb-4 flex items-center justify-center gap-2">
-        <MessageCircle className="w-7 h-7" /> Comunidad y Soporte
+        <MessageCircle className="w-7 h-7" /> Networking Exclusivo
       </h2>
 
       <p className="text-lg text-gray-200 mb-6 text-center leading-relaxed">
