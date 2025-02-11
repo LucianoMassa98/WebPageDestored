@@ -10,7 +10,7 @@
     "start": "serve dist -s -n -L -p $PORT"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.3",
+    "@heroicons/react": "^1.0.6",
     "axios": "^1.6.8",
     "boxicons": "^2.1.4",
     "formik": "^2.4.6",

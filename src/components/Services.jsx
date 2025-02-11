@@ -12,7 +12,7 @@ const Services = () => {
             image: 'b',
             enlace: './Comunidad',
             cta: 'Más',
-            title: 'TalentTech Community',
+            title: 'TalentTech',
             message: 'Conecta con nuestra red de talento digital y accede a recursos valiosos para tu negocio o marca personal.',
             price: 'Acceso gratuito',
             features: [
@@ -31,9 +31,9 @@ const Services = () => {
             message: 'Transforma tu negocio con acceso exclusivo a recursos estratégicos, mentorías personalizadas y herramientas digitales líderes.',
             price: '$50 USD anuales',
             features: [
-              'Mentorías 1 a 1 sobre uso de IA en negocio o marca.',
-              'Guía para desarrollar y lanzar tu M.V.P.',
-              'Grupo privado de WhatsApp.',
+              'Transformación Digital 1:1',
+              'Guía para diseñar, desarrollar y lanzar tu M.V.P.',
+              'Grupo privado de networking.',
               'Ecosistema de herramientas digitales de Google, Meta y OpenAI.',
               'Soporte técnico disponible 24/7.'
             ]
@@ -46,7 +46,7 @@ const Services = () => {
             message: 'Obtén acceso exclusivo y limitado a recursos estratégicos para impulsar y digitalizar tu negocio o marca.',
             price: 'Completar Requisitos',
             features: [
-              'Acceder a los servicios del Partner Hub durante 15 días'
+              'Accede a los servicios del Partner Hub durante 15 días'
             ]
           }
         ];

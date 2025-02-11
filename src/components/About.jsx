@@ -31,13 +31,12 @@ const About = () => {
 
 <div>
   <h3 className="text-center text-[24px] font-bold">
-    Más de 300 profesionales de 7 países se unieron en 2024.
-  </h3>
+  En 2024, conectamos con más de 300 profesionales digitales de 7 países diferentes en América 🌎.  </h3>
   <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
-    +50 capacitaciones y 9 equipos destacados.
+    +50 Capacitaciones.
   </h5>
   <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
-    Súmate al <a href="https://forms.gle/HRuD9aoqfeFihSDw9" className="text-purple-600 no-underline">#DesafioDesto2025</a> y descubre más.
+    +10 Proyectos diferentes.
   </h5>
  
 </div>
