@@ -17,6 +17,8 @@ import Wsp from "./components/wsp/wsp";
 import IABanner from "./components/IABanner";
 
 import DestoPlay from "./Pages/DestoPlay";
+import DesafioDesto from "./Pages/DesafíoDesto";
+
 import EGameChampionship from "./Pages/EGameChampionship";
 import Sorteo from "./Pages/Sorteo";
 import Contact from "./components/Contact";
@@ -68,10 +70,13 @@ function App() {
                     path="/Comunidad"
                     element={
                         <>
-                            <ComunidadDestored />
+                                                    <ComunidadDestored />
+
+                            <DesafioDesto />
                             <Members />
                             <Scrums />
                             <DestoPlay />
+
                             <Footer />
                         </>
                     }

@@ -32,12 +32,7 @@ const About = () => {
 <div>
   <h3 className="text-center text-[24px] font-bold">
   En 2024, conectamos con más de 300 profesionales digitales de 7 países diferentes en América 🌎.  </h3>
-  <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
-    +50 Capacitaciones.
-  </h5>
-  <h5 className="text-center text-[20px] text-gray-500 cursor-pointer">
-    +10 Proyectos diferentes.
-  </h5>
+ 
  
 </div>
 

@@ -50,7 +50,7 @@ const AI_MentorshipSection = () => {
             </button>
 
             <h3 className="text-2xl font-semibold text-purple-700 text-center mb-4">
-              Agenda Tu Mentoría
+              
             </h3>
 
             <div className="bg-gray-100 shadow rounded-lg p-4 h-[60vh]">

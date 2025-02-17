@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import logoDestored from "../../public/Logo Destored.svg";
 
-const DestoPlay = () => {
-  const [destoPlays, setDestoPlays] = useState([]);
+const DesafioDesto = () => {
+  const [destoDesafio, setDestoDesafio] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const url =
-      "https://docs.google.com/spreadsheets/d/1LLW6DQDm48Qd5JoiYMbKCdwm5u0tg2HSeB7Z411WbGs/gviz/tq?tqx=out:json";
-
+      "https://docs.google.com/spreadsheets/d/1oY01BE7D_hyu6VywfRsG1Z1j2Z4A6vK-CNEd8qEbYSE/gviz/tq?tqx=out:json";
     fetch(url)
       .then((response) => response.text())
       .then((text) => {
@@ -30,17 +29,21 @@ const DestoPlay = () => {
           return rowData;
         });
 
-        const formattedDestoPlays = rows.map((row) => ({
-          titulo: row["Titulo"] || "",
+        const formattedDesafios = rows.map((row) => ({
+          marcaTemporal: row["Marca temporal"] || "",
+          email: row["Dirección de correo electrónico"] || "",
+          titulo: row["Nombre del desafío"] || "",
           descripcion: row["Descripción"] || "",
-          objetivo: row["Objetivo"] || "",
-          contenido: row["Contenido"] || "",
-          logo: row["URL Logo"] || "",
-          canal: row["URL Canal"] || "",
-          plataforma: row["Plataforma"] || "",
+          categoria: row["Categoría "] || "",
+          duracion: row["  Duración recomendada  "] || "",
+          dificultad: row["  Nivel de dificultad  "] || "",
+          requisitos: row["  Requisitos previos (si aplica)  "] || "",
+          recompensa: row["¿Qué obtendrán los que lo completen?"] || "",
+          enlace: row["Enlace relacionado (opcional)  "] || "",
+          nombreAlias: row["  Tu nombre o alias (Opcional)  "] || "",
         }));
 
-        setDestoPlays(formattedDestoPlays);
+        setDestoDesafio(formattedDesafios);
       })
       .catch((error) => console.error("Error al leer la hoja de cálculo:", error));
   }, []);
@@ -58,10 +61,9 @@ const DestoPlay = () => {
 
       {/* Main Content */}
       <div className="text-center mt-8 sm:mt-20">
-        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">DestoPlay</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">DesafioDesto</h1>
         <p className="text-lg sm:text-xl text-white mb-8 px-4 sm:px-10">
-          Mira a los creadores de contenido dentro de la comunidad con contenido de
-          educación y entretenimiento
+        En Destored, crea y comparte desafíos para ayudar a otros profesionales a mejorar sus habilidades mientras reafirmas y validas tus propios conocimientos. Sé un referente en tu área, colabora con freelancers y potencia tu marca personal con retos innovadores. Aprovecha esta oportunidad para demostrar tu expertise y contribuir al crecimiento de la comunidad digital. 
         </p>
 
         {/* Botón Agregarme */}
@@ -69,7 +71,7 @@ const DestoPlay = () => {
           className="bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
           onClick={() => setShowModal(true)}
         >
-          Agregarme
+          Crear Desafío
         </button>
 
         {/* Modal */}
@@ -89,7 +91,7 @@ const DestoPlay = () => {
                 ×
               </button>
               <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSd42DrWEzt3DQ1vOIi0ew2ijNryVX0ejfT_Xd030FiJyjGzdA/viewform?embedded=true"
+src="https://docs.google.com/forms/d/e/1FAIpQLScRvqcM1RpfWDM0ATgJtcbyrJlaSRJ93iMkyED8XspLWHfOLQ/viewform?embedded=true"
                 width="100%"
                 height="500"
                 frameBorder="0"
@@ -102,47 +104,65 @@ const DestoPlay = () => {
           </div>
         )}
 
-        {/* Lista de DestoPlays */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8 mb-8">
-          {destoPlays.map((play, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-200"
+      {/* Lista de destoDesafios */}
+<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8 mb-8">
+  {destoDesafio.map((desafio, index) => (
+    <div
+      key={index}
+      className="bg-white shadow-md rounded-2xl p-6 transition-all hover:shadow-lg"
+    >
+      <h2 className="text-xl font-bold text-gray-800 mb-2">{desafio.titulo}</h2>
+      <p className="text-sm text-gray-600">{desafio.descripcion}</p>
+
+      <div className="mt-4 space-y-1">
+        <span className="block text-xs font-medium text-gray-500">
+          🏷️ Categoría: {desafio.categoria}
+        </span>
+        <span className="block text-xs font-medium text-gray-500">
+          ⏳ Duración: {desafio.duracion}
+        </span>
+        <span className="block text-xs font-medium text-gray-500">
+          🎯 Dificultad: {desafio.dificultad}
+        </span>
+      </div>
+
+      <details className="mt-4">
+        <summary className="text-sm text-violet-600 font-semibold cursor-pointer hover:underline">
+          🔍 Ver más detalles
+        </summary>
+        <div className="mt-2 space-y-2">
+          {desafio.requisitos && (
+            <p className="text-sm text-gray-600">
+              <strong>📌 Requisitos previos:</strong> {desafio.requisitos}
+            </p>
+          )}
+          {desafio.recompensa && (
+            <p className="text-sm text-gray-500">
+              <strong>🏆 Recompensa:</strong> {desafio.recompensa}
+            </p>
+          )}
+          {desafio.enlace && (
+            <a
+              href={desafio.enlace}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-violet-500 text-sm font-semibold hover:underline block"
             >
-              <img
-                src={play.logo}
-                alt={play.titulo}
-                className="h-40 w-full object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-lg font-bold text-gray-800 mb-2">
-                  {play.titulo}
-                </h2>
-                <div className="mt-4 flex justify-between items-center">
-                  <a
-                    href={play.canal}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-violet-500 text-sm font-semibold hover:underline"
-                  >
-                    Visitar canal
-                  </a>
-                  <span className="text-xs font-medium text-gray-500">
-                  Plataforma: {play.plataforma}
-                  </span>
-                </div>
-                <details className="mt-4">
-                  <summary className="text-sm text-violet-600 cursor-pointer">
-                    Ver más
-                  </summary>
-                  <p className="text-sm text-gray-600">{play.descripcion}</p>
-                  <p className="text-sm text-gray-500 mt-2">{play.objetivo}</p>
-                  <p className="text-sm text-gray-500 mt-1">{play.contenido}</p>
-                </details>
-              </div>
-            </div>
-          ))}
+              🔗 Enlace relacionado
+            </a>
+          )}
         </div>
+      </details>
+
+      {desafio.nombreAlias && (
+        <p className="text-xs text-gray-500 mt-3">
+          ✍️ Publicado por: {desafio.nombreAlias}
+        </p>
+      )}
+    </div>
+  ))}
+</div>
+
       </div>
 
 
@@ -150,4 +170,4 @@ const DestoPlay = () => {
   );
 };
 
-export default DestoPlay;
+export default DesafioDesto;
