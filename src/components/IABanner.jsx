@@ -95,12 +95,12 @@ const IABanner = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-violet-700 text-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
       {/* Título */}
-      <h2 className="text-4xl font-extrabold mb-6 text-center">Futuro para Programadores con IA</h2>
+      <h2 className="text-4xl font-extrabold mb-6 text-center">Futuro de la programación con IA</h2>
 
       {/* Párrafo */}
       <p className="text-lg mb-6 leading-relaxed text-center">
-        El acceso a cualquier sistema estará cada vez más asistido por IA, facilitando la interpretación y procesamiento de datos desestructurados derivados de la diversidad de lenguajes humanos.
-        Al mismo tiempo, toda organización mantiene un sistema de acceso estructurado, basado en protocolos de seguridad tanto humanos como artificiales.
+      El acceso a los sistemas será cada vez más asistido por IA, permitiendo interpretar y procesar datos desestructurados provenientes de la diversidad de lenguajes humanos. 
+      Al mismo tiempo, las organizaciones seguirán implementando sistemas de acceso estructurados, respaldados por protocolos de seguridad tanto humanos como artificiales.
       </p>
 
       
