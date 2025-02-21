@@ -138,7 +138,7 @@ const PaymentSection = () => {
                 Titular: <span className="font-semibold">Bayron Jesús Leiva Rojas</span>
               </p>
               <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">₡25,000 CRC</span>
+                Monto: <span className="font-semibold text-purple-700">$25,000 CRC</span>
               </p>
 
               <a
@@ -151,6 +151,49 @@ const PaymentSection = () => {
               </a>
             </div>
           )}
+        </div>
+
+         {/* Transferencia Bancaria Mexico */}
+         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
+         <button
+  className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
+  onClick={() => toggleSection("bank_mx")}
+>
+  Transferencia Bancaria (México)
+  {openSection === "bank_mx" ? <ChevronUp /> : <ChevronDown />}
+</button>
+{openSection === "bank_mx" && (
+  <div className="mt-2">
+    <p className="text-gray-600">
+      Banco: <span className="font-semibold">BBVA</span>
+    </p>
+    <p className="text-gray-600">
+      CBU: <span className="font-mono text-purple-700 break-all">012580015637095185</span>
+      <button
+        onClick={() => copyToClipboard("012580015637095185")}
+        className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
+      >
+        <Copy className="w-5 h-5 text-purple-700" />
+      </button>
+    </p>
+    <p className="text-gray-600">
+      Titular: <span className="font-semibold">Alejandra Guardado Mendez</span>
+    </p>
+    <p className="text-gray-600">
+      Monto: <span className="font-semibold text-purple-700">$1,000 MXN</span>
+    </p>
+
+    <a
+      href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
+      className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Compartir comprobante
+    </a>
+  </div>
+)}
+
         </div>
 
         {/* Pago con USDT (Cripto) */}
