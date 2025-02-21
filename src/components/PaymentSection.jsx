@@ -96,7 +96,7 @@ const PaymentSection = () => {
                 Titular: <span className="font-semibold">Nixon Andrew Parra Beltrán</span>
               </p>
               <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">$200.000 COL</span>
+                Monto: <span className="font-semibold text-purple-700">$200.000 COP</span>
               </p>
 
               <a
