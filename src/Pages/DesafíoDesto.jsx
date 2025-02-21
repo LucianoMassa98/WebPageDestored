@@ -1,52 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import logoDestored from "../../public/Logo Destored.svg";
+import useDesafiosData from "../hooks/UseDesafiosData.jsx";
+import useGoogleFormModal from "../hooks/useGoogleFormModal.jsx";
 
 const DesafioDesto = () => {
-  const [destoDesafio, setDestoDesafio] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const { destoDesafios, loading, error } = useDesafiosData();
 
-  useEffect(() => {
-    const url =
-      "https://docs.google.com/spreadsheets/d/1oY01BE7D_hyu6VywfRsG1Z1j2Z4A6vK-CNEd8qEbYSE/gviz/tq?tqx=out:json";
-    fetch(url)
-      .then((response) => response.text())
-      .then((text) => {
-        const jsonData = JSON.parse(
-          text
-            .replace("/*O_o*/\ngoogle.visualization.Query.setResponse(", "")
-            .replace(");", "")
-        );
+  // Renderizamos la interfaz de usuario dependiendo del estado
+  if (loading) {
+    return <p>Cargando desafíos...</p>;
+  }
 
-        const headers = jsonData.table.cols.map((col) => col.label);
-
-        const rows = jsonData.table.rows.map((row) => {
-          const rowData = {};
-          row.c.forEach((cell, index) => {
-            if (cell && cell.v) {
-              rowData[headers[index]] = cell.v;
-            }
-          });
-          return rowData;
-        });
-
-        const formattedDesafios = rows.map((row) => ({
-          marcaTemporal: row["Marca temporal"] || "",
-          email: row["Dirección de correo electrónico"] || "",
-          titulo: row["Nombre del desafío"] || "",
-          descripcion: row["Descripción"] || "",
-          categoria: row["Categoría "] || "",
-          duracion: row["  Duración recomendada  "] || "",
-          dificultad: row["  Nivel de dificultad  "] || "",
-          requisitos: row["  Requisitos previos (si aplica)  "] || "",
-          recompensa: row["¿Qué obtendrán los que lo completen?"] || "",
-          enlace: row["Enlace relacionado (opcional)  "] || "",
-          nombreAlias: row["  Tu nombre o alias (Opcional)  "] || "",
-        }));
-
-        setDestoDesafio(formattedDesafios);
-      })
-      .catch((error) => console.error("Error al leer la hoja de cálculo:", error));
-  }, []);
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-t from-gray-900 via-purple-700 to-white relative px-4 sm:px-6 lg:px-8">
@@ -71,7 +39,7 @@ const DesafioDesto = () => {
           className="bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
           onClick={() => setShowModal(true)}
         >
-          Crear Desafío
+          Crear Desad
         </button>
 
         {/* Modal */}
@@ -106,7 +74,7 @@ src="https://docs.google.com/forms/d/e/1FAIpQLScRvqcM1RpfWDM0ATgJtcbyrJlaSRJ93iM
 
       {/* Lista de destoDesafios */}
 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-8 mb-8">
-  {destoDesafio.map((desafio, index) => (
+  {destoDesafios.map((desafio, index) => (
     <div
       key={index}
       className="bg-white shadow-md rounded-2xl p-6 transition-all hover:shadow-lg"

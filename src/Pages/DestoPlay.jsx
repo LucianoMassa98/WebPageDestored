@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logoDestored from "../../public/Logo Destored.svg";
+import perfil from "../../public/perfil.webp";
 
 const DestoPlay = () => {
   const [destoPlays, setDestoPlays] = useState([]);
@@ -35,7 +36,7 @@ const DestoPlay = () => {
           descripcion: row["Descripción"] || "",
           objetivo: row["Objetivo"] || "",
           contenido: row["Contenido"] || "",
-          logo: row["URL Logo"] || "",
+          logo: row["URL Logo"] || "../../public/perfil.webp",
           canal: row["URL Canal"] || "",
           plataforma: row["Plataforma"] || "",
         }));

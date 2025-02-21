@@ -1,49 +1,22 @@
 import React, { useEffect, useState } from "react";
 import logoDestored from "../../public/Logo Destored.svg";
+import useDesafiosData from "../hooks/UseDesafiosData.jsx";
 
 const DestoPlay = () => {
-  const [destoPlays, setDestoPlays] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const { destoDesafios, loading, error } = useDesafiosData(
+  );
 
-  useEffect(() => {
-    const url =
-      "https://docs.google.com/spreadsheets/d/1LLW6DQDm48Qd5JoiYMbKCdwm5u0tg2HSeB7Z411WbGs/gviz/tq?tqx=out:json";
+  // Renderizamos la interfaz de usuario dependiendo del estado
+  if (loading) {
+    return <p>Cargando desafíos...</p>;
+  }
 
-    fetch(url)
-      .then((response) => response.text())
-      .then((text) => {
-        const jsonData = JSON.parse(
-          text
-            .replace("/*O_o*/\ngoogle.visualization.Query.setResponse(", "")
-            .replace(");", "")
-        );
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
-        const headers = jsonData.table.cols.map((col) => col.label);
-
-        const rows = jsonData.table.rows.map((row) => {
-          const rowData = {};
-          row.c.forEach((cell, index) => {
-            if (cell && cell.v) {
-              rowData[headers[index]] = cell.v;
-            }
-          });
-          return rowData;
-        });
-
-        const formattedDestoPlays = rows.map((row) => ({
-          titulo: row["Titulo"] || "",
-          descripcion: row["Descripción"] || "",
-          objetivo: row["Objetivo"] || "",
-          contenido: row["Contenido"] || "",
-          logo: row["URL Logo"] || "",
-          canal: row["URL Canal"] || "",
-          plataforma: row["Plataforma"] || "",
-        }));
-
-        setDestoPlays(formattedDestoPlays);
-      })
-      .catch((error) => console.error("Error al leer la hoja de cálculo:", error));
-  }, []);
+ 
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-gradient-to-t from-gray-900 via-purple-700 to-white relative px-4 sm:px-6 lg:px-8">
