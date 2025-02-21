@@ -31,7 +31,7 @@ const Services = () => {
             message: 'Transforma tu negocio con acceso exclusivo a recursos estratégicos, mentorías personalizadas y herramientas digitales líderes.',
             price: '$50 USD anuales',
             features: [
-              'Transformación Digital 1:1',
+"Transformación Digital 1:1 (Primera Sesión Gratis)",
               'Guía para diseñar, desarrollar y lanzar tu M.V.P.',
               'Grupo privado de networking.',
               'Ecosistema de herramientas digitales de Google, Meta y OpenAI.',
