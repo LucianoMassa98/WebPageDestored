@@ -27,18 +27,20 @@ const PaymentSection = () => {
       </p>
 
       <div className="flex flex-col gap-4">
-        {/* Transferencia Bancaria */}
+        {/* Transferencia Bancaria Argentina */}
         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
           <button
             className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("bank")}
+            onClick={() => toggleSection("bank_arg")}
           >
             Transferencia Bancaria (Argentina)
-            {openSection === "bank" ? <ChevronUp /> : <ChevronDown />}
+            {openSection === "bank_arg" ? <ChevronUp /> : <ChevronDown />}
           </button>
-          {openSection === "bank" && (
+          {openSection === "bank_arg" && (
             <div className="mt-2">
-              <p className="text-gray-600">Banco: <span className="font-semibold">Galicia</span></p>
+              <p className="text-gray-600">
+                Banco: <span className="font-semibold">Galicia</span>
+              </p>
               <p className="text-gray-600">
                 CBU: <span className="font-mono text-purple-700 break-all">0070112530004219242108</span>
                 <button
@@ -48,8 +50,12 @@ const PaymentSection = () => {
                   <Copy className="w-5 h-5 text-purple-700" />
                 </button>
               </p>
-              <p className="text-gray-600">Titular: <span className="font-semibold">Luciano Gaston Massa Iribarren</span></p>
-              <p className="text-gray-600">Monto: <span className="font-semibold text-purple-700">$52,000 ARS</span></p>
+              <p className="text-gray-600">
+                Titular: <span className="font-semibold">Luciano Gaston Massa Iribarren</span>
+              </p>
+              <p className="text-gray-600">
+                Monto: <span className="font-semibold text-purple-700">$52,000 ARS</span>
+              </p>
 
               <a
                 href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
@@ -62,8 +68,92 @@ const PaymentSection = () => {
             </div>
           )}
         </div>
-        
-        {/* Pago en USDT */}
+
+        {/* Transferencia Bancaria Colombia */}
+        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
+          <button
+            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
+            onClick={() => toggleSection("bank_col")}
+          >
+            Transferencia Bancaria (Colombia)
+            {openSection === "bank_col" ? <ChevronUp /> : <ChevronDown />}
+          </button>
+          {openSection === "bank_col" && (
+            <div className="mt-2">
+              <p className="text-gray-600">
+                Banco: <span className="font-semibold">Nequi</span>
+              </p>
+              <p className="text-gray-600">
+                CBU: <span className="font-mono text-purple-700 break-all">3026898020</span>
+                <button
+                  onClick={() => copyToClipboard("3026898020")}
+                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
+                >
+                  <Copy className="w-5 h-5 text-purple-700" />
+                </button>
+              </p>
+              <p className="text-gray-600">
+                Titular: <span className="font-semibold">Nixon Andrew Parra Beltrán</span>
+              </p>
+              <p className="text-gray-600">
+                Monto: <span className="font-semibold text-purple-700">$200.000 COL</span>
+              </p>
+
+              <a
+                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
+                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Compartir comprobante
+              </a>
+            </div>
+          )}
+        </div>
+
+        {/* Transferencia Bancaria Costa Rica */}
+        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
+          <button
+            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
+            onClick={() => toggleSection("bank_cr")}
+          >
+            Transferencia Bancaria (Costa Rica)
+            {openSection === "bank_cr" ? <ChevronUp /> : <ChevronDown />}
+          </button>
+          {openSection === "bank_cr" && (
+            <div className="mt-2">
+              <p className="text-gray-600">
+                Banco: <span className="font-semibold">Scotiabank</span>
+              </p>
+              <p className="text-gray-600">
+                CBU: <span className="font-mono text-purple-700 break-all">CR95012300170000129271</span>
+                <button
+                  onClick={() => copyToClipboard("CR95012300170000129271")}
+                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
+                >
+                  <Copy className="w-5 h-5 text-purple-700" />
+                </button>
+              </p>
+              <p className="text-gray-600">
+                Titular: <span className="font-semibold">Bayron Jesús Leiva Rojas</span>
+              </p>
+              <p className="text-gray-600">
+                Monto: <span className="font-semibold text-purple-700">₡25,000 CRC</span>
+              </p>
+
+              <a
+                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
+                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Compartir comprobante
+              </a>
+            </div>
+          )}
+        </div>
+
+        {/* Pago con USDT (Cripto) */}
         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
           <button
             className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
@@ -84,8 +174,12 @@ const PaymentSection = () => {
                   <Copy className="w-5 h-5 text-purple-700" />
                 </button>
               </p>
-              <p className="text-gray-600">Monto: <span className="font-semibold text-purple-700">50 USDT</span></p>
-              <p className="text-red-600 font-semibold mt-2">🚨 Recuerda: solo utiliza la red ERC20 para transferencias. Usar otra red podría ocasionar la pérdida de fondos.</p>
+              <p className="text-gray-600">
+                Monto: <span className="font-semibold text-purple-700">50 USDT</span>
+              </p>
+              <p className="text-red-600 font-semibold mt-2">
+                🚨 Recuerda: solo utiliza la red ERC20 para transferencias. Usar otra red podría ocasionar la pérdida de fondos.
+              </p>
 
               <a
                 href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
@@ -98,8 +192,8 @@ const PaymentSection = () => {
             </div>
           )}
         </div>
-        
-        {/* Atención Asistida */}
+
+        {/* Atención de un representante */}
         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
           <button
             className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
@@ -110,7 +204,9 @@ const PaymentSection = () => {
           </button>
           {openSection === "support" && (
             <div className="mt-2">
-              <p className="text-gray-600">Si necesitas asistencia personalizada, contáctanos por WhatsApp.</p>
+              <p className="text-gray-600">
+                Si necesitas asistencia personalizada, contáctanos por WhatsApp.
+              </p>
               <a
                 href="https://wa.me/5492644631495"
                 target="_blank"
@@ -125,7 +221,9 @@ const PaymentSection = () => {
       </div>
       
       {copiedText && (
-        <p className="text-green-600 text-center mt-4">¡Copiado al portapapeles: {copiedText}!</p>
+        <p className="text-green-600 text-center mt-4">
+          ¡Copiado al portapapeles: {copiedText}!
+        </p>
       )}
     </section>
   );

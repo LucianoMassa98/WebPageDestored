@@ -15,8 +15,7 @@ const PartnerHub = () => {
      <PartnerHubHero partnerimg={partnerimg} />
 
 
-     {/* Sección de adquisición */}
-  <PaymentSection />
+   
 
 {/* Sección de información */}
 <div className="info-section mt-8" id="info-section">
@@ -36,7 +35,8 @@ const PartnerHub = () => {
   
 </div>
 
-
+  {/* Sección de adquisición */}
+  <PaymentSection />
 
       
     </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
-const useDesafiosData = (url) => {
+const useDesafiosData = () => {
+  const url = 'https://docs.google.com/spreadsheets/d/1oY01BE7D_hyu6VywfRsG1Z1j2Z4A6vK-CNEd8qEbYSE/gviz/tq?tqx=out:json';
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [destoDesafios, setDestoDesafios] = useState([]); // Corregido nombre de estado

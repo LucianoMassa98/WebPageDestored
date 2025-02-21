@@ -39,7 +39,7 @@ const DesafioDesto = () => {
           className="bg-white text-violet-600 px-6 py-3 rounded-lg font-semibold shadow hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300"
           onClick={() => setShowModal(true)}
         >
-          Crear Desad
+          Crear Desafio
         </button>
 
         {/* Modal */}
