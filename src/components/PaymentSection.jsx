@@ -152,7 +152,47 @@ const PaymentSection = () => {
             </div>
           )}
         </div>
+        {/* Transferencia Bancaria Ecuador */}
+        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
+          <button
+            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
+            onClick={() => toggleSection("bank_cr")}
+          >
+            Transferencia Bancaria (Ecuador)
+            {openSection === "bank_cr" ? <ChevronUp /> : <ChevronDown />}
+          </button>
+          {openSection === "bank_cr" && (
+            <div className="mt-2">
+              <p className="text-gray-600">
+                Banco: <span className="font-semibold">Guayaquil</span>
+              </p>
+              <p className="text-gray-600">
+                CBU: <span className="font-mono text-purple-700 break-all">1720498938</span>
+                <button
+                  onClick={() => copyToClipboard("1720498938")}
+                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
+                >
+                  <Copy className="w-5 h-5 text-purple-700" />
+                </button>
+              </p>
+              <p className="text-gray-600">
+                Titular: <span className="font-semibold">CURAY DARIO XAVIER</span>
+              </p>
+              <p className="text-gray-600">
+                Monto: <span className="font-semibold text-purple-700">$50 USD</span>
+              </p>
 
+              <a
+                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
+                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Compartir comprobante
+              </a>
+            </div>
+          )}
+        </div>
          {/* Transferencia Bancaria Mexico */}
          <div className="bg-gray-100 rounded-lg shadow-sm p-4">
          <button
@@ -195,6 +235,53 @@ const PaymentSection = () => {
 )}
 
         </div>
+
+         {/* Transferencia Bancaria Perú 
+           <div className="bg-gray-100 rounded-lg shadow-sm p-4">
+          <button
+            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
+            onClick={() => toggleSection("bank_cr")}
+          >
+            Transferencia Bancaria (Perú)
+            {openSection === "bank_cr" ? <ChevronUp /> : <ChevronDown />}
+          </button>
+          {openSection === "bank_cr" && (
+            <div className="mt-2">
+              <p className="text-gray-600">
+                Banco: <span className="font-semibold">Scotiabank</span>
+              </p>
+              <p className="text-gray-600">
+                CBU: <span className="font-mono text-purple-700 break-all">CR95012300170000129271</span>
+                <button
+                  onClick={() => copyToClipboard("CR95012300170000129271")}
+                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
+                >
+                  <Copy className="w-5 h-5 text-purple-700" />
+                </button>
+              </p>
+              <p className="text-gray-600">
+                Titular: <span className="font-semibold">Bayron Jesús Leiva Rojas</span>
+              </p>
+              <p className="text-gray-600">
+                Monto: <span className="font-semibold text-purple-700">$25,000 CRC</span>
+              </p>
+
+              <a
+                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
+                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Compartir comprobante
+              </a>
+            </div>
+          )}
+        </div>
+         
+         
+         
+         */}
+       
 
         {/* Pago con USDT (Cripto) */}
         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
