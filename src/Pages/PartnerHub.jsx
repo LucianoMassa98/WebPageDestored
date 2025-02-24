@@ -21,9 +21,12 @@ const PartnerHub = () => {
 <div className="info-section mt-8" id="info-section">
 <h1 className="text-2xl font-bold">¿Cómo empezar?</h1>
 <p>
-Agenda tu primera reunión sin costo adicional y da el primer paso con nosotros.
- Para una experiencia más personalizada y productiva, te recomendamos completar el formulario en www.destored.org/demo antes de la reunión.
+  Agenda tu primera reunión sin costo adicional y da el primer paso con nosotros.
+  Para una experiencia más personalizada y productiva, te recomendamos completar el formulario en&nbsp;
+  <a href="https://www.destored.org/demo" className="text-purple-600">www.destored.org/demo</a>
+  &nbsp;antes de la reunión.
 </p>
+
 
 
 
