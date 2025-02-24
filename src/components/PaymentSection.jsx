@@ -156,12 +156,12 @@ const PaymentSection = () => {
         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
           <button
             className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("bank_cr")}
+            onClick={() => toggleSection("bank_ec")}
           >
             Transferencia Bancaria (Ecuador)
-            {openSection === "bank_cr" ? <ChevronUp /> : <ChevronDown />}
+            {openSection === "bank_ec" ? <ChevronUp /> : <ChevronDown />}
           </button>
-          {openSection === "bank_cr" && (
+          {openSection === "bank_ec" && (
             <div className="mt-2">
               <p className="text-gray-600">
                 Banco: <span className="font-semibold">Guayaquil</span>
