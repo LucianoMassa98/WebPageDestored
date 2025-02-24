@@ -28,16 +28,17 @@ const Services = () => {
             enlace: './partnerhub',
             cta: 'Más',
             title: 'Partner Hub',
-            message: 'Transforma tu negocio con acceso exclusivo a recursos estratégicos, mentorías personalizadas y herramientas digitales líderes.',
+            message: 'Transforma tu negocio junto a un profesional digital 1:1 y accede de forma exclusiva a recursos estratégicos y herramientas digitales durante un año completo.',
             price: '$50 USD anuales',
             features: [
-"Transformación Digital 1:1 (Primera Sesión Gratis)",
-              'Guía para diseñar, desarrollar y lanzar tu M.V.P.',
-              'Grupo privado de networking.',
-              'Ecosistema de herramientas digitales de Google, Meta y OpenAI.',
-              'Soporte técnico disponible 24/7.'
+              'Transformación Digital 1:1 (Primera sesión gratis)',
+              '48 tutorías a lo largo del año',
+              'Acceso a un grupo privado de networking',
+              'Documentación estratégica sobre herramientas líderes',
+              'Soporte técnico 24/7'
             ]
-          },
+          }
+,          
           {
             image: 'c',
             enlace: './demo',
