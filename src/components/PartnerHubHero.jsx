@@ -63,7 +63,7 @@ const PartnerHubHero = ({ partnerimg }) => {
         {/* Contenedor para el precio y el botón */}
         <div className="flex flex-col md:flex-row justify-center gap-8 mt-8">
           <h2 className="px-6 py-3 bg-transparent text-white font-bold">
-            Accede ahora por solo 50 USD.
+          Obtén acceso a 48 sesiones 1:1 durante un año completo, junto con materiales y recursos estratégicos, todo por tan solo 50 USD.
           </h2>
         </div>
       </div>
