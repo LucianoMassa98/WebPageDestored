@@ -18,7 +18,7 @@ const AI_MentorshipSection = () => {
       </h2>
 
       <p className="text-lg text-gray-200 mb-6 text-center leading-relaxed">
-      Las mentorías de Inteligencia Artificial están dirigidas a negocios y profesionales digitales que buscan comprender y aplicar tecnologías de IA en sus procesos. Ofrecen orientación personalizada sobre su integración en marketing, software, informática y gestión ágil, con un límite de 2 sesiones mensuales.
+      Las tutorías 1:1 en Inteligencia Artificial están diseñadas para dueños de negocios y profesionales digitales que desean comprender y aplicar la IA en sus procesos. Cada sesión, de una hora semanal, brinda orientación personalizada sobre su integración en marketing, software, informática y gestión ágil.
       </p>
 
       {/* Botón para abrir el modal */}

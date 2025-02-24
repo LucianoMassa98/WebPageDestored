@@ -59,7 +59,7 @@ const ResourcesAndTools  = () => {
 
             <div className="flex justify-center">
               <a
-                href="https://docs.google.com/document/d/1SK3XW19cF8shUkxEVaEpZ5O84Qe8SA_JJHQcGGWelNs/edit?usp=sharing"
+                href="https://drive.google.com/drive/folders/1FBMNIArIAk91ElB-JqR3fdcmfQmALGwy?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3 bg-green-500 text-white font-semibold rounded-full shadow-md hover:bg-green-600 transition-all flex items-center justify-center gap-2"
