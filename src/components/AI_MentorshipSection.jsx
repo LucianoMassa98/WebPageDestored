@@ -14,7 +14,7 @@ const AI_MentorshipSection = () => {
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500 rounded-full opacity-25 transform -translate-x-8 translate-y-8"></div>
 
       <h2 className="text-3xl font-bold text-center mb-4 flex items-center justify-center gap-2">
-        <Calendar className="w-7 h-7" /> Mentorías de IA
+        <Calendar className="w-7 h-7" /> Tutorías de IA 
       </h2>
 
       <p className="text-lg text-gray-200 mb-6 text-center leading-relaxed">
@@ -27,7 +27,7 @@ const AI_MentorshipSection = () => {
           onClick={openModal}
           className="px-6 py-3 bg-white text-purple-700 font-semibold rounded-full shadow-md hover:bg-purple-200 transition-all flex items-center justify-center gap-2"
         >
-          <Calendar className="w-5 h-5" /> Agendar Mentoría
+          <Calendar className="w-5 h-5" /> Agendar Tutoría
         </button>
       </div>
 
@@ -58,7 +58,7 @@ const AI_MentorshipSection = () => {
                 src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0mqvUCIiZ9aLcfqxaabrIFwjPWMVPFps7AMzc8_Wruw26V2flGiaxqU9iBW4_ZMlZVm_HA6eEX?gv=true"
                 className="w-full h-full rounded-lg"
                 allowFullScreen
-                title="Calendario de Mentorías"
+                title="Calendario de Tutorías"
               ></iframe>
             </div>
           </div>
