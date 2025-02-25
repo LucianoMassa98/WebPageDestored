@@ -236,34 +236,34 @@ const PaymentSection = () => {
 
         </div>
 
-         {/* Transferencia Bancaria Perú 
-           <div className="bg-gray-100 rounded-lg shadow-sm p-4">
+         {/* Transferencia Bancaria Perú   */}
+         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
           <button
             className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("bank_cr")}
+            onClick={() => toggleSection("bank_pr")}
           >
             Transferencia Bancaria (Perú)
-            {openSection === "bank_cr" ? <ChevronUp /> : <ChevronDown />}
+            {openSection === "bank_pr" ? <ChevronUp /> : <ChevronDown />}
           </button>
-          {openSection === "bank_cr" && (
+          {openSection === "bank_pr" && (
             <div className="mt-2">
               <p className="text-gray-600">
-                Banco: <span className="font-semibold">Scotiabank</span>
+                Banco: <span className="font-semibold">BCP</span>
               </p>
               <p className="text-gray-600">
-                CBU: <span className="font-mono text-purple-700 break-all">CR95012300170000129271</span>
+                CBU: <span className="font-mono text-purple-700 break-all">00219117934755804659</span>
                 <button
-                  onClick={() => copyToClipboard("CR95012300170000129271")}
+                  onClick={() => copyToClipboard("00219117934755804659")}
                   className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
                 >
                   <Copy className="w-5 h-5 text-purple-700" />
                 </button>
               </p>
               <p className="text-gray-600">
-                Titular: <span className="font-semibold">Bayron Jesús Leiva Rojas</span>
+                Titular: <span className="font-semibold">Jairo Medrano Salcca</span>
               </p>
               <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">$25,000 CRC</span>
+                Monto: <span className="font-semibold text-purple-700">$180 PEN</span>
               </p>
 
               <a
@@ -277,11 +277,6 @@ const PaymentSection = () => {
             </div>
           )}
         </div>
-         
-         
-         
-         */}
-       
 
         {/* Pago con USDT (Cripto) */}
         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
