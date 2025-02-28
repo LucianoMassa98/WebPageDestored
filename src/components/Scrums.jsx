@@ -64,7 +64,8 @@ const Scrums = () => {
       <div className="text-center text-white px-4 sm:px-8">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">Forma tu Equipo</h1>
         <p className="text-lg max-w-2xl mx-auto mb-4">
-          ¿Tienes una visión y estás listo para liderar? En Destored, ofrecemos la oportunidad de formar tu propio equipo y desarrollar proyectos innovadores junto a profesionales de todo el mundo. Colabora con expertos en diversas áreas, convierte tus ideas en realidad y sé parte de algo grande.
+        ¿Listo para liderar? En Destored, forma tu equipo, desarrolla proyectos y colabora con expertos en Latam. ¡Haz realidad tu visión!
+        
         </p>
         
         {/* Botón Agregarme */}
