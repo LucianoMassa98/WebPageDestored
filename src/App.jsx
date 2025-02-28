@@ -21,6 +21,8 @@ import DesafioDesto from "./Pages/DesafíoDesto";
 
 import EGameChampionship from "./Pages/EGameChampionship";
 import Sorteo from "./Pages/Sorteo";
+import Reunion from "./Pages/Reunion";
+
 import Contact from "./components/Contact";
 import PartnerHub from "./Pages/PartnerHub";
 import DigitalMastery from "./Pages/DigitalMastery";
@@ -86,6 +88,9 @@ function App() {
                 <Route path="/demo" element={<><Demo /><Footer /></>} />
 
                 <Route path="/sorteo" element={<><Sorteo /><Footer /></>} />
+
+                <Route path="/reunion" element={<><Reunion /></>} />
+
                 <Route path="/EGame" element={<><EGameChampionship /><Footer /></>} />
                 <Route path="/token" element={<><LandingToken /><Footer /></>} />
 
