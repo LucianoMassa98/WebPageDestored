@@ -14,11 +14,11 @@ const AI_MentorshipSection = () => {
       <div className="absolute bottom-0 left-0 w-24 h-24 bg-purple-500 rounded-full opacity-25 transform -translate-x-8 translate-y-8"></div>
 
       <h2 className="text-3xl font-bold text-center mb-4 flex items-center justify-center gap-2">
-        <Calendar className="w-7 h-7" /> Tutorías de IA 
+        <Calendar className="w-7 h-7" /> Sesiones 1 a 1
       </h2>
 
       <p className="text-lg text-gray-200 mb-6 text-center leading-relaxed">
-      Las tutorías 1:1 en Inteligencia Artificial están diseñadas para dueños de negocios y profesionales digitales que desean comprender y aplicar la IA en sus procesos. Cada sesión, de una hora semanal, brinda orientación personalizada sobre su integración en marketing, software, informática y gestión ágil.
+      Las sesiones 1:1 están enfocadas para dueños de negocios y profesionales digitales, incluso si ya tienes un equipo trabajando, que desean comprender y aplicar IA, Cloud, Ciberseguridad y Blockchain en sus procesos. Cada sesión semanal de una hora ofrece orientación personalizada sobre su integración.    
       </p>
 
       {/* Botón para abrir el modal */}
@@ -27,7 +27,7 @@ const AI_MentorshipSection = () => {
           onClick={openModal}
           className="px-6 py-3 bg-white text-purple-700 font-semibold rounded-full shadow-md hover:bg-purple-200 transition-all flex items-center justify-center gap-2"
         >
-          <Calendar className="w-5 h-5" /> Agendar Tutoría
+          <Calendar className="w-5 h-5" /> Agendar Sesión
         </button>
       </div>
 

@@ -24,6 +24,8 @@ import Sorteo from "./Pages/Sorteo";
 import Reunion from "./Pages/Reunion";
 
 import Contact from "./components/Contact";
+import TeachLeader from "./components/TeachLeader";
+
 import PartnerHub from "./Pages/PartnerHub";
 import DigitalMastery from "./Pages/DigitalMastery";
 import Demo from "./Pages/Demo";
@@ -60,6 +62,7 @@ function App() {
                             <TechIconsRow />
                             <DestoredInfo />
                             <Services />
+                            <TeachLeader />
                             <About />
                             <Works />
                             <SuccessCases />

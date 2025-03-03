@@ -43,8 +43,9 @@ const PartnerHubHero = ({ partnerimg }) => {
           Desto Partner Hub
         </h1>
         <p className="text-lg text-center mb-12">
-          Digitaliza tu negocio y marca con IA durante 1 año al mejor precio del mercado.
-        </p>
+        Digitaliza tu negocio con IA, Cloud, Blockchain y Ciberseguridad por 1 año al mejor precio. Recibe capacitaciones 1:1 con un Tech Leader, documentación y herramientas para aplicarlo por tu cuenta, todo por 50 USD anuales.           
+           
+              </p>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <img
@@ -54,18 +55,14 @@ const PartnerHubHero = ({ partnerimg }) => {
           />
 
           <div className="md:w-1/2 space-y-6">
-            <ExpandableList titulo="Sesiones Exclusivas 1 a 1" items={sesiones} />
+            
             <ExpandableList titulo="Recursos y herramientas" items={recursos} />
             <ExpandableList titulo="Comunidad y soporte" items={comunidad} />
+            <ExpandableList titulo="Sesiones Exclusivas 1 a 1" items={sesiones} />
           </div>
         </div>
 
-        {/* Contenedor para el precio y el botón */}
-        <div className="flex flex-col md:flex-row justify-center gap-8 mt-8">
-          <h2 className="px-6 py-3 bg-transparent text-white font-bold">
-          Obtén acceso a 48 sesiones 1:1 durante un año completo, junto con materiales y recursos estratégicos, todo por tan solo 50 USD.
-          </h2>
-        </div>
+       
       </div>
     </section>
   );
