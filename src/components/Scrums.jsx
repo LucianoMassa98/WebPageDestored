@@ -113,8 +113,8 @@ const Scrums = () => {
   <div className="text-center py-6 px-4 sm:px-8">
     <h1 className="text-2xl sm:text-3xl font-bold mb-4">Equipos</h1>
     <p className="text-lg text-gray-600">
-      Aquí podrás explorar y contactar equipos que comparten propósitos similares a los tuyos. Ya sea que busques colaborar o invertir, esta es tu oportunidad para unirte a proyectos que se alineen con tus objetivos e intereses.
-    </p>
+    Conéctate con equipos afines para colaborar o invertir en proyectos alineados a tus objetivos.
+        </p>
   </div>
 </div>
 

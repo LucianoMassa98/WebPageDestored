@@ -31,7 +31,7 @@ const DesafioDesto = () => {
       <div className="text-center mt-8 sm:mt-20">
         <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">DesafioDesto</h1>
         <p className="text-lg sm:text-xl text-white mb-8 px-4 sm:px-10">
-        En Destored, crea y comparte desafíos para ayudar a otros profesionales a mejorar sus habilidades mientras reafirmas y validas tus propios conocimientos. Sé un referente en tu área, colabora con freelancers y potencia tu marca personal con retos innovadores. Aprovecha esta oportunidad para demostrar tu expertise y contribuir al crecimiento de la comunidad digital. 
+        Crea y comparte desafíos para ayudar a otros a mejorar sus habilidades, reafirmando tus conocimientos. Colabora con freelancers, potencia tu marca personal y demuestra tu expertise, contribuyendo al crecimiento de la comunidad digital.
         </p>
 
         {/* Botón Agregarme */}
@@ -101,12 +101,12 @@ src="https://docs.google.com/forms/d/e/1FAIpQLScRvqcM1RpfWDM0ATgJtcbyrJlaSRJ93iM
         <div className="mt-2 space-y-2">
           {desafio.requisitos && (
             <p className="text-sm text-gray-600">
-              <strong>📌 Requisitos previos:</strong> {desafio.requisitos}
+               {desafio.requisitos}
             </p>
           )}
           {desafio.recompensa && (
             <p className="text-sm text-gray-500">
-              <strong>🏆 Recompensa:</strong> {desafio.recompensa}
+               {desafio.recompensa}
             </p>
           )}
           {desafio.enlace && (

@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowDown } from "lucide-react";
 import ExpandableList from "./ExpandableList";
 
 const PartnerHubHero = ({ partnerimg }) => {
-  const scrollToMentorship = () => {
-    document.getElementById("mentorship-section").scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  const [isMobile, setIsMobile] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // 768px es el umbral para móvil
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Inicializa el tamaño al cargar
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const sesiones = [
     { title: "Exploración del impacto de IA", content: "Cómo la IA transformará el futuro rol de los trabajadores en los negocios." },
@@ -32,6 +42,12 @@ const PartnerHubHero = ({ partnerimg }) => {
     { title: "Soporte 24/7", content: "Soporte técnico disponible 24/7." }
   ];
 
+  const scrollToMentorship = () => {
+    document.getElementById("mentorship-section").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section className="bg-gradient-to-r from-indigo-600 to-purple-800 text-white relative overflow-hidden py-16">
       {/* Forma decorativa */}
@@ -43,26 +59,46 @@ const PartnerHubHero = ({ partnerimg }) => {
           Desto Partner Hub
         </h1>
         <p className="text-lg text-center mb-12">
-        Digitaliza tu negocio con IA, Cloud, Blockchain y Ciberseguridad por 1 año al mejor precio. Recibe capacitaciones 1:1 con un Tech Leader, documentación y herramientas para aplicarlo por tu cuenta, todo por 50 USD anuales.           
-           
-              </p>
+          Digitaliza tu negocio o marca personal con IA, Cloud, Blockchain o Ciberseguridad por 1 año al mejor precio. Recibe capacitaciones semanales 1 a 1 con un Teach Leader, documentación y herramientas para aplicarlo por tu cuenta, todo por 50 USD anuales.
+        </p>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <img
-            src={partnerimg}
-            alt="Imagen de Partner"
-            className="w-full md:w-1/2 h-auto rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105"
-          />
+          {isMobile && !showMore ? (
+            <div className="w-full md:w-1/2 text-center">
+              <button
+                onClick={() => setShowMore(true)}
+                className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300"
+              >
+                Ver más <ArrowDown className="inline ml-2" />
+              </button>
+            </div>
+          ) : (
+            <>
+              <img
+                src={partnerimg}
+                alt="Imagen de Partner"
+                className="w-full md:w-1/2 h-auto rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105"
+              />
 
-          <div className="md:w-1/2 space-y-6">
-            
-            <ExpandableList titulo="Recursos y herramientas" items={recursos} />
-            <ExpandableList titulo="Comunidad y soporte" items={comunidad} />
-            <ExpandableList titulo="Sesiones Exclusivas 1 a 1" items={sesiones} />
-          </div>
+              <div className="md:w-1/2 space-y-6">
+                <ExpandableList titulo="Recursos y herramientas" items={recursos} />
+                <ExpandableList titulo="Comunidad y soporte" items={comunidad} />
+                <ExpandableList titulo="Sesiones Exclusivas 1 a 1" items={sesiones} />
+              </div>
+            </>
+          )}
         </div>
 
-       
+        {showMore && (
+          <div className="mt-8">
+            <button
+              onClick={() => setShowMore(false)}
+              className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow-lg hover:bg-gray-700 transition duration-300"
+            >
+              Ver menos <ArrowDown className="inline ml-2 rotate-180" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

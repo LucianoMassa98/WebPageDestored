@@ -109,9 +109,9 @@ const Members = () => {
         >
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative text-center text-white px-4 py-6 sm:py-10">
-            <h2 className="text-3xl font-bold mb-4">Miembros Destacados</h2>
+            <h2 className="text-3xl font-bold mb-4">Profesionales Digitales</h2>
             <p className="text-lg max-w-3xl mx-auto mb-4">
-              Regístrate como miembro destacado de la comunidad, participa en el #DesafíoDesto2025 y destaca en una comunidad en constante crecimiento.
+              Regístrate gratis como miembro de la comunidad y destaca en una comunidad en constante crecimiento.
             </p>
 
             <div className="flex flex-col items-center">
@@ -159,7 +159,7 @@ const Members = () => {
 
       {/* Filtros */}
       <div className="mb-6 text-center">
-        <h1 className="text-xl font-semibold mt-12">Perfiles Destacados</h1>
+        <h1 className="text-xl font-semibold mt-12">Perfiles: {membersData.length}</h1>
         <h3 className="text-xl font-semibold mt-6">Filtrar por</h3>
         <div className="flex flex-wrap justify-center">
           <select

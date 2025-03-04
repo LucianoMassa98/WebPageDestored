@@ -100,75 +100,110 @@ import React, { useEffect, useState } from "react";
   ];
   
   
-
-const Works = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedForm, setSelectedForm] = useState("");
-
-  return (
-    <div id="products" className="p-8 xl:p-20 bg-gradient-to-b from-indigo-900 to-purple-700 text-white">
-      <div className="mb-8 text-center">
-        <h1 className="text-[40px] font-black">Destored en Acción</h1>
-        <p className="text-xl text-gray-300">
-          Sumérgete en el emocionante mundo de Destored y descubre una variedad
-          de productos digitales que hemos ayudado a desarrollar con pasión y dedicación.
-          ¡Explora nuestros trabajos y déjate inspirar!
-        </p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <div key={index} className="bg-white text-gray-900 rounded-3xl p-6 shadow-lg transform hover:scale-105 transition-all">
-            <img src={project.img} className="w-full h-56 object-cover rounded-2xl" />
-            <h3 className="text-2xl font-bold mt-4">{project.title}</h3>
-            <p className="text-gray-600 mt-2">{project.description}</p>
-            {project.link ? (
-              <a
-                href={project.link}
-                className="inline-block mt-4 text-purple-600 font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300"
-              >
-                ¡Visitar Sitio Web!
-              </a>
-            ) : (
-              <button
-                className="mt-4 bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg shadow-lg"
-                onClick={() => {
-                  setShowModal(true);
-                  setSelectedForm(project.formLink);
-                }}
-              >
-                {project.buttonText}
-              </button>
-            )}
-          </div>
-        ))}
-      </div>
-      {showModal && (
-        <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-          onClick={() => setShowModal(false)}
-        >
-          <div className="bg-white rounded-lg w-11/12 max-w-lg p-6 relative" onClick={(e) => e.stopPropagation()}>
-            <button
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
-              onClick={() => setShowModal(false)}
-            >
-              ×
-            </button>
-            <iframe
-              src={selectedForm}
-              width="100%"
-              height="500"
-              frameBorder="0"
-              className="rounded-lg"
-              title="Formulario de Google"
-            >
-              Cargando…
-            </iframe>
-          </div>
+  const Works = () => {
+    const [showModal, setShowModal] = useState(false);
+    const [selectedForm, setSelectedForm] = useState("");
+    const [currentPage, setCurrentPage] = useState(0);
+    const itemsPerPage = 3;
+  
+    // Divide los proyectos en páginas de 3 elementos cada una
+    const pages = [];
+    for (let i = 0; i < projects.length; i += itemsPerPage) {
+      pages.push(projects.slice(i, i + itemsPerPage));
+    }
+  
+    // Funciones para cambiar de página
+    const nextPage = () => {
+      if (currentPage < pages.length - 1) {
+        setCurrentPage(currentPage + 1);
+      }
+    };
+  
+    const prevPage = () => {
+      if (currentPage > 0) {
+        setCurrentPage(currentPage - 1);
+      }
+    };
+  
+    return (
+      <div id="products" className="p-8 xl:p-20 bg-gradient-to-b from-indigo-900 to-purple-700 text-white">
+        <div className="mb-8 text-center">
+          <h1 className="text-[40px] font-black">Destored en Acción</h1>
+          <p className="text-xl text-gray-300">
+          Adéntrate en nuestro universo y explora una amplia gama de productos digitales que hemos desarrollado con pasión y dedicación. ¡Descubre nuestros proyectos y déjate inspirar!
+          </p>
         </div>
-      )}
-    </div>
-  );
-};
-
-export default Works;
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+          {pages[currentPage].map((project, index) => (
+            <div key={index} className="bg-white text-gray-900 rounded-3xl p-6 shadow-lg transform hover:scale-105 transition-all">
+              <img src={project.img} className="w-full h-56 object-cover rounded-2xl" alt={project.title} />
+              <h3 className="text-2xl font-bold mt-4">{project.title}</h3>
+              <p className="text-gray-600 mt-2">{project.description}</p>
+              {project.link ? (
+                <a
+                  href={project.link}
+                  className="inline-block mt-4 text-purple-600 font-bold underline decoration-dotted hover:text-purple-800 hover:scale-110 transition-all duration-300"
+                >
+                  ¡Visitar Sitio Web!
+                </a>
+              ) : (
+                <button
+                  className="mt-4 bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg shadow-lg"
+                  onClick={() => {
+                    setShowModal(true);
+                    setSelectedForm(project.formLink);
+                  }}
+                >
+                  {project.buttonText}
+                </button>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={prevPage}
+            disabled={currentPage === 0}
+            className="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-l-lg disabled:opacity-50"
+          >
+            Anterior
+          </button>
+          <button
+            onClick={nextPage}
+            disabled={currentPage === pages.length - 1}
+            className="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-r-lg disabled:opacity-50"
+          >
+            Siguiente
+          </button>
+        </div>
+        {showModal && (
+          <div
+            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+            onClick={() => setShowModal(false)}
+          >
+            <div className="bg-white rounded-lg w-11/12 max-w-lg p-6 relative" onClick={(e) => e.stopPropagation()}>
+              <button
+                className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 focus:outline-none"
+                onClick={() => setShowModal(false)}
+              >
+                ×
+              </button>
+              <iframe
+                src={selectedForm}
+                width="100%"
+                height="500"
+                frameBorder="0"
+                className="rounded-lg"
+                title="Formulario de Google"
+              >
+                Cargando…
+              </iframe>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
+  
+  export default Works;
+  

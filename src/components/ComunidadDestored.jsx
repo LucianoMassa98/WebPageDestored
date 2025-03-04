@@ -38,11 +38,7 @@ const ComunidadDestored = () => {
             Comunidad Abierta de Destored
           </h3>
           <p className="text-lg text-gray-600 mb-6">
-            Únete a un espacio donde  <strong> desarrolladores, emprendedores y creadores
-            de contenido </strong> se conectan, comparten conocimientos y colaboran en
-            proyectos. Recibirás avisos importantes, aprenderás de los mentores
-            de la comunidad y serás parte de un grupo que impulsa la tecnología
-            y la innovación.
+          Únete a una comunidad de desarrolladores, emprendedores y creadores de contenido para compartir conocimientos, colaborar en proyectos y aprender de mentores, impulsando la tecnología y la innovación.
           </p>
           <a
             href="https://chat.whatsapp.com/LOal4051AfnLoxMlccbLNs"
