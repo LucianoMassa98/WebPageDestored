@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-// Componente PaymentDropdown
-const PaymentDropdown = () => {
+// Componente PaymentSection
+const PaymentSection = () => {
   // Array dinámico de pasarelas de pago
   const [paymentGateways, setPaymentGateways] = useState([
     {
@@ -55,4 +55,4 @@ const PaymentDropdown = () => {
   );
 };
 
-export default PaymentDropdown;
+export default PaymentSection;
