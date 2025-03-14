@@ -31,16 +31,16 @@ import React, { useEffect, useState } from "react";
       link: "https://vendeporinsta.up.railway.app/",
     },
     {
+      img: "work7.png",
+      title: "WeedSJ - Comunidad Cannábica",
+      description: "Prototipo de plataforma para la comunidad del cannabis, con información, foros y espacios de debate sobre el sector en Argentina.",
+      link: "https://weed.destored.org/",
+  },
+    {
       img: "work1.png",
       title: "VendePorInsta - SaaS de gestion de clinicas",
       description: "Optimiza la gestión de tus clincias con tus pacientes y profesionales para",
       link: "https://aconex.up.railway.app/login",
-    },
-    {
-      img: "work2.png",
-      title: "YMS APP - Ecommerce para aviarias",
-      description: "Sistema integral para la gestión y venta de productos en el sector avícola.",
-      link: "https://yms.up.railway.app/",
     },
     {
       img: "A todo motor.png",
@@ -49,37 +49,19 @@ import React, { useEffect, useState } from "react";
       link: "https://atodomotor.up.railway.app/login",
     },
     {
-      img: "prototipo.webp",
-      title: "Prototipo - Chatbot IA con Deepseek",
-      description: "Prototipo de chatbot con inteligencia artificial para automatizar respuestas y mejorar la experiencia del usuario.",
-      link: "https://www.destored.org/IA",
+      img: "work2.png",
+      title: "YMS APP - Ecommerce para aviarias",
+      description: "Sistema integral para la gestión y venta de productos en el sector avícola.",
+      link: "https://yms.up.railway.app/",
     },
-    {
-      img: "prototipo.webp",
-      title: "Prototipo - Comunidad Cannábica",
-      description: "Prototipo de plataforma para la comunidad del cannabis, con información, foros y espacios de debate sobre el sector en Argentina.",
-      link: "https://weed.destored.org/",
-  },
+   
+    
   {
     img: "work5.png",
     title: "Maqueta - Liga de Fútbol Amateur",
     description: "Prototipo de sistema para la gestión de torneos de fútbol amateur en San Juan, con seguimiento de partidos y estadísticas.",
     link: "https://laliga.up.railway.app/",
   },
-    
-  
-    {
-      img: "work5.png",
-      title: "Maqueta - Plataforma gaming EGame",
-      description: "Concepto de landing page para una plataforma enfocada en el mundo gaming.",
-      link: "https://www.destored.org/EGame",
-    },
-    {
-      img: "work5.png",
-      title: "Maqueta - Tokenizacion de Destored",
-      description: "Concepto de Un modelo descentralizado para la gobernanza de software, datos y publicidad.",
-      link: "https://www.destored.org/token",
-    },
     {
       img: "work5.png",
       title: "Maqueta - Turismo Rally ",

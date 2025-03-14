@@ -59,7 +59,7 @@ const Services = () => {
         <p className="text-xl text-gray-500 text-center">
         ¡Transformación digital del futuro de los proyectos, negocios y empresas!       </p>
       </div>
-      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 mb-8 flex-col">
+      <div className="max-w-[1400px] mx-auto grid lg:grid-cols-2 md:grid-cols-2 gap-8 px-4 sm:px-6 lg:px-8 mb-8 flex-col">
   {cardData.map((card, index) => (
     <div
       key={index}
