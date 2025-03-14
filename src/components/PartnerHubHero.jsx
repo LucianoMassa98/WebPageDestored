@@ -56,10 +56,10 @@ const PartnerHubHero = ({ partnerimg }) => {
 
       <div className="container mx-auto px-6 relative z-10">
         <h1 className="text-5xl font-extrabold text-center text-white mb-8">
-          Desto Partner Hub
+          DestHub
         </h1>
         <p className="text-lg text-center mb-12">
-          Digitaliza tu negocio o marca personal con IA, Cloud, Blockchain o Ciberseguridad por 1 año al mejor precio. Recibe capacitaciones semanales 1 a 1 con un Teach Leader, documentación y herramientas para aplicarlo por tu cuenta, todo por 50 USD anuales.
+          Digitaliza tu negocio o marca personal con IA, Cloud, Blockchain o Ciberseguridad por 1 año al mejor precio. Recibe sesiones semanales 1 a 1 con un Teach Leader, documentación y herramientas para aplicarlo por tu cuenta, todo por 50 USD anuales.
         </p>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">

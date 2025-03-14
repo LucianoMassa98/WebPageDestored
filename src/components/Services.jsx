@@ -25,31 +25,22 @@ const Services = () => {
           },
           {
             image: 'b',
-            enlace: './partnerhub',
+            enlace: './desthub',
             cta: 'Más',
-            title: 'Partner Hub',
-            message: 'Transforma tu negocio junto a un profesional digital 1:1 y accede de forma exclusiva a recursos estratégicos y herramientas digitales durante un año completo.',
+            title: 'DestHub',
+            message: 'Digitaliza tu negocio o marca personal con IA, Cloud, Blockchain o Ciberseguridad. Recibe sesiones semanales 1 a 1 con un Teach Leader, documentación y herramientas estratégicas.',
             price: '$50 USD anuales',
             features: [
-              'Transformación Digital 1:1 (Primera sesión gratis)',
-              '48 tutorías a lo largo del año',
-              'Acceso a un grupo privado de networking',
-              'Documentación estratégica sobre herramientas líderes',
+              'Transformación digital personalizada (primera sesión gratuita)',
+              'Una sesión semanal con un Tech Leader',
+              'Acceso exclusivo a un grupo privado de networking',
+              'Documentación estratégica sobre herramientas clave',
               'Soporte técnico 24/7'
             ]
+            
           }
-,          
-          {
-            image: 'c',
-            enlace: './demo',
-            cta: 'Solicitar Demo',
-            title: 'Partner Hub Demo',
-            message: 'Obtén acceso exclusivo y limitado a recursos estratégicos para impulsar y digitalizar tu negocio o marca.',
-            price: 'Completar Requisitos',
-            features: [
-              'Accede a los servicios del Partner Hub durante 15 días'
-            ]
-          }
+
+
         ];
         
         

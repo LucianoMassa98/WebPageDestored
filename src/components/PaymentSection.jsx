@@ -1,357 +1,58 @@
-import React, { useState } from "react";
-import { Copy, ChevronDown, ChevronUp } from "lucide-react";
-import qrImage from "../../public/qr_ETH.png";
+import React, { useState } from 'react';
 
-const PaymentSection = () => {
-  const [copiedText, setCopiedText] = useState("");
-  const [openSection, setOpenSection] = useState(null);
-
-  const copyToClipboard = (text) => {
-    navigator.clipboard.writeText(text);
-    setCopiedText(text);
-    setTimeout(() => setCopiedText(""), 2000);
-  };
-
-  const toggleSection = (section) => {
-    setOpenSection(openSection === section ? null : section);
-  };
-
-  const whatsappMessage = "Comprobante de pago realizado. Aquí está la información.";
+// Componente PaymentDropdown
+const PaymentDropdown = () => {
+  // Array din�mico de pasarelas de pago
+  const [paymentGateways, setPaymentGateways] = useState([
+    {
+      title: "Mercado Pago",
+      url: "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c938084955cc4800195967f60a61bd7",
+      color: "bg-blue-500",
+      icon: "https://pbs.twimg.com/profile_images/1609933607006519297/JfQLdV9q_400x400.jpg", // Icono de Mercado Pago
+      shape: "rounded-full", // Icono circular
+    },
+    {
+      title: "PayPal",
+      url: "https://www.paypal.me/Lucianomassa26",
+      color: "bg-[#009cde]",
+      icon: "https://play-lh.googleusercontent.com/iQ8f5plIFy9rrY46Q2TNRwq_8nCvh9LZVwytqMBpOEcfnIU3vTkICQ6L1-RInWS93oQg", // Sustituye con el icono de PaySolamente
+      shape: "square", // Icono cuadrado
+    }
+    
+    // Puedes agregar m�s pasarelas aqu� en el futuro
+  ]);
 
   return (
-    <section className="bg-white rounded-lg shadow-md p-6 mt-6 max-w-2xl mx-auto w-full">
-      <h2 className="text-2xl font-semibold text-center text-purple-700 mb-6">Formas de Pago</h2>
-      
-      <p className="text-center text-red-600 font-semibold mb-4">
-        ⚠️ Importante: Si tienes un código de descuento exclusivo, dirígete a la opción de ser atendido por un representante.
-      </p>
-
-      <div className="flex flex-col gap-4">
-        {/* Transferencia Bancaria Argentina */}
-        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
-          <button
-            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("bank_arg")}
+    <div className="flex justify-center items-center bg-white p-8">
+    <div className="relative w-full max-w-lg mx-auto">
+      <div className="space-y-4">
+        {paymentGateways.map((gateway, index) => (
+          <a
+            key={index}
+            href={gateway.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`flex items-center justify-between p-4 bg-white ${gateway.color} text-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:scale-105 relative`}
           >
-            Transferencia Bancaria (Argentina)
-            {openSection === "bank_arg" ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openSection === "bank_arg" && (
-            <div className="mt-2">
-              <p className="text-gray-600">
-                Banco: <span className="font-semibold">Galicia</span>
-              </p>
-              <p className="text-gray-600">
-                CBU: <span className="font-mono text-purple-700 break-all">0070112530004219242108</span>
-                <button
-                  onClick={() => copyToClipboard("0070112530004219242108")}
-                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
-                >
-                  <Copy className="w-5 h-5 text-purple-700" />
-                </button>
-              </p>
-              <p className="text-gray-600">
-                Titular: <span className="font-semibold">Luciano Gaston Massa Iribarren</span>
-              </p>
-              <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">$52,000 ARS</span>
-              </p>
-
-              <a
-                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
-                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Compartir comprobante
-              </a>
+            <div className="w-12 h-12 rounded-full overflow-hidden">
+              <img
+                src={gateway.icon}
+                alt={gateway.title}
+                className="object-contain w-full h-full"
+              />
             </div>
-          )}
-        </div>
-
-        {/* Transferencia Bancaria Colombia */}
-        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
-          <button
-            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("bank_col")}
-          >
-            Transferencia Bancaria (Colombia)
-            {openSection === "bank_col" ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openSection === "bank_col" && (
-            <div className="mt-2">
-              <p className="text-gray-600">
-                Banco: <span className="font-semibold">Nequi</span>
-              </p>
-              <p className="text-gray-600">
-                CBU: <span className="font-mono text-purple-700 break-all">3026898020</span>
-                <button
-                  onClick={() => copyToClipboard("3026898020")}
-                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
-                >
-                  <Copy className="w-5 h-5 text-purple-700" />
-                </button>
-              </p>
-              <p className="text-gray-600">
-                Titular: <span className="font-semibold">Nixon Andrew Parra Beltrán</span>
-              </p>
-              <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">$200.000 COP</span>
-              </p>
-
-              <a
-                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
-                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Compartir comprobante
-              </a>
-            </div>
-          )}
-        </div>
-
-        {/* Transferencia Bancaria Costa Rica */}
-        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
-          <button
-            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("bank_cr")}
-          >
-            Transferencia Bancaria (Costa Rica)
-            {openSection === "bank_cr" ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openSection === "bank_cr" && (
-            <div className="mt-2">
-              <p className="text-gray-600">
-                Banco: <span className="font-semibold">Scotiabank</span>
-              </p>
-              <p className="text-gray-600">
-                CBU: <span className="font-mono text-purple-700 break-all">CR95012300170000129271</span>
-                <button
-                  onClick={() => copyToClipboard("CR95012300170000129271")}
-                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
-                >
-                  <Copy className="w-5 h-5 text-purple-700" />
-                </button>
-              </p>
-              <p className="text-gray-600">
-                Titular: <span className="font-semibold">Bayron Jesús Leiva Rojas</span>
-              </p>
-              <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">$25,000 CRC</span>
-              </p>
-
-              <a
-                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
-                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Compartir comprobante
-              </a>
-            </div>
-          )}
-        </div>
-        {/* Transferencia Bancaria Ecuador */}
-        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
-          <button
-            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("bank_ec")}
-          >
-            Transferencia Bancaria (Ecuador)
-            {openSection === "bank_ec" ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openSection === "bank_ec" && (
-            <div className="mt-2">
-              <p className="text-gray-600">
-                Banco: <span className="font-semibold">Guayaquil</span>
-              </p>
-              <p className="text-gray-600">
-                CBU: <span className="font-mono text-purple-700 break-all">1720498938</span>
-                <button
-                  onClick={() => copyToClipboard("1720498938")}
-                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
-                >
-                  <Copy className="w-5 h-5 text-purple-700" />
-                </button>
-              </p>
-              <p className="text-gray-600">
-                Titular: <span className="font-semibold">CURAY DARIO XAVIER</span>
-              </p>
-              <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">$50 USD</span>
-              </p>
-
-              <a
-                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
-                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Compartir comprobante
-              </a>
-            </div>
-          )}
-        </div>
-         {/* Transferencia Bancaria Mexico */}
-         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
-         <button
-  className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-  onClick={() => toggleSection("bank_mx")}
->
-  Transferencia Bancaria (México)
-  {openSection === "bank_mx" ? <ChevronUp /> : <ChevronDown />}
-</button>
-{openSection === "bank_mx" && (
-  <div className="mt-2">
-    <p className="text-gray-600">
-      Banco: <span className="font-semibold">BBVA</span>
-    </p>
-    <p className="text-gray-600">
-      CBU: <span className="font-mono text-purple-700 break-all">012580015637095185</span>
-      <button
-        onClick={() => copyToClipboard("012580015637095185")}
-        className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
-      >
-        <Copy className="w-5 h-5 text-purple-700" />
-      </button>
-    </p>
-    <p className="text-gray-600">
-      Titular: <span className="font-semibold">Alejandra Guardado Mendez</span>
-    </p>
-    <p className="text-gray-600">
-      Monto: <span className="font-semibold text-purple-700">$1,000 MXN</span>
-    </p>
-
-    <a
-      href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
-      className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Compartir comprobante
-    </a>
-  </div>
-)}
-
-        </div>
-
-         {/* Transferencia Bancaria Perú   */}
-         <div className="bg-gray-100 rounded-lg shadow-sm p-4">
-          <button
-            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("bank_pr")}
-          >
-            Transferencia Bancaria (Perú)
-            {openSection === "bank_pr" ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openSection === "bank_pr" && (
-            <div className="mt-2">
-              <p className="text-gray-600">
-                Banco: <span className="font-semibold">BCP</span>
-              </p>
-              <p className="text-gray-600">
-                CBU: <span className="font-mono text-purple-700 break-all">00219117934755804659</span>
-                <button
-                  onClick={() => copyToClipboard("00219117934755804659")}
-                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
-                >
-                  <Copy className="w-5 h-5 text-purple-700" />
-                </button>
-              </p>
-              <p className="text-gray-600">
-                Titular: <span className="font-semibold">Jairo Medrano Salcca</span>
-              </p>
-              <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">$180 PEN</span>
-              </p>
-
-              <a
-                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
-                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Compartir comprobante
-              </a>
-            </div>
-          )}
-        </div>
-
-        {/* Pago con USDT (Cripto) */}
-        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
-          <button
-            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("usdt")}
-          >
-            Pago con USDT (Red ERC20)
-            {openSection === "usdt" ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openSection === "usdt" && (
-            <div className="mt-2">
-              <img src={qrImage} alt="QR Code para pago USDT" className="w-32 mx-auto" />
-              <p className="text-gray-600">
-                Dirección USDT: <span className="font-mono text-purple-700 break-all">0x7874A8178785890261E81Bef2760b5D4c97535C4</span>
-                <button
-                  onClick={() => copyToClipboard("0x7874A8178785890261E81Bef2760b5D4c97535C4")}
-                  className="ml-2 p-2 bg-purple-100 rounded hover:bg-purple-200"
-                >
-                  <Copy className="w-5 h-5 text-purple-700" />
-                </button>
-              </p>
-              <p className="text-gray-600">
-                Monto: <span className="font-semibold text-purple-700">50 USDT</span>
-              </p>
-              <p className="text-red-600 font-semibold mt-2">
-                🚨 Recuerda: solo utiliza la red ERC20 para transferencias. Usar otra red podría ocasionar la pérdida de fondos.
-              </p>
-
-              <a
-                href={`https://wa.me/5492644631495?text=${encodeURIComponent(whatsappMessage)}`}
-                className="mt-4 px-6 py-3 bg-purple-700 text-white text-center font-semibold rounded-lg hover:bg-purple-800 mx-auto block"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Compartir comprobante
-              </a>
-            </div>
-          )}
-        </div>
-
-        {/* Atención de un representante */}
-        <div className="bg-gray-100 rounded-lg shadow-sm p-4">
-          <button
-            className="w-full flex justify-between items-center text-xl font-bold text-gray-800"
-            onClick={() => toggleSection("support")}
-          >
-            Atención de un representante
-            {openSection === "support" ? <ChevronUp /> : <ChevronDown />}
-          </button>
-          {openSection === "support" && (
-            <div className="mt-2">
-              <p className="text-gray-600">
-                Si necesitas asistencia personalizada, contáctanos por WhatsApp.
-              </p>
-              <a
-                href="https://wa.me/5492644631495"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 px-4 py-2 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 block text-center"
-              >
-                Chatear con un Asesor
-              </a>
-            </div>
-          )}
-        </div>
+            <span className="ml-4 font-medium">{gateway.title}</span>
+            
+            {/* Figura blanca ocupando todo el ancho y alto del bot�n con transparencia del 10% */}
+            <div className=" relative inset-0 bg-white opacity-100
+             rounded-full"></div>
+          </a>
+        ))}
       </div>
-      
-      {copiedText && (
-        <p className="text-green-600 text-center mt-4">
-          ¡Copiado al portapapeles: {copiedText}!
-        </p>
-      )}
-    </section>
+    </div>
+  </div>
+  
   );
 };
 
-export default PaymentSection;
+export default PaymentDropdown;

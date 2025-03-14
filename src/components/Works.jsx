@@ -12,6 +12,13 @@ import React, { useEffect, useState } from "react";
   },*/
   const projects = [
     {
+      "img": "work6.png",
+      "title": "Mcoach",
+      "description": "Coaching profesional enfocado en el desarrollo personal.",
+      "link": "https://marcocerdera.com/"
+    }
+,    
+    {
       img: "work4.png",
       title: "OFIX - Servicios para el hogar",
       description: "Plataforma innovadora para contratar y ofrecer servicios del hogar de manera rápida y segura.",

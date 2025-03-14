@@ -18,26 +18,29 @@ const PartnerHub = () => {
    
 
 {/* Sección de información */}
-<div className="info-section mt-8" id="info-section">
-<h1 className="text-2xl font-bold">¿Cómo empezar?</h1>
-<p>
-  Agenda tu primera sesión sin costo adicional y da el primer paso con nosotros.
-  Para una experiencia más personalizada y productiva, te recomendamos completar el formulario en&nbsp;
-  <a href="https://www.destored.org/demo" className="text-purple-600">www.destored.org/demo</a>
-  &nbsp;antes de la sesión.
-</p>
-
-
-
-
-
-  <section id="mentorship-section" className="space-y-4"> 
-  <AI_MentorshipSection />
-    <ResourcesAndTools />
-    <CommunityAndSupport  />
-</section>
-  
+<div className="info-section mt-8 text-center" id="info-section">
+  <h1 className="text-2xl font-bold">¿Cómo empezar?</h1>
+  <p>
+    Agenda tu primera sesión gratuita&nbsp;
+    <a href="https://www.destored.org/reunion" className="text-purple-600">aquí</a>.  
+    Para personalizar la experiencia, completa el &nbsp;
+    <a href="https://forms.gle/YnvRXqXVgWJnUWpEA" className="text-purple-600">formulario</a>.
+  </p>
+  <p className="mt-4">
+    Aceptamos pagos en cuotas vía <strong>Mercado Pago</strong> o <strong>PayPal</strong>.  
+  </p>
+  <p className="mt-4">
+    Tras el pago, podras acceder al <strong>manual de uso de DestHub</strong>, que recomendamos guardar.
+  </p>
+  <p className="mt-4">
+    ¿Dudas o no recibiste el acceso al manual? <a href="https://api.whatsapp.com/send?phone=5492644631495&text=¡Hola! Me gustaría recibir ayuda sobre Desthub" className="text-purple-600 font-bold">Contáctanos</a>.
+  </p>
 </div>
+
+
+
+
+
 
   {/* Sección de adquisición */}
   <PaymentSection />

@@ -15,6 +15,7 @@ import Members from "./components/Members";
 import Scrums from "./components/Scrums";
 import Wsp from "./components/wsp/wsp";
 import IABanner from "./components/IABanner";
+import Web3 from "./components/Web3";
 
 import DestoPlay from "./Pages/DestoPlay";
 import DesafioDesto from "./Pages/DesafíoDesto";
@@ -63,9 +64,13 @@ function App() {
                             <DestoredInfo />
                             <Services />
                             <TeachLeader />
+
                             <About />
                             <Works />
+
                             <SuccessCases />
+                            <Web3 />
+
                             <Contact />
                             <Footer />
                         </>
@@ -86,7 +91,7 @@ function App() {
                         </>
                     }
                 />
-                <Route path="/partnerhub" element={<><PartnerHub /><Footer /></>} />
+                <Route path="/desthub" element={<><PartnerHub /><Footer /></>} />
                 <Route path="/digitalmastery" element={<><DigitalMastery /><Footer /></>} />
                 <Route path="/demo" element={<><Demo /><Footer /></>} />
 
