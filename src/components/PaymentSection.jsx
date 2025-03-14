@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 // Componente PaymentSection
 const PaymentSection = () => {
-  // Array dinámico de pasarelas de pago
-  const [paymentGateways, setPaymentGateways] = useState([
-    {
+
+
+    const paymentGateways = [{
       title: "Mercado Pago",
       url: "https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c938084955cc4800195967f60a61bd7",
       color: "bg-blue-500",
@@ -17,10 +17,9 @@ const PaymentSection = () => {
       color: "bg-[#009cde]",
       icon: "https://play-lh.googleusercontent.com/iQ8f5plIFy9rrY46Q2TNRwq_8nCvh9LZVwytqMBpOEcfnIU3vTkICQ6L1-RInWS93oQg", // Sustituye con el icono de PaySolamente
       shape: "square", // Icono cuadrado
-    }
-    
-    // Puedes agregar más pasarelas aquí en el futuro
-  ]);
+    }]
+ 
+   
 
   return (
     <div className="flex justify-center items-center bg-white p-8">
