@@ -21,7 +21,7 @@ const DestoredInfo = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Tu puente hacia la transformación digital
+        Haz Crecer tu Negocio con Tecnología
       </motion.h1>
       <motion.p
         className="text-gray-600 text-justify mb-6 text-lg text-center"
@@ -29,9 +29,8 @@ const DestoredInfo = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        En Destored conectamos a pequeños y medianos negocios con soluciones
-        innovadoras para potenciar su crecimiento en la era digital.
-      </motion.p>
+      En Destored, hemos creado DestHub, una solución integral diseñada para ayudar a pequeños y medianos negocios a evolucionar en la era digital.
+       Conectamos tu empresa con expertos, estrategias y herramientas que impulsan tu crecimiento de manera eficiente.</motion.p>
 
       {/* Contenedor desplazable para las tarjetas en móvil */}
       <div className="overflow-x-auto mt-6">
@@ -42,28 +41,28 @@ const DestoredInfo = () => {
               imgAlt: "Planes Personalizados",
               title: "Planes Personalizados",
               description:
-                "Soluciones adaptadas a tus necesidades, desde formación hasta estrategias avanzadas.",
+                "Soluciones a medida, desde formación inicial hasta estrategias digitales avanzadas.",
             },
             {
               imgSrc: "prueba2.jpg",
               imgAlt: "Red de Expertos",
               title: "Red de Expertos",
               description:
-                "Acceso a profesionales calificados en desarrollo, marketing y tecnología.",
+                "Accede a un equipo de profesionales en desarrollo, marketing y tecnología listos para potenciar tu negocio.",
             },
             {
               imgSrc: "prueba3.jpg",
               imgAlt: "Capacitación y Soporte",
               title: "Capacitación y Soporte",
               description:
-                "Preparamos a tu equipo y garantizamos asistencia técnica continua.",
+                "Entrenamos a tu equipo y brindamos asistencia técnica continua para asegurar resultados óptimos.",
             },
             {
               imgSrc: "prueba4.jpg",
               imgAlt: "Resultados Medibles",
               title: "Resultados Medibles",
               description:
-                "Generamos impacto directo en productividad, ventas y alcance digital.",
+                "Maximizamos tu productividad, ventas y presencia digital con estrategias enfocadas en el impacto real.",
             },
           ].map(({ imgSrc, imgAlt, title, description }, index) => (
             <motion.div

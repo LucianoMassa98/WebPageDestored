@@ -108,7 +108,7 @@ Transformación Digital para tu Negocio: Impulsa tu Marca en la Era de la Inteli
 
         <div className="bg-transparent  rounded-lg p-6 max-w-[280px] mx-auto">
   <h2 className="text-2xl font-semibold text-purple-600 mb-4 text-center">
-    Web 3.0
+    Web3
   </h2>
 
   <ul className="space-y-0  transparent text-gray-500">

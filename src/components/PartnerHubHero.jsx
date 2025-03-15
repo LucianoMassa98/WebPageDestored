@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import { ArrowDown } from "lucide-react";
 import ExpandableList from "./ExpandableList";
 
-const PartnerHubHero = ({ partnerimg }) => {
+const PartnerHubHero = ({ partnerVideo }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // 768px es el umbral para móvil
+      setIsMobile(window.innerWidth <= 768);
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Inicializa el tamaño al cargar
+    handleResize();
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -30,27 +30,19 @@ const PartnerHubHero = ({ partnerimg }) => {
 
   const recursos = [
     { title: "Guía MVP", content: "Guía detallada para desarrollar y lanzar tu producto digital MVP." },
-    { title: "Meta Business y Ads", content: "Configuración profesional de Meta Business y Ads." },
-    { title: "Google Workspace y Ads", content: "Configuración optimizada de Google Workspace y Ads." },
+    { title: "Ecosistema de Meta", content: "Configuración profesional de Meta Business y Ads." },
+    { title: "Ecosistema de Google", content: "Configuración optimizada de Google Workspace y Ads." },
     { title: "OpenAI", content: "Integración y configuración de OpenAI y su API." },
     { title: "GitHub y Railway", content: "Implementación y configuración de GitHub y Railway." },
-    { title: "Hosting Gratuito", content: "1 mes de hosting gratuito." }
   ];
 
   const comunidad = [
-    { title: "Networking", content: "Grupo privado de WhatsApp para networking y estrategias de negocio." },
+    { title: "Networking", content: "Comunidad pública con grupos públicos y privados para networking y colaboraciones." },
     { title: "Soporte 24/7", content: "Soporte técnico disponible 24/7." }
   ];
 
-  const scrollToMentorship = () => {
-    document.getElementById("mentorship-section").scrollIntoView({
-      behavior: "smooth",
-    });
-  };
-
   return (
     <section className="bg-gradient-to-r from-indigo-600 to-purple-800 text-white relative overflow-hidden py-16">
-      {/* Forma decorativa */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500 rounded-full opacity-30 transform translate-x-24 -translate-y-24"></div>
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-500 rounded-full opacity-40 transform translate-x-16 translate-y-16"></div>
 
@@ -74,11 +66,15 @@ const PartnerHubHero = ({ partnerimg }) => {
             </div>
           ) : (
             <>
-              <img
-                src={partnerimg}
-                alt="Imagen de Partner"
+              {/* Video en lugar de imagen */}
+              <video
+                src={partnerVideo}
                 className="w-full md:w-1/2 h-auto rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105"
-              />
+                controls
+                autoPlay
+                loop
+                muted
+              ></video>
 
               <div className="md:w-1/2 space-y-6">
                 <ExpandableList titulo="Recursos y herramientas" items={recursos} />

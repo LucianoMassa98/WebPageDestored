@@ -31,10 +31,11 @@ const TeachLeader = () => {
       </div>
 
       <div className="text-center text-white p-6 z-10">
-        <h1 className="text-4xl font-bold mb-4">¿Eres un Tech Leader?</h1>
+        <h1 className="text-4xl font-bold mb-4">¿Eres un TeachLeader?</h1>
         <p className="text-lg mb-8">
-          ¿Te interesa brindar sesiones 1 a 1 semanales a dueños de negocios u otros profesionales digitales para que apliquen IA, Cloud, Blockchain o Ciberseguridad a sus procesos?
-        </p>
+  ¿Te interesa brindar sesiones 1 a 1 semanales a dueños de negocios u otros profesionales digitales para ayudarles a aplicar IA, Cloud, Blockchain o Ciberseguridad a sus procesos y ganar dinero en el proceso?
+</p>
+
         <p className="text-lg mb-8">
           Solo debes registrarte y nos pondremos en contacto contigo para más detalles.
         </p>
