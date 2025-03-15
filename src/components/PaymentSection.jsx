@@ -14,7 +14,7 @@ const PaymentSection = () => {
     {
       title: "PayPal",
       url: "https://www.paypal.me/Lucianomassa26",
-      color: "bg-[#009cde]",
+      color: "bg-blue-300",
       icon: "https://play-lh.googleusercontent.com/iQ8f5plIFy9rrY46Q2TNRwq_8nCvh9LZVwytqMBpOEcfnIU3vTkICQ6L1-RInWS93oQg", // Sustituye con el icono de PaySolamente
       shape: "rounded-full", // Icono cuadrado
     }]
