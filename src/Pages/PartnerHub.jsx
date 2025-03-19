@@ -2,9 +2,6 @@ import React, { useRef } from "react";
 import partnerimg from "../../public/partnerHub.webp";
 
 import PaymentSection from "../components/PaymentSection.jsx";
-//import ResourcesAndTools  from "../components/ResourcesAndTools.jsx";
-//import AI_MentorshipSection from "../components/AI_MentorshipSection.jsx";
-//import CommunityAndSupport from "../components/CommunityAndSupport.jsx";
 import PartnerHubHero from "../components/PartnerHubHero.jsx";
  
 const PartnerHub = () => {

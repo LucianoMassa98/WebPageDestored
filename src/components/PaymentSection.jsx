@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 
 // Componente PaymentSection
 const PaymentSection = () => {
@@ -42,7 +41,7 @@ const PaymentSection = () => {
             </div>
             <span className="ml-4 font-medium">{gateway.title}</span>
             
-            {/* Figura blanca ocupando todo el ancho y alto del botón con transparencia del 10% */}
+            {/* Figura blanca ocupando todo el ancho y alto del botï¿½n con transparencia del 10% */}
             <div className=" relative inset-0 bg-white opacity-100
              rounded-full"></div>
           </a>
