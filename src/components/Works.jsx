@@ -1,92 +1,87 @@
 import React, { useEffect, useState } from "react";
 
 
-
-/*  {
-    img: "work5.png",
-    year: "2025",
-    title: "Demo",
-    description: "Prueba el partnerhub durante 15 días",
-    buttonText: "Completar Formulario",
-    formLink: "https://docs.google.com/forms/d/e/1FAIpQLSeuIb-cpT4yCvVjT8wFcets0hqW84ybdcnQEvCU4FQ5xQgQkg/viewform?embedded=true",
-  },*/
-  const projects = [
-    {
-      "img": "work6.png",
-      "title": "Mcoach",
-      "description": "Coaching profesional enfocado en el desarrollo personal.",
-      "link": "https://marcocerdera.com/"
-    }
-,    
-    {
-      img: "work4.png",
-      title: "OFIX - Servicios para el hogar",
-      description: "Plataforma innovadora para contratar y ofrecer servicios del hogar de manera rápida y segura.",
-      link: "https://ofix.tech",
-    },
-    {
-      img: "work1.png",
-      title: "VendePorInsta - Automatización de ventas",
-      description: "Optimiza la gestión de tu consultorio o clínica odontológica con herramientas de marketing.",
-      link: "https://vendeporinsta.up.railway.app/",
-    },
-    {
-      img: "work7.png",
-      title: "WeedSJ - Comunidad Cannábica",
-      description: "Prototipo de plataforma para la comunidad del cannabis, con información, foros y espacios de debate sobre el sector en Argentina.",
-      link: "https://weed.destored.org/",
+const projects = [
+  {
+    img: "https://dmarket.up.railway.app/logo.webp",
+    title: "Digital Market",
+    description: "Plataforma en versión Beta dedicada a la compra, venta e intercambio de productos de supermercado, con opciones de retiro o envío. Diseñada para ofrecer una experiencia de usuario intuitiva y segura.",
+    link: "https://dmarket.up.railway.app/"
   },
-    {
-      img: "work1.png",
-      title: "VendePorInsta - SaaS de gestion de clinicas",
-      description: "Optimiza la gestión de tus clincias con tus pacientes y profesionales para",
-      link: "https://aconex.up.railway.app/login",
-    },
-    {
-      img: "A todo motor.png",
-      title: "A Todo Motor - Gestion de Rally",
-      description: "Sistema integral para la gestión de competidores y organizacion de rally.",
-      link: "https://atodomotor.up.railway.app/login",
-    },
-    {
-      img: "work2.png",
-      title: "YMS APP - Ecommerce para aviarias",
-      description: "Sistema integral para la gestión y venta de productos en el sector avícola.",
-      link: "https://yms.up.railway.app/",
-    },
-   
-    
+  {
+    img: "work6.png",
+    title: "Mcoach",
+    description: "Plataforma de coaching profesional enfocada en el desarrollo personal, brindando herramientas y acompañamiento para el crecimiento individual.",
+    link: "https://marcocerdera.com/"
+  },
+  {
+    img: "work4.png",
+    title: "OFIX",
+    description: "Plataforma innovadora para la contratación y oferta de servicios del hogar, diseñada para facilitar procesos rápidos y seguros entre usuarios y proveedores.",
+    link: "https://ofix.tech"
+  },
+  {
+    img: "https://laliga.up.railway.app/assets/logo-CiF1n9KN.webp",
+    title: "Liga de Fútbol Amateur",
+    description: "Sistema prototípico para la gestión de torneos de fútbol amateur (Liga Veteranos Del Sur) en San Juan, con funcionalidades para el seguimiento de partidos y estadísticas.",
+    link: "https://laliga.up.railway.app/"
+  },
+  {
+    img: "work1.png",
+    title: "VendePorInsta",
+    description: "Optimiza la gestión de tu consultorio odontológico mediante herramientas de marketing digital, permitiendo una mayor visibilidad y eficiencia en la atención.",
+    link: "https://vendeporinsta.up.railway.app/"
+  },
+  {
+    img: "work2.png",
+    title: "YMS",
+    description: "Sistema integral diseñado para la gestión y comercialización de productos en el sector avícola, ofreciendo soluciones completas para mejorar la operación del negocio.",
+    link: "https://yms.up.railway.app/"
+  },
+  {
+    img: "aconex.webp",
+    title: "AConex",
+    description: "Plataforma que optimiza la gestión de clínicas, facilitando la interacción entre pacientes y profesionales de manera eficiente y organizada.",
+    link: "https://aconex.up.railway.app/login"
+  },
+  {
+    img: "A todo motor.png",
+    title: "A Todo Motor",
+    description: "Sistema integral para la gestión de competidores y la organización de rallys, mejorando la experiencia de los participantes y facilitando la administración de eventos.",
+    link: "https://atodomotor.up.railway.app/login"
+  },
+  {
+    img: "work7.png",
+    title: "WeedSJ",
+    description: "Prototipo de plataforma destinada a la comunidad del cannabis en Argentina, ofreciendo información, foros y espacios de debate sobre el sector.",
+    link: "https://weed.destored.org/"
+  },
+  {
+    img: "landing.webp",
+    title: "Portfolio Contador Público",
+    description: "Portfolio profesional de Ramiro Massa, contador público de la Universidad Nacional de San Juan, FACSO, destacando su experiencia y servicios en el ámbito contable.",
+    link: "https://portfoliocontador.up.railway.app/"
+  },
+  {
+    img: "informes.webp",
+    title: "Informe de Ventas",
+    description: "Informe básico de ventas, con la capacidad de leer archivos CSV y presentar datos de manera clara y precisa para la toma de decisiones.",
+    link: "https://paola.up.railway.app/"
+  },
   {
     img: "work5.png",
-    title: "Maqueta - Liga de Fútbol Amateur",
-    description: "Prototipo de sistema para la gestión de torneos de fútbol amateur en San Juan, con seguimiento de partidos y estadísticas.",
-    link: "https://laliga.up.railway.app/",
+    title: "Maqueta - Turismo Rally",
+    description: "Plataforma de eCommerce enfocada en hospedaje, gastronomía y eventos para el Rally Safari Tras las Sierras, en Valle Fértil, San Juan, brindando una experiencia completa para los turistas.",
+    link: "https://atm.up.railway.app/"
   },
-    {
-      img: "work5.png",
-      title: "Maqueta - Turismo Rally ",
-      description: "Plataforma de eCommerce para hospedaje, gastronomía y eventos del Rally Safari Tras las Sierras en Valle Fértil, San Juan.",
-      link: "https://atm.up.railway.app/",
-    },
-    {
-      img: "work5.png",
-      title: "Maqueta - Ecommerce Digital Market",
-      description: "Plataforma para gestion de negocios",
-      link: "https://www.figma.com/design/29yJ7c59VPQH9MFd6aitGx/Digital-Market?node-id=0-1&p=f&t=IW2F4WWyomBc4t9a-0",
-    },
-    {
-      img: "work5.png",
-      title: "Maqueta - Comunidad Misionera",
-      description: "idea foto para comunidad misionera en San Juan, Argentina",
-      link: "https://www.figma.com/proto/WGRU7QuG83gf5ckoDJfeFX/Digital-Market?node-id=23-727&p=f&t=DMxg166l3hovLPul-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A3",
-    },
-    {
-      img: "work5.png",
-      title: "Maqueta - SaaS Digital Market",
-      description: "idea de Saas para gestion de negocios",
-      link: "https://www.figma.com/proto/WGRU7QuG83gf5ckoDJfeFX/Digital-Market?node-id=23-727&p=f&t=DMxg166l3hovLPul-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A3",
-    },
-  ];
+  {
+    img: "work5.png",
+    title: "Maqueta - Comunidad Misionera",
+    description: "Propuesta visual para una comunidad misionera en San Juan, Argentina, destacando la conexión y el compromiso en la misión de servicio.",
+    link: "https://www.figma.com/proto/WGRU7QuG83gf5ckoDJfeFX/Digital-Market?node-id=23-727&p=f&t=DMxg166l3hovLPul-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A3"
+  }
+];
+
   
   
   const Works = () => {

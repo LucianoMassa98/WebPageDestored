@@ -31,6 +31,7 @@ import PartnerHub from "./Pages/PartnerHub";
 import DigitalMastery from "./Pages/DigitalMastery";
 import Demo from "./Pages/Demo";
 import LandingToken from "./Pages/LandingToken";
+import TeachLeadersPage from "./Pages/TeachLeadersPage";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 
@@ -101,6 +102,7 @@ function App() {
 
                 <Route path="/EGame" element={<><EGameChampionship /><Footer /></>} />
                 <Route path="/token" element={<><LandingToken /><Footer /></>} />
+                <Route path="/teachleaders" element={<><TeachLeadersPage /></>} />
 
                 <Route path="/IA" element={<>
                     <IABanner/>     
