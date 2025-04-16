@@ -51,7 +51,8 @@ const PartnerHubHero = ({ partnerVideo }) => {
           DestHub
         </h1>
         <p className="text-lg text-center mb-12">
-          Digitaliza tu negocio o marca personal con IA, Cloud, Blockchain o Ciberseguridad por 1 año al mejor precio. Recibe sesiones semanales 1 a 1 con un Teach Leader, documentación y herramientas para aplicarlo por tu cuenta, todo por 50 USD anuales.
+
+Con cualquier plan, accedés a contenido exclusivo, incluyendo documentación detallada y acceso a un grupo privado de networking.
         </p>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -66,20 +67,19 @@ const PartnerHubHero = ({ partnerVideo }) => {
             </div>
           ) : (
             <>
-              {/* Video en lugar de imagen */}
-              <video
+              {/* Video en lugar de imagen <video
                 src={partnerVideo}
                 className="w-full md:w-1/2 h-auto rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105"
                 controls
                 autoPlay
                 loop
                 muted
-              ></video>
+              ></video>*/}
+              
 
               <div className="md:w-1/2 space-y-6">
                 <ExpandableList titulo="Recursos y herramientas" items={recursos} />
                 <ExpandableList titulo="Comunidad y soporte" items={comunidad} />
-                <ExpandableList titulo="Sesiones Exclusivas 1 a 1" items={sesiones} />
               </div>
             </>
           )}

@@ -49,7 +49,7 @@ const Hero = () => {
             className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
               }`}>
 
-Transformación Digital para tu Negocio: Impulsa tu Marca en la Era de la Inteligencia Artificial </p>
+Diseño y Desarrollo Web 1 a 1, adaptado a tus objetivos en la era de IA </p>
          
          {/* accionables */}
           <div className="flex flex-col md:flex-row items-center gap-4">
@@ -108,7 +108,7 @@ Transformación Digital para tu Negocio: Impulsa tu Marca en la Era de la Inteli
 
         <div className="bg-transparent  rounded-lg p-6 max-w-[280px] mx-auto">
   <h2 className="text-2xl font-semibold text-purple-600 mb-4 text-center">
-    Web3
+    Aprenda & Aplique
   </h2>
 
   <ul className="space-y-0  transparent text-gray-500">

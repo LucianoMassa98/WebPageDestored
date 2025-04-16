@@ -1,49 +1,48 @@
 import React, { useState } from 'react';
 import { RiPlayFill } from 'react-icons/ri';
+import { FaInstagram } from 'react-icons/fa';
 
 // Componente de Caso de Éxito
 const SuccessCase = ({ name, role, description, videoUrl }) => {
   const [showModal, setShowModal] = useState(false);
 
-  // Función para abrir el modal
   const openModal = () => setShowModal(true);
-  
-  // Función para cerrar el modal
   const closeModal = () => setShowModal(false);
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-6 mb-4">
-      <h3 className="text-2xl font-semibold text-purple-600 mt-4">{name}</h3>
-      <p className="text-gray-500 italic">{role}</p>
-      <p className="text-gray-700 mt-2">{description}</p>
-      
+    <div className="bg-white shadow-xl border border-gray-200 rounded-2xl p-6 transition-all hover:shadow-2xl">
+      <h3 className="text-xl font-bold text-purple-700 mb-1">{name}</h3>
+      <p className="text-sm text-gray-500 italic">{role}</p>
+      <p className="text-base text-gray-700 mt-3">{description}</p>
+
       <button
-        className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl mt-4 ${showModal ? "show-5" : ""}`}
         onClick={openModal}
+        className="flex items-center gap-3 mt-5 px-5 py-3 bg-purple-100 hover:bg-purple-200 text-purple-800 rounded-xl transition-all text-base font-medium"
       >
-        <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />
-        Mirar testimonio<br />en vídeo
+        <RiPlayFill className="text-purple-600 text-3xl bg-purple-200 rounded-full p-1" />
+        <FaInstagram className="text-pink-600 text-xl" />
+        Testimonio
       </button>
 
-      {/* Modal para mostrar el video */}
       {showModal && (
-        <div className="fixed inset-0 z-10 overflow-auto bg-black bg-opacity-80 flex items-center justify-center">
-          <div className="bg-white p-5 border border-gray-400 rounded-lg w-11/12 sm:w-3/4 md:w-2/3 lg:max-w-md m-4">
-            <span
-              className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black cursor-pointer"
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center px-4">
+          <div className="bg-white rounded-xl overflow-hidden relative w-full max-w-2xl shadow-lg">
+            <button
               onClick={closeModal}
+              className="absolute top-3 right-3 text-3xl text-gray-400 hover:text-gray-700"
             >
               &times;
-            </span>
-            <iframe
-              className="w-full h-screen"
-              src={videoUrl}
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              allowTransparency="true"
-              style={{ maxWidth: '100%', maxHeight: '700px' }}
-            ></iframe>
+            </button>
+            <div className="w-full aspect-video">
+              <iframe
+                src={videoUrl}
+                className="w-full h-full"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{ borderRadius: '0 0 0.75rem 0.75rem' }}
+              ></iframe>
+            </div>
           </div>
         </div>
       )}
@@ -51,35 +50,35 @@ const SuccessCase = ({ name, role, description, videoUrl }) => {
   );
 };
 
-// Componente principal que contiene todos los casos de éxito
+// Componente principal
 const SuccessCases = () => {
   const [cases] = useState([
     {
       name: 'Bruno Segovia',
-      role: 'QA',
-      description: 'Bruno jugó un papel fundamental en asegurar la calidad del sistema de ecommerce para uno de nuestros clientes más importantes. Su atención al detalle y habilidad para identificar y resolver errores antes de la implementación fueron claves para garantizar el éxito y la satisfacción del cliente.',
-      videoUrl: 'https://www.instagram.com/reel/C-1DY07OFxd/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1',
+      role: 'Pasante QA & Testing',
+      description: 'Bruno destaca la innovación y compañerismo.',
+      videoUrl: 'https://www.instagram.com/reel/C-1DY07OFxd/embed/captioned/?autoplay=1',
     },
     {
-      name: 'Daniel Mena',
-      role: 'Diseñador UX/UI',
-      description: 'Daniel contribuyó significativamente al diseño y desarrollo visual de YMS APP, Digital Market y Ofix. Su creatividad y habilidad para traducir conceptos en interfaces atractivas y funcionales han elevado la calidad de cada proyecto, impactando directamente en la experiencia del usuario.',
-      videoUrl: 'https://www.instagram.com/reel/C-1DY07OFxd/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1',
+      name: 'Bayron Leiva',
+      role: 'Pasante DevOps',
+      description: 'Destaca su crecimiento profesional y agradece su oportunidad.',
+      videoUrl: 'https://www.instagram.com/reel/C-1DY07OFxd/embed/captioned/?autoplay=1',
     },
     {
       name: 'Braian Vargas',
-      role: 'Marketer',
-      description: 'Braian Vargas destacó como marketer en Destored, contribuyendo al crecimiento de AdLab con estrategias de marketing innovadoras y campañas efectivas. Su creatividad, liderazgo y trabajo en equipo dejaron una huella significativa en nuestros proyectos y comunidad profesional. Un ejemplo de éxito impulsado por talento y visión.',
-      videoUrl: 'https://www.instagram.com/reel/C0z3utag_7o/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1',
-    }
+      role: 'Cofundador & Marketer',
+      description: 'Contribuye al crecimiento con estrategias de marketing innovadoras. Su creatividad y trabajo en equipo dejaron una huella significativa.',
+      videoUrl: 'https://www.instagram.com/reel/C0z3utag_7o/embed/captioned/?autoplay=1',
+    },
   ]);
 
   return (
-    <div className="container mx-auto p-6">
-      <h2 className="text-3xl font-bold text-center text-black-600 mb-6">
+    <div className="container mx-auto px-4 py-10">
+      <h2 className="text-3xl font-extrabold text-center text-gray-800 mb-10">
         Casos de Éxito de Nuestros Colaboradores
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {cases.map((caseItem, index) => (
           <SuccessCase
             key={index}

@@ -1,97 +1,77 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  Briefcase,
+  Code,
+  GraduationCap,
+  Building2,
+} from "lucide-react";
 
 const DestoredInfo = () => {
   const cardVariants = {
-    initial: { opacity: 0, y: 20 },
+    initial: { opacity: 0, y: 30 },
     animate: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 },
+      transition: { duration: 0.5, ease: "easeOut" },
     },
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-    tap: { scale: 0.95, transition: { duration: 0.2 } }, // Animación al hacer clic
+    hover: {
+      scale: 1.04,
+      boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+      transition: { duration: 0.3 },
+    },
   };
 
-  return (
-    <div className="bg-white rounded-lg shadow-lg p-6 max-w-[80vw] mx-auto mt-8">
-      <motion.h1
-        className="text-[40px] text-center font-black mb-4 text-gray-800"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        Haz Crecer tu Negocio con Tecnología
-      </motion.h1>
-      <motion.p
-        className="text-gray-600 text-justify mb-6 text-lg text-center"
-        initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-      En Destored, hemos creado DestHub, una solución integral diseñada para ayudar a pequeños y medianos negocios a evolucionar en la era digital.
-       Conectamos tu empresa con expertos, estrategias y herramientas que impulsan tu crecimiento de manera eficiente.</motion.p>
+  const items = [
+    {
+      icon: <Briefcase className="w-8 h-8 text-purple-600" />,
+      title: "Emprendedores",
+      desc: "Digitaliza tu negocio.",
+    },
+    {
+      icon: <Code className="w-8 h-8 text-purple-600" />,
+      title: "Freelancers",
+      desc: "Mejorá tu técnica y conectá.",
+    },
+    {
+      icon: <GraduationCap className="w-8 h-8 text-purple-600" />,
+      title: "Estudiantes",
+      desc: "Reforzá conocimientos clave.",
+    },
+    {
+      icon: <Building2 className="w-8 h-8 text-purple-600" />,
+      title: "Empresas",
+      desc: "Capacitá en nuevas tecnologías.",
+    },
+  ];
 
-      {/* Contenedor desplazable para las tarjetas en móvil */}
-      <div className="overflow-x-auto mt-6">
-        <div className="flex space-x-6 p-4">
-          {[
-            {
-              imgSrc: "prueba1.jpg",
-              imgAlt: "Planes Personalizados",
-              title: "Planes Personalizados",
-              description:
-                "Soluciones a medida, desde formación inicial hasta estrategias digitales avanzadas.",
-            },
-            {
-              imgSrc: "prueba2.jpg",
-              imgAlt: "Red de Expertos",
-              title: "Red de Expertos",
-              description:
-                "Accede a un equipo de profesionales en desarrollo, marketing y tecnología listos para potenciar tu negocio.",
-            },
-            {
-              imgSrc: "prueba3.jpg",
-              imgAlt: "Capacitación y Soporte",
-              title: "Capacitación y Soporte",
-              description:
-                "Entrenamos a tu equipo y brindamos asistencia técnica continua para asegurar resultados óptimos.",
-            },
-            {
-              imgSrc: "prueba4.jpg",
-              imgAlt: "Resultados Medibles",
-              title: "Resultados Medibles",
-              description:
-                "Maximizamos tu productividad, ventas y presencia digital con estrategias enfocadas en el impacto real.",
-            },
-          ].map(({ imgSrc, imgAlt, title, description }, index) => (
-            <motion.div
-              key={index}
-              className="bg-white rounded-lg shadow-md p-4 flex flex-col items-center transform transition-all w-64" // Ancho fijo
-              variants={cardVariants}
-              initial="initial"
-              animate="animate"
-              whileHover="hover"
-              whileTap="tap" // Agregar animación al hacer clic
-            >
-              <motion.img
-                className="w-full h-40 object-cover rounded-md shadow-lg"
-                src={imgSrc}
-                alt={imgAlt}
-                style={{
-                  clipPath:
-                    "polygon(50% 0%, 100% 0%, 100% 80%, 75% 100%, 25% 100%, 0% 80%, 0% 0%)",
-                }}
-                whileHover={{ rotate: 3, scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              />
-              <h3 className="text-xl font-semibold text-purple-600 mt-4 text-center">
-                {title}
-              </h3>
-              <p className="text-gray-600 text-center mt-2">{description}</p>
-            </motion.div>
-          ))}
-        </div>
+  return (
+    <div className="relative bg-white rounded-xl shadow-xl px-4 py-8 sm:py-10  mx-auto overflow-hidden">
+      
+      <motion.h2
+        className="text-center text-[26px] sm:text-[32px] font-extrabold text-gray-800 z-10 relative"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        ¿Para quién es esto?
+      </motion.h2>
+
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 z-10 relative">
+        {items.map((item, index) => (
+          <motion.div
+            key={index}
+            className="bg-white border border-gray-200 rounded-xl p-4 flex flex-col items-center text-center shadow-sm hover:shadow-lg transition-all"
+            variants={cardVariants}
+            initial="initial"
+            animate="animate"
+            whileHover="hover"
+          >
+            <div className="mb-2">{item.icon}</div>
+            <h3 className="font-semibold text-sm text-purple-700">{item.title}</h3>
+            <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

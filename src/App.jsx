@@ -13,23 +13,17 @@ import DestoredInfo from "./components/DestoredInfo";
 import SuccessCases from "./components/SuccessCases";
 import Members from "./components/Members";
 import Scrums from "./components/Scrums";
-import Wsp from "./components/wsp/wsp";
-import IABanner from "./components/IABanner";
-import Web3 from "./components/Web3";
+import FloatingButtons from "./components/FloatingButtons"
+import PartnerHubHero from "./components/PartnerHubHero";
+import partnerimg from "../public/partnerHub.webp";
 
 import DestoPlay from "./Pages/DestoPlay";
 import DesafioDesto from "./Pages/DesafíoDesto";
 
-import EGameChampionship from "./Pages/EGameChampionship";
-import Sorteo from "./Pages/Sorteo";
 import Reunion from "./Pages/Reunion";
 
 import Contact from "./components/Contact";
 import TeachLeader from "./components/TeachLeader";
-
-import PartnerHub from "./Pages/PartnerHub";
-import DigitalMastery from "./Pages/DigitalMastery";
-import Demo from "./Pages/Demo";
 import LandingToken from "./Pages/LandingToken";
 import TeachLeadersPage from "./Pages/TeachLeadersPage";
 
@@ -64,13 +58,16 @@ function App() {
                             <TechIconsRow />
                             <DestoredInfo />
                             <Services />
-                            <TeachLeader />
+                            <PartnerHubHero partnerimg={partnerimg} />
+
 
                             <About />
-                            <Works />
+                            <TeachLeader />
 
                             <SuccessCases />
-                            <Web3 />
+                            <Works />
+                            <FloatingButtons />
+
 
                             <Contact />
                             <Footer />
@@ -92,21 +89,13 @@ function App() {
                         </>
                     }
                 />
-                <Route path="/desthub" element={<><PartnerHub /><Footer /></>} />
-                <Route path="/digitalmastery" element={<><DigitalMastery /><Footer /></>} />
-                <Route path="/demo" element={<><Demo /><Footer /></>} />
-
-                <Route path="/sorteo" element={<><Sorteo /><Footer /></>} />
-
+             
                 <Route path="/reunion" element={<><Reunion /></>} />
 
-                <Route path="/EGame" element={<><EGameChampionship /><Footer /></>} />
                 <Route path="/token" element={<><LandingToken /><Footer /></>} />
                 <Route path="/teachleaders" element={<><TeachLeadersPage /></>} />
 
-                <Route path="/IA" element={<>
-                    <IABanner/>     
-                <Footer /></>} />
+               
 
             </Routes>
         </Router>
