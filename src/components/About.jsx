@@ -25,16 +25,18 @@ const About = () => {
       <div className="flex flex-col items-center justify-center gap-8">
         
       <div class="relative max-w-full w-full md:max-w-[600px]">
-  <img src={imgVision} alt="img" class="rounded-lg w-full h-auto" />
-  <div class="absolute inset-0 bg-gray-800 opacity-50 rounded-lg"></div>
-</div>
+        <img src={imgVision} alt="img" class="rounded-lg w-full h-auto" />
+        <div class="absolute inset-0 bg-gray-800 opacity-50 rounded-lg"></div>
+      </div>
+      <span className="block text-center text-gray-600 mt-2">
+        San Juan, Argentina 2023 · 21 septiembre
+      </span>
 
-<div>
-  <h3 className="text-center text-[24px] font-bold">
-  En 2024, conectamos con más de 300 profesionales digitales de 7 países diferentes en América 🌎.  </h3>
- 
- 
-</div>
+      <div>
+        <h3 className="text-center text-[24px] font-bold">
+          En 2024, conectamos con más de 300 profesionales digitales de 7 países diferentes en América 🌎.
+        </h3>
+      </div>
 
 
 

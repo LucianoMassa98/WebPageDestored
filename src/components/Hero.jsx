@@ -1,182 +1,254 @@
 import "./Hero.css"
-import React, { useState, useEffect } from "react";
-import {Link} from "react-router-dom"
+import React, { useState, useEffect, useRef } from "react";
+import laf from "../assets/laf2.mp4"; // Importa la imagen que falta
+import atm from "../assets/atm.mp4"; // Importa la imagen que falta
+import amd from "../assets/amd.mp4"; // Importa la imagen que falta
+import yms from "../assets/yms.mp4"; // Importa la imagen que falta
 
-//<blockquote className="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/C2kSJdxu3Mr/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style={{ background: '#FFF', border: 0, borderRadius: '3px', boxShadow: '0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15)', margin: '1px', maxWidth: '540px', minWidth: '326px', padding: 0, width: '99.375%', width: '-webkit-calc(100% - 2px)', width: 'calc(100% - 2px)' }}></blockquote><script async src="//www.instagram.com/embed.js"></script>
-import {
-  RiCheckboxBlankCircleFill,
-  RiPlayFill,
-  RiStarFill,
-} from "react-icons/ri";
+const images = [
+  { 
+    src: laf, // Video de prueba público
+    alt: "laf", 
+    industry: "Deporte", 
+    type: "video" 
+  },
+    { src: yms, alt: "yms", industry: "Agro Avícola", type: "video" },
 
-//import  TechIconsRow from "./TechIconsRow.jsx";
+  { src: atm, alt: "atm", industry: "Deporte", type: "video" },
+  { src: amd, alt: "amd", industry: "Talento Remoto", type: "video" },
+
+];
 
 const Hero = () => {
-
-  const [showText, setShowText] = useState(false); // Estado para controlar la visibilidad del texto, es para la animacion del movimiento inicial
+  const [showText, setShowText] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [current, setCurrent] = useState(0);
+  const timeoutRef = useRef(null);
 
   useEffect(() => {
-    setShowText(true); // Cuando el componente se monta, establece showText en true para mostrar el texto, es para la animacion de movimiento inicial
+    setShowText(true);
   }, []);
 
-  const [showModal, setShowModal] = useState(false);
+  // Animación automática del carrusel
+  useEffect(() => {
+    timeoutRef.current && clearTimeout(timeoutRef.current);
+    timeoutRef.current = setTimeout(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 4000); // Cambiado a 4 segundos
+    return () => clearTimeout(timeoutRef.current);
+  }, [current]);
 
-  const openInstagramVideo = () => {
-    console.log(showModal)
-    setShowModal(true);
+  const openInstagramVideo = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
+  const goTo = (idx) => {
+    setCurrent(idx);
   };
 
-  const closeModal = () => {
-    console.log(showModal)
-    setShowModal(false);
+  const prevSlide = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
 
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % images.length);
   };
 
   return (
-    <section id="home" className="min-h-[90vh] grid grid-cols-1 xl:grid-cols-8">
-      {/* mensaje bienvenida */}
-      <div className="md:col-span-4 flex items-center justify-center p-8 xl:p-10">
-        <div className="flex flex-col gap-8">
-          <h1 className="text-5xl xl:text-7xl  xl:leading-[7.5rem]"> <h1
-            className={`text-5xl xl:text-7xl  xl:leading-[7.5rem] title-css ${showText ? "show" : ""
-              }`}
+    <section
+      id="home"
+      className="min-h-[90vh] grid grid-cols-1 xl:grid-cols-8 bg-gradient-to-br from-indigo-900 via-purple-700 to-purple-400"
+      style={{marginTop: 0, paddingTop: 0}}
+    >
+      {/* Columna izquierda: Bienvenida y acciones */}
+      <div className="xl:col-span-4 flex items-center justify-center p-2 sm:p-4 md:p-8 xl:p-16">
+        <div className="flex flex-col gap-4 w-full max-w-xl">
+          <h1
+            className={`font-extrabold text-3xl sm:text-4xl md:text-5xl xl:text-7xl leading-tight text-white drop-shadow-lg title-css text-center xl:text-left ${showText ? "show" : ""}`}
           >
-           Bienvenido a {" "} <strong className="text-purple-600"> Destored</strong>
-          </h1>
-          
+            Bienvenido a{" "}
+            <span className="text-indigo-200 bg-gradient-to-r from-purple-500 via-indigo-400 to-purple-300 bg-clip-text text-transparent">
+              Destored
+            </span>
           </h1>
           <p
-            className={`text-gray-500 text-2xl leading-[2.5rem] ${showText ? "show-3" : ""
-              }`}>
-
-Diseño y Desarrollo Web 1 a 1, adaptado a tus objetivos en la era de IA </p>
-         
-         {/* accionables */}
-          <div className="flex flex-col md:flex-row items-center gap-4">
-
-            <a href="#services">
+            className={`text-indigo-100 text-lg sm:text-xl md:text-2xl leading-relaxed font-light text-center xl:text-left ${showText ? "show-3" : ""}`}
+          >
+            Una plataforma que conecta personas y empresas con soluciones de software y datos para potenciar sus ideas y negocios.
+          </p>
+          {/* Métricas y datos destacados */}
+          <div className="flex flex-row flex-nowrap overflow-x-auto justify-center xl:justify-start gap-3 sm:gap-6 mt-1 mb-1 px-0 sm:px-0">
+            <div className="flex flex-col items-center bg-white bg-opacity-10 rounded-xl px-2 py-1 min-w-[80px] sm:min-w-[110px]">
+              <span className="text-xl sm:text-3xl font-bold text-indigo-200">+50</span>
+              <span className="text-indigo-100 text-xs sm:text-sm">Clientes</span>
+            </div>
+            <div className="flex flex-col items-center bg-white bg-opacity-10 rounded-xl px-2 py-1 min-w-[80px] sm:min-w-[110px]">
+              <span className="text-xl sm:text-3xl font-bold text-indigo-200">5</span>
+              <span className="text-indigo-100 text-xs sm:text-sm">Sectores</span>
+            </div>
+            <div className="flex flex-col items-center bg-white bg-opacity-10 rounded-xl px-2 py-1 min-w-[80px] sm:min-w-[110px]">
+              <span className="text-xl sm:text-3xl font-bold text-indigo-200">24/7</span>
+              <span className="text-indigo-100 text-xs sm:text-sm">Soporte</span>
+            </div>
+          </div>
+          {/* Fin métricas */}
+          {/* Botones de acción */}
+          <div className="flex flex-col md:flex-row items-center gap-4 mt-2 md:mt-4">
+            <a href="#services" className="w-full md:w-auto hidden md:block">
               <button
-                className={`w-full xl:w-auto bg-primary hover:bg-purple-900 text-white py-2 px-8 rounded-xl text-xl ${showText ? "show-3" : ""
-                  }`}>
-              Servicios             
-            </button>
+                className={`w-full md:w-auto bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-500 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-3 px-10 rounded-2xl shadow-lg text-xl transition-all duration-200 ${showText ? "show-3" : ""}`}
+              >
+                Regístrate
+              </button>
             </a>
-
-          
-
-
-
-            <button
-              className={`w-full xl:w-auto flex items-center justify-start text-left gap-4 py-2 px-8 rounded-xl text-xl ${showText ? "show-5" : ""}`}
-              onClick={openInstagramVideo}
-            >
-              <RiPlayFill className="bg-secondary text-primary p-4 rounded-full box-content" />{" "}
-             Intro
-            </button>
-
-            {showModal && (
-              <div className="fixed inset-0 z-10 overflow-auto bg-black bg-opacity-80 flex items-center justify-center">
-                <div className="bg-white p-5 border border-gray-400 rounded-lg w-11/12 sm:w-3/4 md:w-2/3 lg:max-w-md m-4">
-                  <span
-                    className="text-gray-400 float-right text-4xl font-bold hover:text-black focus:text-black cursor-pointer"
-                    onClick={closeModal}
-                  >
-                    &times;
-                  </span>
-                  <iframe
-                    className="w-full h-screen"
-                    src="https://www.instagram.com/reel/C2kSJdxu3Mr/embed/captioned/?rd=https%3A%2F%2Fembedinstagramfeed.com&autoplay=1"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    allowTransparency="true"
-                    style={{ maxWidth: '100%', maxHeight: '700px' }} // Consider adjusting this based on content and design needs0
-                  ></iframe>
-                </div>
-              </div>
-            )}
-           
           </div>
         </div>
       </div>
-
-      {/* Imagen publicitaria*/}
-      <div className="md:col-span-4 flex items-center justify-center relative xl:p-10 z-0">
-        {/* Content image */}
-      <div className="z-40 m-auto p-0">
-          
-
-        <div className="bg-transparent  rounded-lg p-6 max-w-[280px] mx-auto">
-  <h2 className="text-2xl font-semibold text-purple-600 mb-4 text-center">
-    Aprenda & Aplique
-  </h2>
-
-  <ul className="space-y-0  transparent text-gray-500">
-    <li className="flex items-center gap-3">
-      <RiCheckboxBlankCircleFill className="text-primary " />
-      <span className="text-lg">Cloud</span>
-    </li>
-    <li className="flex items-center gap-3">
-      <RiCheckboxBlankCircleFill className="text-primary" />
-      <span className="text-lg">IA</span>
-    </li>
-    <li className="flex items-center gap-3">
-      <RiCheckboxBlankCircleFill className="text-primary" />
-      <span className="text-lg">Blockchain</span>
-    </li>
-    <li className="flex items-center gap-3">
-      <RiCheckboxBlankCircleFill className="text-primary" />
-      <span className="text-lg">Agile Nexus</span>
-    </li>
-  </ul>
-</div>
-
-
-
-
-
+      {/* Columna derecha: Visual y lista de tecnologías */}
+      <div className="xl:col-span-4 flex items-start justify-center relative xl:p-16 pt-4 sm:pt-8 md:pt-12">
+        {/* Formas decorativas SVG */}
+        <svg
+          className="absolute -top-10 -left-10 w-40 h-40 opacity-30 z-0 pointer-events-none hidden xl:block"
+          viewBox="0 0 200 200"
+        >
+          <circle cx="100" cy="100" r="100" fill="#a5b4fc" />
+        </svg>
+        <svg
+          className="absolute top-1/2 right-0 w-32 h-32 opacity-20 z-0 pointer-events-none hidden xl:block"
+          style={{ transform: "translateY(-50%)" }}
+          viewBox="0 0 160 160"
+        >
+          <circle cx="80" cy="80" r="80" fill="#c4b5fd" />
+        </svg>
+        <svg
+          className="absolute bottom-0 left-1/2 w-56 h-20 opacity-20 z-0 pointer-events-none hidden xl:block"
+          style={{ transform: "translateX(-50%)" }}
+          viewBox="0 0 400 80"
+        >
+          <ellipse cx="200" cy="40" rx="200" ry="40" fill="#818cf8" />
+        </svg>
+        <svg
+          className="absolute top-10 right-24 w-16 h-16 opacity-40 z-0 pointer-events-none hidden xl:block"
+          viewBox="0 0 64 64"
+        >
+          <circle cx="32" cy="32" r="32" fill="#f3e8ff" />
+        </svg>
+        {/* Fin formas decorativas */}
+        <div className="relative w-full max-w-md sm:max-w-lg md:max-w-2xl mx-auto flex flex-col items-center z-10">
+          {/* Carrusel de imágenes */}
+          <div className="relative flex items-center justify-center w-full h-56 sm:h-[22rem] md:h-[36rem] bg-white bg-opacity-20 rounded-2xl sm:rounded-3xl shadow-2xl mb-2 sm:mb-8 overflow-hidden max-h-[22rem] sm:max-h-[32rem]">
+            {images.map((img, idx) => (
+              <div
+                key={img.src}
+                className={`absolute left-0 top-0 w-full h-full transition-all duration-700 ease-in-out flex items-center justify-center
+                  ${idx === current ? "opacity-100 scale-100 z-10" : "opacity-0 scale-95 z-0"}
+                `}
+                style={{ pointerEvents: idx === current ? "auto" : "none" }}
+              >
+                {img.type === "video" ? (
+                  <div className="w-full h-full relative">
+                    <video
+                      src={img.src}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      type="video/mp4"
+                      poster="https://via.placeholder.com/600x400?text=Video+no+carga"
+                      className="w-full h-full object-cover"
+                      style={{ position: "absolute", left: 0, top: 0 }}
+                      onError={e => { e.target.poster = "https://via.placeholder.com/600x400?text=Error+video"; }}
+                    >
+                      Tu navegador no soporta el video.
+                    </video>
+                    {/* Capa gris oscura con opacidad */}
+                    <div
+                      className="absolute left-0 top-0 w-full h-full"
+                      style={{ background: "rgba(30,30,30,0.45)", pointerEvents: "none" }}
+                    />
+                  </div>
+                ) : (
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-contain filter grayscale brightness-75"
+                    style={{ position: "absolute", left: 0, top: 0 }}
+                  />
+                )}
+                <span
+                  className="absolute top-4 left-4 z-20 text-white text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-lg select-none px-4 py-2 rounded"
+                  style={{
+                    background: "rgba(30,30,30,0.35)",
+                    textShadow: "0 2px 8px rgba(0,0,0,0.7)",
+                    letterSpacing: "2px"
+                  }}
+                >
+                  {img.industry}
+                </span>
+              </div>
+            ))}
+            {/* Botón anterior */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-indigo-700 bg-opacity-70 hover:bg-indigo-900 text-white rounded-full p-2 sm:p-3 shadow-lg transition-all duration-200 focus:outline-none"
+              aria-label="Anterior"
+            >
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 19l-7-7 7-7"/></svg>
+            </button>
+            {/* Botón siguiente */}
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-indigo-700 bg-opacity-70 hover:bg-indigo-900 text-white rounded-full p-2 sm:p-3 shadow-lg transition-all duration-200 focus:outline-none"
+              aria-label="Siguiente"
+            >
+              <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+            {/* Indicadores */}
+            <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2">
+              {images.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => goTo(idx)}
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 border-2 border-white
+                    ${idx === current ? "bg-purple-600 scale-110 shadow" : "bg-white bg-opacity-40"}
+                  `}
+                  aria-label={`Ir a la imagen ${idx + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+          {/* Botón de registro solo en móvil */}
+          <a href="#services" className="w-full block md:hidden">
+            <button
+              className="w-full bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-500 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg text-lg sm:text-xl transition-all duration-200 mt-2 mb-2"
+            >
+              Regístrate
+            </button>
+          </a>
+          {/* Flecha "ver más" solo en móvil */}
+          <div className="flex justify-center w-full md:hidden">
+            <button
+              type="button"
+              className="animate-bounce mt-6 flex flex-col items-center text-indigo-100 focus:outline-none"
+              onClick={() => {
+                const section = document.getElementById("destored-intro");
+                if (section) {
+                  section.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24">
+                <path d="M12 5v14M19 12l-7 7-7-7" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="text-xs mt-1">Ver más</span>
+            </button>
+          </div>
         </div>
-
-      <div className="logo-container absolute w-[70%] h-[70%] p-9 block xl:block">
-
-  <div className="logo1">
-    <img
-      src="logo1.png"
-      className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[10%]"
-    />
-  </div>
-
-  <div className="logo2">
-    <img
-      src="logo2.png"
-      className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[10%] left-[90%]"
-    />
-  </div>
-
-  <div className="logo3">
-    <img
-      src="logo3.png"
-      className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[85%]"
-    />
-  </div>
-
-  <div className="logo4">
-    <img
-      src="logo4.png"
-      className="w-10 h-10 md:w-20 md:h-20 rounded-full absolute top-[90%] left-[90%]"
-    />
-  </div>
-        </div>
-
       </div>
-
-
-
     </section>
   );
 };
 
 export default Hero;
+
 
 
 
