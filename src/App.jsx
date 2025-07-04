@@ -3,9 +3,9 @@ import ReactPixel, { initPixel } from "./utils/pixel";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Works from "./components/Works";
-import About from "./components/About";
-import Services from "./components/Services";
+import Works from "./Pages/Works";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
 import BusinessTech from "./components/BusinessTech";
 import Footer from "./components/Footer";
 import DestoredIntro from "./components/DestoredIntro";
@@ -13,7 +13,7 @@ import DestoredForYou from "./components/DestoredForYou";
 import WhyDestored from "./components/WhyDestored";
 import Testimonial from "./components/Testimonial";
 import Reunion from "./Pages/Reunion";
-import Contact from "./components/Contact";
+import Contact from "./Pages/Contact";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 

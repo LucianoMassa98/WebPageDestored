@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Chatbot from "./Chatbot";
-import Wsp from "./wsp/wsp";
+import Chatbot from "../Chatbot";
+import Wsp from "../wsp";
 
 export default function FloatingButtons() {
   const [isChatOpen, setIsChatOpen] = useState(false);

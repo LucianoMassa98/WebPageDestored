@@ -54,7 +54,7 @@ const Header = () => {
           {/* Botón CTA Desktop */}
           <div className="hidden xl:flex">
             <Link
-              to="/registro"
+              to="https://dashboard.destored.org"
               className="bg-purple-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-purple-700 transition-colors"
             >
               Iniciar
@@ -111,7 +111,7 @@ const Header = () => {
                 ))}
               </nav>
               <Link
-                to="/registro"
+                to="https://dashboard.destored.org"
                 className="mt-8 bg-purple-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-purple-700 transition-colors text-center"
                 onClick={() => setShowMenu(false)}
               >

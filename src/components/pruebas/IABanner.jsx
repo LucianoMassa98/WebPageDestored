@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import ExpandableList from "./ExpandableList"
-import Chatbot from "./Chatbot"
+import Chatbot from "../Chatbot"
 
 
 const IABanner = () => {

@@ -89,13 +89,20 @@ const DestoredForYou = () => (
           </motion.div>
         ))}
       </div>
-      <motion.button
-        className="bg-gradient-to-r from-[#9C1DD8] to-[#00d9fa] hover:from-[#00d9fa] hover:to-[#9C1DD8] text-white font-bold rounded-full px-10 py-4 text-lg shadow-lg transition"
-        whileHover={{ scale: 1.07 }}
-        whileTap={{ scale: 0.97 }}
+      <a
+        href="https://dashboard.destored.org"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block"
       >
-        Quiero ser parte
-      </motion.button>
+        <motion.button
+          className="bg-gradient-to-r from-[#9C1DD8] to-[#00d9fa] hover:from-[#00d9fa] hover:to-[#9C1DD8] text-white font-bold rounded-full px-10 py-4 text-lg shadow-lg transition"
+          whileHover={{ scale: 1.07 }}
+          whileTap={{ scale: 0.97 }}
+        >
+          Quiero ser parte
+        </motion.button>
+      </a>
     </div>
   </section>
 );

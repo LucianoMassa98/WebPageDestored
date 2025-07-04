@@ -92,7 +92,7 @@ const Hero = () => {
           {/* Fin métricas */}
           {/* Botones de acción */}
           <div className="flex flex-col md:flex-row items-center gap-4 mt-2 md:mt-4">
-            <a href="#services" className="w-full md:w-auto hidden md:block">
+            <a href="https://dashboard.destored.org" className="w-full md:w-auto hidden md:block" target="_blank" rel="noopener noreferrer">
               <button
                 className={`w-full md:w-auto bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-500 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-3 px-10 rounded-2xl shadow-lg text-xl transition-all duration-200 ${showText ? "show-3" : ""}`}
               >
@@ -216,7 +216,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Botón de registro solo en móvil */}
-          <a href="#services" className="w-full block md:hidden">
+          <a href="https://dashboard.destored.org" className="w-full block md:hidden" target="_blank" rel="noopener noreferrer">
             <button
               className="w-full bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-500 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg text-lg sm:text-xl transition-all duration-200 mt-2 mb-2"
             >
