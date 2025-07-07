@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   { label: "Servicios", to: "/servicios" },
-  { label: "Consultoría Gratis", to: "/consultoria", highlight: true },
+  { label: "Chatbot", to: "/chatbot", highlight: true },
   { label: "Quiénes Somos", to: "/quienes-somos" },
   { label: "Portafolio", to: "/portafolio" },
   { label: "Contacto", to: "/contacto" },

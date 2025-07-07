@@ -51,12 +51,12 @@ const Services = () => {
   ];
 
   const [selectedCard, setSelectedCard] = useState(null);
-  const [openFormModal, setOpenFormModal] = useState(false);
 
-  const modalUrl = "https://forms.gle/mL6R1sypKQfcQik37";
+  const dashboardUrl = "https://dashboard.destored.org/register";
 
-  const handleOpenFormModal = () => setOpenFormModal(true);
-  const handleCloseFormModal = () => setOpenFormModal(false);
+  const handleRedirectToDashboard = () => {
+    window.location.href = dashboardUrl;
+  };
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-white to-[#f3e8ff]">
@@ -104,7 +104,7 @@ const Services = () => {
                 className="!absolute !bottom-6 !right-8 !bg-[#9C1DD8] hover:!bg-[#7a16a8] shadow"
                 onClick={(e) => {
                   e.stopPropagation();
-                  handleOpenFormModal();
+                  handleRedirectToDashboard();
                 }}
                 aria-label="Ir"
                 sx={{
@@ -123,25 +123,6 @@ const Services = () => {
           ))}
         </div>
       </section>
-      {/* Modal de formulario */}
-      {openFormModal && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
-          <div className="bg-white rounded-lg overflow-hidden w-full max-w-3xl h-[80vh] relative">
-            <button
-              onClick={handleCloseFormModal}
-              className="absolute top-3 right-4 text-gray-600 text-xl font-bold hover:text-purple-600"
-            >
-              ×
-            </button>
-            <iframe
-              src={modalUrl}
-              className="w-full h-full border-0"
-              allowFullScreen
-              title="Formulario"
-            ></iframe>
-          </div>
-        </div>
-      )}
     </main>
   );
 };

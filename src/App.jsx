@@ -3,6 +3,8 @@ import ReactPixel, { initPixel } from "./utils/pixel";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Wsp from "./components/wsp";
+
 import Works from "./Pages/Works";
 import About from "./Pages/About";
 import Services from "./Pages/Services";
@@ -12,7 +14,8 @@ import DestoredIntro from "./components/DestoredIntro";
 import DestoredForYou from "./components/DestoredForYou";
 import WhyDestored from "./components/WhyDestored";
 import Testimonial from "./components/Testimonial";
-import Reunion from "./Pages/Reunion";
+import Chatbot from "./Pages/Chatbot";
+
 import Contact from "./Pages/Contact";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
@@ -32,6 +35,7 @@ function Layout({ children }) {
         <>
             <Header />
             {children}
+            <Wsp />
             <Footer />
         </>
     );
@@ -68,10 +72,10 @@ function App() {
                     }
                 />
                 <Route
-                    path="/consultoria"
+                    path="/chatbot"
                     element={
                         <Layout>
-                            <Reunion />
+                            < Chatbot/>
                         </Layout>
                     }
                 />
