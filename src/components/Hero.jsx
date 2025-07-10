@@ -47,7 +47,14 @@ const Hero = () => {
         
         setLoadedVideos(prev => {
           const newLoaded = [...prev, { ...videoSources[index], originalIndex: index }];
-          return newLoaded.sort((a, b) => a.originalIndex - b.originalIndex);
+          const sorted = newLoaded.sort((a, b) => a.originalIndex - b.originalIndex);
+          
+          // Si es el primer video que se carga, mostrar inmediatamente
+          if (prev.length === 0) {
+            setVideosReady(true);
+          }
+          
+          return sorted;
         });
         
         videoRefs.current[index] = video;
@@ -86,24 +93,18 @@ const Hero = () => {
       });
       setVideoLoadStatus(initialStatus);
 
-      // Precargar videos en paralelo
-      const loadPromises = videoSources.map((video, index) => 
-        preloadVideo(video.src, index)
-      );
-
-      try {
-        await Promise.allSettled(loadPromises);
-        setVideosReady(true);
-      } catch (error) {
-        console.warn('Error al precargar algunos videos:', error);
-        setVideosReady(true); // Continuar aunque algunos videos fallen
-      }
+      // Precargar videos individualmente (no esperar a que todos terminen)
+      videoSources.forEach((video, index) => {
+        preloadVideo(video.src, index).catch(error => {
+          console.warn(`Error al cargar video ${index}:`, error);
+        });
+      });
     };
 
     loadVideos();
   }, [preloadVideo]);
 
-  // Animación automática del carrusel - solo inicia cuando hay videos cargados
+  // Animación automática del carrusel - solo inicia cuando hay al menos un video cargado
   useEffect(() => {
     if (!videosReady || loadedVideos.length === 0) return;
 
@@ -134,7 +135,7 @@ const Hero = () => {
     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-400 to-indigo-600">
       <div className="text-center">
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4"></div>
-        <p className="text-white text-lg font-medium">Preparando experiencia...</p>
+        <p className="text-white text-lg font-medium">Cargando contenido...</p>
         <p className="text-indigo-100 text-sm mt-2">
           {Object.values(videoLoadStatus).filter(status => status === 'loaded').length} de {videoSources.length} videos listos
         </p>
